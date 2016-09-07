@@ -1,0 +1,224 @@
+$irradiance_icon:'/modules/dashboard/css/img/Irradianceicon.png';
+$site_marker_icon:'/modules/dashboard/css/img/sitemarkericon.png';
+$zone_marker_icon:'/modules/dashboard/css/img/Zoneicon.png';
+$weather-icon:'/modules/dashboard/css/img/Icon_Cloudy_sunny.png';
+$windSpeedBig-icon:'/modules/dashboard/css/img/Windspeedbig.png';
+$rainfallBig-icon:'/modules/dashboard/css/img/Rainfallbig.png';
+$humidityBig-icon:'/modules/dashboard/css/img/Humiditybig.png';
+$height_20p: 20px;
+$top_5: 5px;
+.top-5 {
+    top: $top_5 !important;
+}
+
+.theme-siteMarker-icon {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 80%;
+    height: 0;
+    background: url($site_marker_icon) no-repeat;
+    background-size: cover;
+    display: inline-block;
+}
+
+.theme-zoneMarker-icon {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 80%;
+    height: 0;
+    background: url($zone_marker_icon) no-repeat;
+    background-size: cover;
+    display: inline-block;
+}
+
+.theme-irradiance-icon {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 80%;
+    height: 0;
+    background: url($irradiance_icon) no-repeat;
+    background-size: cover;
+    display: inline-block;
+}
+
+.theme-weather-sunny-icon {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 87%;
+    height: 0;
+    background: url($weather-icon) no-repeat;
+    background-size: cover;
+    display: inline-block;
+}
+
+.theme-single-site-weather-info {
+    .widget .widget-controls a {
+        width: 34% !important;
+        border: none !important;
+    }
+    .theme-wind-icon {
+        width: 31%;
+        margin: 0 auto;
+        padding-top: 31%;
+        height: 0;
+        background: url($windSpeedBig-icon) no-repeat;
+        background-size: cover;
+        display: inline-block;
+        position: relative;
+    }
+    .theme-rainfall-icon {
+        width: 31%;
+        margin: 0 auto;
+        padding-top: 31%;
+        height: 0;
+        background: url($rainfallBig-icon) no-repeat;
+        background-size: cover;
+        display: inline-block;
+        position: relative;
+    }
+    .theme-humidity-icon {
+        width: 31%;
+        margin: 0 auto;
+        padding-top: 31%;
+        height: 0;
+        background: url($humidityBig-icon) no-repeat;
+        background-size: cover;
+        display: inline-block;
+        position: relative;
+    }
+    .theme-icon-side-data {
+        position: absolute;
+        left: 36%;
+        top: 1%;
+    }
+    .theme-date-text {
+        color: #848ea5;
+        font-size: 17px;
+    }
+    .theme-data-value {
+        color: #43525a;
+        font-family: Roboto-Medium;
+        font-size: 20px;
+    }
+    .theme-data-label {
+        color: #43525a;
+        font-family: Roboto-Medium;
+        font-size: 13px;
+    }
+    .theme-temp-text {
+        color: #576770;
+        font-family: Roboto-Regular;
+        font-size: 32px;
+    }
+}
+
+.theme-zones-overview {
+    .dataTables_scrollHead .dataTable:first-child {
+        border-bottom: none !important;
+    }
+    .irs {
+        height: $height_20p;
+    }
+    .irs-slider.single {
+        display: none;
+    }
+    .irs-line {
+        @extend .top-5;
+        height: 6px;
+    }
+    .irs-bar {
+        @extend .top-5;
+        height: 6px;
+    }
+    .theme-today-gen .irs-bar {
+        border-top-color: #CE6C6D;
+        border-bottom-color: #CE6C6D;
+        background: #CE6C6D;
+    }
+    .theme-today-gen .irs-line {
+        background: #000000;
+        border: 1px solid #000;
+    }
+    .theme-today-yield .irs-bar {
+        border-top-color: #4D5383;
+        border-bottom-color: #4D5383;
+        background: #4D5383;
+    }
+    .irs-bar-edge {
+        @extend .top-5;
+        height: 6px;
+    }
+    .theme-today-gen .irs-bar-edge {
+        border-color: #CE6C6D;
+        background: #CE6C6D;
+    }
+    .theme-today-yield .irs-bar-edge {
+        border-color: #4D5383;
+        background: #4D5383;
+    }
+    .table > thead > tr > th {
+        border-bottom: 1px solid #CCCCCC !important;
+    }
+}
+
+.theme-zone-wise-alarms {
+    .table>thead>tr>th {
+        border-bottom: 1px solid #CCCCCC;
+    }
+    .panel-title {
+        color: #434a54;
+        font-family: Roboto-Medium;
+        font-size: 12px;
+    }
+    .table > tbody > tr > td:first-child {
+        color: #43525a;
+        font-family: Roboto-Medium;
+        font-size: 13px;
+    }
+}
+
+.panel-title {
+    font-family: Roboto-Medium;
+    font-size: 12pt !important;
+}
+
+.theme-zone-wise-alarms {
+    .theme-connectivity-icon {
+        width: 22%;
+        padding-top: 8%;
+    }
+    .theme-connectivity-red-icon {
+        width: 22%;
+        padding-top: 8%;
+    }
+}
+
+.top-widget {
+    height: 99.5%;
+    width: 99.5%;
+    background-color: #ffffff;
+    .theme-loader {
+        width: 11% !important;
+        padding-bottom: 15% !important;
+        top: 4% !important;
+        background-size: cover !important;
+    }
+}
+
+.progress.progress-small {
+    height: 8px !important;
+}
+
+.progress-list .progress {
+    margin-top: 25px !important;
+}
+
+.widget-show {
+    position: absolute;
+    width: 98%;
+    text-align: center;
+    top: 13%;
+    height: 86%;
+    display: block;
+    margin-left: 1%;
+}

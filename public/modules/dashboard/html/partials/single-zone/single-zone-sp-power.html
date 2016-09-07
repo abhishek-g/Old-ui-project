@@ -1,0 +1,27 @@
+<div class="panel panel-default" addClass=true>
+    <div class="panel-heading">
+        <h3 class="panel-title">Inverter Specific Power</h3>
+        <ul class="panel-controls" style=" margin-top: 2px;">
+            <li><a href="#" class="panel-fullscreen js-resize" style=" border: none"><span class="maximise ">
+                </span></a>
+            </li>
+            <li><a href="#" class="panel-fullscreen" style=" border: none"><span  id="js-hideshow-specificpower" class="theme-hideeye ">
+            </span></a>
+            </li>
+            <li datefilternew set-view-mode="setViewMode(viewMode,startdate,enddate)" id="reportrange">
+                <a href="#" class="dropdown-toggle no-border"><span class="theme-filterdd"></span></a>
+            </li>
+            <li export-highcharts=""></li>
+            <li ui-info-window="" data-to-hide-el=".js-specific-power-details"> </li>
+        </ul>
+    </div>
+    <groupbychangecall group-by-change="groupByChange(groupby)"></groupbychangecall>
+    <button type="button" class="btn btn-default resetZoom pull-right" id="resetZoomISP">Reset Zoom</button>
+    <div class="panel-body js-sp-power-inverter theme-inv-sp-pw">
+    </div>
+    <div class="alert alert-info js-specific-power-details widget-show" style="display: none;font-size: 12pt">
+        <p style="margin-left: 1%;text-align: left">Formula used : </p>
+        <hr>
+        <p>( <sup>Instantaneous active power of a building's energy meter </sup>/<sub>Building's Installed Capacity</sub> )</p>
+    </div>
+</div>

@@ -1,0 +1,101 @@
+.list-group-item {
+    border-color: #CCC;
+}
+
+.list-group.border-bottom .list-group-item:last-child {
+    border-bottom: 1px solid #CCC;
+}
+
+.fa.fa-plus-square,
+.fa.fa-minus-square,
+.fa.fa-square-o,
+.fa.fa-check-square-o {
+    cursor: pointer;
+}
+
+.list-group-item.secondary {
+    border: none;
+}
+
+.list-group .list-group-item.secondary:last-child {
+    border-bottom: none !important;
+}
+
+.theme-tree-icon {
+    width: 32px;
+    margin: 0 auto;
+    padding-top: 32px;
+    height: 0;
+    background: url('/modules/home/css/img/Tree_Down_Icon_072.png') no-repeat;
+    background-size: cover;
+    display: inline-block;
+}
+
+.breadcrumb li,
+.breadcrumb li a {
+    font-size: 14px !important;
+    line-height: 12px;
+    color: #000 !important;
+    text-decoration: none;
+}
+
+.scrollclass {
+    max-height: 550px !important;
+    overflow: auto !important;
+}
+
+.alarm > .mb-container{
+    top: 2%;
+    width: 21%;
+    right: 1%;
+}
+
+.alarm.message-box .mb-container .mb-middle {
+    position: relative;
+    color: #FFF;
+    left: 0;
+}
+
+.alarm > .list-group-item > .list-group-status.status-online:after {
+    border-color: #b64645;
+}
+
+.alarm > .list-group-item:hover{
+    background-color: #f2dede !important;
+    color:#a94442 !important;
+}
+
+.blink_me {
+    -webkit-animation-name: blinker;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+
+    -moz-animation-name: blinker;
+    -moz-animation-duration: 1s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+
+    animation-name: blinker;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@-moz-keyframes blinker {
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+@-webkit-keyframes blinker {
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+@keyframes blinker {
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}

@@ -1,0 +1,286 @@
+<div class="container-fluid dashboard-container" style="min-height: 100%;" xmlns="http://www.w3.org/1999/html">
+    <div class="row  mtop">
+        <div class="col-sm-6 col-md-3">
+
+            <div class="widget widget-default widget-item-icon shadow-helper">
+                <div class="widget-item-left marhelp"><span class="top-widget-wea-poa m8"></span>
+                </div>
+                <div class="widget-data padhelp">
+                    <div class="widget-int num-count lynhgt">
+
+                        <span class="font24">{{dailypoa | number:2}} <span class="num-units">Wh/m2</span></span>
+                    </div>
+                    <div class="widget-title font12">Daily POA Energy</div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-sm-6 col-md-3">
+            <div class="widget widget-default widget-item-icon shadow-helper">
+                <div class="widget-item-left marhelp"><span class="top-widget-wea-ghi m8"></span>
+                </div>
+                <div class="widget-data padhelp">
+                    <div class="widget-int num-count lynhgt">
+                        <span class="font24">{{dailyghi | number:2}} <span class="num-units">&#8451;</span></span>
+                    </div>
+                    <div class="widget-title font12">Temparature</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+            <div class="widget widget-default widget-item-icon shadow-helper">
+                <div class="widget-item-left marhelp"><span class="theme-windsp-icon m8"></span>
+                </div>
+                <div class="widget-data padhelp">
+                    <div class="widget-int num-count lynhgt">
+                        <span class="font24">{{windspeed}} <span class="num-units">m/s</span></span>
+                    </div>
+                    <div class="widget-title font12">Wind Speed</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+            <div class="widget widget-default widget-item-icon shadow-helper">
+                <div class="widget-item-left marhelp"><span class="theme-winddir-icon m8"></span>
+                </div>
+                <div class="widget-data padhelp">
+                    <div class="widget-int num-count lynhgt">
+                        <span class="font24">{{windirection}}<span class="num-units"></span></span>
+                    </div>
+                    <div class="widget-title font12">Wind Direction</div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-5" id="weatherconditons">
+            <div class="panel panel-default" addClass=true>
+                <div class="panel-heading">
+                    <h3 class="panel-title">Weather Conditions</h3>
+                    <ul class="panel-controls" style=" margin-top: 2px;">
+                        <li><a href="#" class="panel-fullscreen " style=" border: none"><span
+                                class="maximise"></span></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="panel-body layout-chart-container">
+                    <div class="row" style="padding:0px 15px;">
+                        <div class="col-md-7 img-rounded weather_icon">
+                            <div class="ftlt" style="margin-top: 8px;">
+                                <div class="col-md-6 text-left">
+                                    <h3 ng-if="iftoday" style="color:#444950;font-size:22px;">Today</h3>
+                                </div>
+                                <div class="col-md-6 text-right"><small style="font-size: 12px;color: #69657d;">{{currentDate|date:'dd-MMM-yyyy'}}</small>
+                                </div>
+
+                            </div>
+                            <div class="ftlt bottom-text">
+                                <div class="col-md-6 text-left">
+                                    <h3 style="font-size:23px;color:#3d71b8;white-space: nowrap;">{{currenttemp | number:2}} &#8451;</h3>
+                                </div>
+                                <div class="col-md-6 text-right" style="color: #5a566d;font-size: 15px;"><strong>Windy</strong>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-5 mCustomScrollbar">
+                            <div templistdirective class="list-group border-bottom weather-date-group">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-7" ng-controller="SurfaceVsAmbientController">
+            <div class="panel panel-default" addClass=true>
+                <div class="panel-heading">
+                    <h3 class="panel-title">Mod Temp Vs Amb Temp</h3>
+                    <ul class="panel-controls" style=" margin-top: 2px;">
+                        <li><a href="#" class="panel-fullscreen js-resize" style=" border: none"><span
+                                class="maximise"></span></a>
+                        </li>
+                        <li datefilternew set-view-mode="setViewMode(viewMode,startdate,enddate)" id="reportrange">
+                            <a href="#" class="dropdown-toggle no-border"><span class="theme-filterdd"></span></a>
+                        </li>
+                        <li export-highcharts=""></li>
+                        <li ui-info-window="" data-to-hide-el=".js-amb-mod-temperature-details"></li>
+                    </ul>
+                </div>
+                <groupbychangecall group-by-change="groupByChange(groupby)"></groupbychangecall>
+                <div class="panel-body surface-vs-ambient" surface-vs-ambient="" id='surfacevsambient'>
+                </div>
+                <div class="alert alert-info js-amb-mod-temperature-details widget-show" style="display: none;font-size: 12pt">
+                    <p style="margin-top: 1%;">
+                        Module vs Ambient Temperature as recorded by the weather station
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="row">
+
+        <div class="col-md-5" ng-controller="winddriection">
+            <div class="panel panel-default" addClass=true>
+                <div class="panel-heading">
+                    <h3 class="panel-title">Wind Direction</h3>
+                    <ul class="panel-controls" style=" margin-top: 2px;">
+                        <li><a href="#" class="panel-fullscreen " style=" border: none"><span
+                                class="maximise"></span></a>
+                        </li>
+                        <li ui-info-window="" data-to-hide-el=".js-wind-direction-details"></li>
+                    </ul>
+                </div>
+
+                <div class="panel-body layout-chart-container">
+                    <div class="row" style="height: 250px;">
+                        <div class="col-md-7" wind-direction="'" id="winddirection" style="height: 100%">
+                        </div>
+                        <div class="col-md-5">
+                            <div class="list-group border-bottom" style="width: 90%;">
+                                <button class="btn btn-xs btn-info btn-block" type="button" ng-repeat="item in directionArray">{{item}}</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="alert alert-info js-wind-direction-details widget-show" style="display: none;font-size: 12pt">
+                    <p style="margin-top: 1%;">
+                        Wind Direction as recorded by the weather station
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-7" ng-controller="livewindspeed">
+            <div class="panel panel-default" addClass=true>
+                <div class="panel-heading">
+                    <h3 class="panel-title">Wind Speed (m/s) Vs Wind Direction &#176;</h3>
+                    <ul class="panel-controls" style=" margin-top: 2px;">
+                        <li><a href="#" class="panel-fullscreen js-resize" style=" border: none"><span
+                                class="maximise"></span></a>
+                        </li>
+                        <li datefilternew set-view-mode="setViewMode(viewMode,startdate,enddate)" id="reportrange">
+                            <a href="#" class="dropdown-toggle no-border"><span class="theme-filterdd"></span></a>
+                        </li>
+                        <li export-highcharts=""></li>
+                        <li ui-info-window="" data-to-hide-el=".js-wind-speed-details"></li>
+                    </ul>
+                </div>
+                <groupbychangecall group-by-change="groupByChange(groupby)"></groupbychangecall>
+                <div class="panel-body live-wind-speed" live-wind-speed="" id='livewindspeed'>
+                </div>
+                <div class="alert alert-info js-wind-speed-details widget-show" style="display: none;font-size: 12pt">
+                    <p style="margin-top: 1%;">
+                        Wind Speed as recorded by the weather station
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-6" ng-controller="humidity">
+            <div class="panel panel-default" addClass=true>
+                <div class="panel-heading">
+                    <h3 class="panel-title">POA (W/m<sup>2</sup>)</h3>
+                    <ul class="panel-controls" style=" margin-top: 2px;">
+                        <li><a href="#" class="panel-fullscreen " style=" border: none"><span
+                                class="maximise"></span></a>
+                        </li>
+                        <li datefilternew set-view-mode="setViewMode(viewMode,startdate,enddate)" id="reportrange">
+                            <a href="#" class="dropdown-toggle no-border"><span class="theme-filterdd"></span></a>
+                        </li>
+                        <li export-highcharts=""></li>
+                        <li ui-info-window="" data-to-hide-el=".js-humidity-details"></li>
+                    </ul>
+                </div>
+                <groupbychangecall group-by-change="groupByChange(groupby)"></groupbychangecall>
+                <div class="panel-body weather-humidity" humidity="" id='humidity'>
+                </div>
+                <div class="alert alert-info js-humidity-details widget-show" style="display: none;font-size: 12pt">
+                    <p style="margin-top: 1%;">
+                        POA as recorded by the weather station
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="panel panel-default" addClass=true>
+                <div class="panel-heading">
+                    <h3 class="panel-title">Detail Parameters</h3>
+                    <ul class="panel-controls" style=" margin-top: 2px;">
+                        <li><a href="#" class="panel-fullscreen " style=" border: none"><span
+                                class="maximise"></span></a>
+                        </li>
+                        <li datefilternew set-view-mode="setViewMode(viewMode,startdate,enddate)" id="reportrange">
+                            <a href="#" class="dropdown-toggle no-border"><span class="theme-filterdd"></span></a>
+                        </li>
+                        <li export-highcharts=""></li>
+                    </ul>
+                </div>
+
+                <div class="panel-body layout-chart-container">
+                    <div class="row" style="height: 250px;">
+                        <div class="">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Value</th>
+                                        <th>Type</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Daily POA</td>
+                                        <td>
+                                            <span style="background:#3896B0;color:#fff;padding:3px 5px;border-radius:3px;">
+                                        {{dailypoa | number:2}} Wh/m2
+                                    </span>
+                                        </td>
+                                        <td>Default</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ambient Temparature</td>
+                                        <td>
+                                            <span style="background:#3896B0;color:#fff;padding:3px 5px;border-radius:3px;">
+                                            {{dailyghi | number :2}} &#8451;
+                                        </span>
+                                        </td>
+                                        <td>Default</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Wind Direction</td>
+                                        <td>
+                                            <span style="background:#3896B0;color:#fff;padding:3px 5px;border-radius:3px;">{{windirection}}</span>
+                                        </td>
+                                        <td>Default</td>
+                                    </tr>
+
+
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>

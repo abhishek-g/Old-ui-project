@@ -1,0 +1,45 @@
+<table id="table-site-overview" class="table js-table-sitesOverview table-responsive no-footer">
+    <thead>
+        <tr role="row">
+            <th colspan="1" rowspan="2" style="border-bottom: 1px solid #CCCCCC;border-right: 1px solid #CCCCCC;line-height:50px;text-align:left;"> Site</th>
+            <th colspan="1" rowspan="2" style="border-bottom: 1px solid #CCCCCC;border-right: 1px solid #CCCCCC;line-height:50px;text-align:left;"> Zone</th>
+            <th colspan="1" rowspan="2" style="border-bottom: 1px solid #CCCCCC;border-right: 1px solid #CCCCCC;line-height:50px;text-align:left;"> Date</th>
+            <th colspan="1" rowspan="2" style="border-bottom: 1px solid #CCCCCC;border-right: 1px solid #CCCCCC;line-height:50px;"> Installed Capacity (kWp)</th>
+            <th colspan="5" rowspan="1" style="border-bottom: 1px solid #CCCCCC;border-right: 1px solid #CCCCCC;"> Irradiance Energy (Wh/m<sup>2</sup>)</th>
+            <th colspan="1" rowspan="2" style="border-bottom: 1px solid #cccccc;border-right: 1px solid #cccccc;line-height:50px;"> Energy (kWh)</th>
+            <th colspan="5" rowspan="1" style="border-bottom: 1px solid #CCCCCC;border-right: 1px solid #CCCCCC;"> PR (%)</th>
+        </tr>
+        <tr role="row">
+            <th colspan="1" rowspan="1" style="border-bottom: 1px solid #CCCCCC;border-right: 1px solid #CCCCCC;border-left: 1px solid #CCCCCC;"> Common</th>
+            <th colspan="1" rowspan="1" style="border-bottom: 1px solid #CCCCCC;border-right: 1px solid #CCCCCC;"> East</th>
+            <th colspan="1" rowspan="1" style="border-bottom: 1px solid #CCCCCC;border-right: 1px solid #CCCCCC;"> West</th>
+            <th colspan="1" rowspan="1" style="border-bottom: 1px solid #CCCCCC;border-right: 1px solid #CCCCCC;"> North</th>
+            <th colspan="1" rowspan="1" style="border-bottom: 1px solid #CCCCCC;border-right: 1px solid #CCCCCC;"> South</th>
+
+            <th colspan="1" rowspan="1" style="border-bottom: 1px solid #CCCCCC;border-right: 1px solid #CCCCCC;border-left: 1px solid #CCCCCC;"> Common</th>
+            <th colspan="1" rowspan="1" style="border-bottom: 1px solid #CCCCCC;border-right: 1px solid #CCCCCC;"> East</th>
+            <th colspan="1" rowspan="1" style="border-bottom: 1px solid #CCCCCC;border-right: 1px solid #CCCCCC;"> West</th>
+            <th colspan="1" rowspan="1" style="border-bottom: 1px solid #CCCCCC;border-right: 1px solid #CCCCCC;"> North</th>
+            <th colspan="1" rowspan="1" style="border-bottom: 1px solid #CCCCCC;border-right: 1px solid #CCCCCC;"> South</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="summaryData in overViewData">
+            <td>{{summaryData.site}}</td>
+            <td>{{summaryData.zone}}</td>
+            <td>{{summaryData.date}}</td>
+            <td>{{summaryData.capacity}}</td>
+            <td>{{summaryData.poaCommon | number : 2}}</td>
+            <td>{{summaryData.poaEast | number : 2}}</td>
+            <td>{{summaryData.poaWest | number : 2}}</td>
+            <td>{{summaryData.poaNorth | number : 2}}</td>
+            <td>{{summaryData.poaSouth | number : 2}}</td>
+            <td>{{summaryData.yield | number : 2}}</td>
+            <td>{{summaryData.prCommon | number : 2}}</td>
+            <td>{{summaryData.prEast | number : 2}}</td>
+            <td>{{summaryData.prWest | number : 2}}</td>
+            <td>{{summaryData.prNorth | number : 2}}</td>
+            <td>{{summaryData.prSouth | number : 2}}</td>
+        </tr>
+    </tbody>
+</table>

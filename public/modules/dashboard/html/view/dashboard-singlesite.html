@@ -1,0 +1,458 @@
+<div class="container-fluid dashboard-container" style="min-height: 100%;">
+    <div class="row mtop">
+        <div class="col-sm-6 col-md-3">
+            <ul rn-carousel rn-carousel-auto-slide="7" rn-carousel-buffered rn-carousel-pause-on-hover class="image shadow-helper" style="min-height: 53px;border-radius:5px;">
+                <li>
+                    <div class="widget widget-default widget-item-icon shadow-helper">
+                        <div class="widget-item-left marhelp"><span class="theme-img-site"></span>
+                        </div>
+                        <div class="widget-data padhelp">
+                            <div class="widget-int num-count lynhgt">
+                                <span class="font24">{{SiteDetails.sites[0].siteName}}</span>
+                            </div>
+                            <div class="widget-title font12">Site Name</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="widget widget-default widget-item-icon shadow-helper">
+                        <div class="widget-item-left marhelp"><span class="theme-img-date"></span>
+                        </div>
+                        <div class="widget-data padhelp">
+                            <div class="widget-int num-count lynhgt">
+                                <span class="font24">{{SiteDetails.date}}</span>
+                            </div>
+                            <div class="widget-title font12">Date</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="widget widget-default widget-item-icon shadow-helper">
+                        <div class="widget-item-left marhelp"><span class="theme-img-PR"></span>
+                        </div>
+                        <div class="widget-data padhelp">
+                            <div class="widget-int num-count lynhgt">
+                                <span class="font24">{{SiteDetails.sitePr | number:2}} <span
+                                class="num-units">%</span></span>
+                            </div>
+                            <div class="widget-title font12">Performance Ratio</div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div rn-carousel-indicators slides="performanceIndication" rn-carousel-index="iNumberForperformanceIndication" class="rn-carousel-indicators"></div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+            <ul rn-carousel rn-carousel-auto-slide="7" rn-carousel-buffered rn-carousel-pause-on-hover class="image shadow-helper" style="min-height: 53px;border-radius:5px;">
+                <li>
+                    <div class="widget widget-default widget-item-icon shadow-helper">
+                        <div class="widget-item-left marhelp"><span class="theme-img-tod-gen"></span>
+                        </div>
+                        <div class="widget-data padhelp">
+                            <div class="widget-int num-count lynhgt">
+                                <span class="font24">{{SiteDetails.todayGeneration | number:2}} <span class="num-units">kWh</span></span>
+                            </div>
+                            <div class="widget-title font12">Today's Energy Generation</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="widget widget-default widget-item-icon shadow-helper">
+                        <div class="widget-item-left marhelp"><span class="theme-img-tot-gen"></span>
+                        </div>
+                        <div class="widget-data padhelp">
+                            <div class="widget-int num-count lynhgt">
+                                <span class="font24">{{SiteDetails.totalGeneration | number : 2}}  <span
+                    class="num-units">kWh</span></span>
+                            </div>
+                            <div class="widget-title font12">Total Energy Generation</div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div rn-carousel-indicators slides="energyGeneration" rn-carousel-index="iNumberForEnergyGeneration" class="rn-carousel-indicators"></div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+            <ul rn-carousel rn-carousel-auto-slide="7" rn-carousel-buffered rn-carousel-pause-on-hover class="image shadow-helper" style="min-height: 53px;border-radius:5px;">
+                <li>
+                    <div class="widget widget-default widget-item-icon shadow-helper">
+                        <div class="widget-item-left marhelp"><span class="theme-img-pk-pwr"></span>
+                        </div>
+                        <div class="widget-data padhelp">
+                            <div class="widget-int num-count lynhgt">
+                                <span class="font24">{{singlePeakPower | number:2}} <span class="num-units">kW</span></span>
+                            </div>
+                            <div class="widget-title font12">Today's Peak Power</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="widget widget-default widget-item-icon shadow-helper">
+                        <div class="widget-item-left marhelp"><span class="theme-img-tot-capacity"></span>
+                        </div>
+                        <div class="widget-data padhelp">
+                            <div class="widget-int num-count lynhgt">
+                                <span class="font24">{{SiteDetails.totalCapacity | number:2}} <span class="num-units">kWp</span></span>
+                            </div>
+                            <div class="widget-title font12">Total Capacity</div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div rn-carousel-indicators slides="energyGeneration" rn-carousel-index="iNumberForEnergyGeneration" class="rn-carousel-indicators"></div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+            <ul rn-carousel rn-carousel-auto-slide="7" rn-carousel-buffered rn-carousel-pause-on-hover class="image shadow-helper" style="min-height: 53px;border-radius:5px;">
+                <li>
+                    <div class="widget widget-default widget-item-icon shadow-helper">
+                        <div class="widget-item-left marhelp"><span class="theme-img-todays-co2"></span>
+                        </div>
+                        <div class="widget-data padhelp">
+                            <div class="widget-int num-count lynhgt">
+                                <span class="font24">{{SiteDetails.todayGeneration * 0.445 /1000 | number:2}} <span
+                                class="num-units">Ton</span></span>
+                            </div>
+                            <div class="widget-title font12">Today's Emissions Reduced</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="widget widget-default widget-item-icon shadow-helper">
+                        <div class="widget-item-left marhelp"><span class="theme-img-total-co2"></span>
+                        </div>
+                        <div class="widget-data padhelp">
+                            <div class="widget-int num-count lynhgt">
+                                <span class="font24">{{SiteDetails.totalGeneration * 0.445 /1000 | number:2}} <span
+                                class="num-units">Ton</span></span>
+                            </div>
+                            <div class="widget-title font12">Total Emissions Reduced</div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div rn-carousel-indicators slides="energyGeneration" rn-carousel-index="iNumberForEnergyGeneration" class="rn-carousel-indicators"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><span
+                        ng-repeat="site in SiteDetails.sites">{{site.siteName}}</span></h3>
+                    <ul class="panel-controls" style=" margin-top: 2px;">
+                        <li><a href="#" class="panel-fullscreen js-panel-map" style=" border: none"><span
+                            class="maximise "></span></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="panel-body js-map-panel-body" style="padding: 0px;height: 374px">
+                    <div class="row" single-site-map="" ng-show="isMarkerReady" style="height:inherit">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6" ng-controller="EnergyTrendsController">
+
+            <div class="panel panel-default" addClass=true>
+
+                <div class="panel-heading">
+                    <h3 class="panel-title">Plant Energy (kWh)</h3>
+                    <ul class="panel-controls" style=" margin-top: 2px;">
+                        <li><a href="#" class="panel-fullscreen " style=" border: none"><span
+                            class="maximise"></span></a>
+                        </li>
+                        <li><a href="#" class="panel-fullscreen" style=" border: none"><span  id="js-hideshow-energytrends" class="theme-hideeye ">
+                        </span></a>
+                        </li>
+                        <li datefilternew set-view-mode="setViewMode(viewMode,startdate,enddate)" id="reportrange">
+                            <a href="#" class="dropdown-toggle no-border"><span class="theme-filterdd"></span></a>
+                        </li>
+                        <li export-highcharts=""></li>
+                        <li ui-info-window="" data-to-hide-el=".js-energy-trends-details"> </li>
+                    </ul>
+                </div>
+                <groupbychangecall group-by-change="groupByChange(groupby)"></groupbychangecall>
+                <!--                <div id="Pagination" class="pagination"></div>-->
+                <button type="button" class="btn btn-default resetZoom pull-right" id="resetZoomPY">Reset Zoom</button>
+                <div class="panel-body theme-plant-energy js-energy-trend" single-site-energy-yield="">
+                </div>
+                <div class="alert alert-info js-energy-trends-details widget-show" style="display: none;font-size: 12pt">
+                    <p>Sum of today's energy yield from all energy meter in selected site - <strong>Hourly View</strong>
+                    </p>
+                    <div class="alert alert-info js-building-pr-details widget-show" style="display: none;font-size: 12pt">
+                        <p style="margin-left: 1%;text-align: left">Formula used : </p>
+                        <hr>
+                        <p>(<sup> Building's energy</sup>/<sub>Building's Installed Capacity</sub> ) * ( <sup>1000</sup>/<sub> Today's Irradiance Energy</sub> )</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+
+            <!--peak power chart-->
+            <div class="col-md-6" ng-controller="PeakPowerController">
+                <div class="panel panel-default" addclass="true">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Peak Power (kW)</h3>
+                        <ul class="panel-controls" style=" margin-top: 2px;">
+
+                            <li><a href="#" class="panel-fullscreen js-resize" style=" border: none"><span
+                                class="maximise"></span></a>
+                            </li>
+                            <!--
+<li><a href="#" class="panel-fullscreen" style=" border: none"><span  id="js-hideshow-specificpower" class="theme-hideeye ">
+                        </span></a>
+</li>
+-->
+                            <li datefilternew set-view-mode="setViewMode(viewMode,startdate,enddate)" id="reportrange">
+                                <a href="#" class="dropdown-toggle no-border"><span class="theme-filterdd"></span></a>
+                            </li>
+                            <li export-highcharts=""></li>
+                            <li ui-info-window="" data-to-hide-el=".js-specific-power-details"> </li>
+                        </ul>
+                    </div>
+                    <!--<groupbychangecall group-by-change="groupByChange(groupby)"></groupbychangecall>-->
+                    <!-- <button type="button" class="btn btn-default resetZoom pull-right" id="resetZoomSPP">Reset Zoom</button>-->
+                    <div class="panel-body theme-pk-pwr js-site-peakpower">
+                        <div class="row " single-site-peak-power="">
+                        </div>
+                    </div>
+                    <div class="alert alert-info js-specific-power-details widget-show" style="display: none;font-size: 12pt">
+                        <p style="margin-left: 1%;text-align: left">Formula used : </p>
+                        <hr>
+                        <p>( <sup>Instantaneous active power of a building's energy meter </sup>/<sub>Building's Installed Capacity</sub> )</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Specific Energy (kWh/kWp)</h3>
+                        <ul class="panel-controls" style=" margin-top: 2px;">
+                            <li>
+                                <a href="#" class="panel-fullscreen js-resize" style=" border: none"><span class="maximise "></span></a>
+                            </li>
+                            <li ui-info-window="" data-to-hide-el=".js-sp-yield-details"> </li>
+                        </ul>
+                    </div>
+                    <div class="panel-body theme-sp-energy">
+                        <div class="row">
+                            <div class="progress-list" ng-repeat="zones in singleSiteSpYield">
+                                <div class="pull-left"><strong style="font-size: 10pt">{{zones.subject}}</strong>
+                                </div>
+                                <div class="pull-right"><strong style="font-size: 10pt">{{zones.value | number : 2}}</strong>
+                                </div>
+                                <div class="progress progress-small">
+                                    <div class="progress-bar progress-bar-success" progress-value="" value="zones.value" role="progressbar" aria-valuenow="" aria-valuemin="0" aria-valuemax="100">
+                                        {{power.progressValue}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="alert alert-info js-sp-yield-details widget-show" style="display: none;font-size: 12pt">
+                        <p style="margin-left: 1%;text-align: left">Formula used : </p>
+                        <hr>
+                        <p>( <sup>Building's energy </sup>/<sub>Building's Installed Capacity</sub> )</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6" ng-controller="PoaVsApController">
+                <div class="panel panel-default" addclass="true">
+                    <div class="panel-heading">
+                        <h3 class="panel-title titleAdjust" alt="Irradiance vs Active Power (W/m<sup>2</sup> vs kW)">Irradiance vs Active Power (W/m<sup>2</sup> vs kW)</h3>
+                        <ul class="panel-controls" style=" margin-top: 2px;">
+                            <li><a href="#" class="panel-fullscreen js-resize" style=" border: none"><span
+                            class="maximise"></span></a>
+                            </li>
+                            <li><a href="#" class="panel-fullscreen" style=" border: none"><span  id="js-hideshow-poavsamb" class="theme-hideeye ">
+                        </span></a>
+                            </li>
+                            <li datefilternew set-view-mode="setViewMode(viewMode,startdate,enddate)" id="reportrange">
+                                <a href="#" class="dropdown-toggle no-border"><span class="theme-filterdd"></span></a>
+                            </li>
+                            <li export-highcharts=""></li>
+                            <li ui-info-window="" data-to-hide-el=".js-poa-ap-details"> </li>
+                        </ul>
+                    </div>
+                    <groupbychangecall group-by-change="groupByChange(groupby)"></groupbychangecall>
+                    <button type="button" class="btn btn-default resetZoom pull-right" id="resetZoomPOA">Reset Zoom</button>
+                    <div class="panel-body theme-poa-vs-ap js-poa-vs-ap" single-site-poa-vs-ap="">
+                    </div>
+                    <div class="alert alert-info js-poa-ap-details widget-show" style="display: none;font-size: 12pt">
+                        <p>Instantaneous sum of all active power from energy meter and Instantaneous POA ( w.m<sup>-2</sup>)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 zones-pr-compare">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Performance Ratio (R<sub>p</sub>)</h3>
+                        <ul class="panel-controls" style=" margin-top: 2px;">
+                            <li><a href="#" class="panel-fullscreen js-resize" style=" border: none"><span
+                            class="maximise "></span></a>
+                            </li>
+                            <li export-highcharts=""></li>
+                            <li ui-info-window="" data-to-hide-el=".js-building-pr-details"> </li>
+                        </ul>
+                    </div>
+                    <div class="panel-body theme-pr-comp js-single-site-zone-pr">
+                        <div class="row" zones-pr-compare="" ng-show="zonePrData.length >0">
+                        </div>
+                        <div class="theme-loader" ng-show="zonePrData.length  === 0">
+
+                        </div>
+                    </div>
+                    <div class="alert alert-info js-building-pr-details widget-show" style="display: none;font-size: 12pt">
+                        <p style="margin-left: 1%;text-align: left">Formula used : </p>
+                        <hr>
+                        <p>(<sup> Building's energy yield</sup>/<sub>Building's Installed Capacity</sub> ) * ( <sup>1000</sup>/<sub> Today's Irradiance Energy yield</sub> )</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-md-8">
+                <div class="panel panel-default" ng-controller="InverterModAmbController">
+                    <div class="panel-heading">
+                        <h3 class="panel-title textAdjust">Ambient vs Module Temperature</h3>
+                        <ul class="panel-controls" style=" margin-top: 2px;">
+                            <li><a href="#" class="panel-fullscreen js-resize" style=" border: none"><span
+                                class="maximise"></span></a>
+                            </li>
+                            <li><a href="#" class="panel-fullscreen" style=" border: none"><span  id="js-hideshow-moduleambienttemp" class="theme-hideeye ">
+                        </span></a>
+                            </li>
+                            <li export-highcharts=""></li>
+                            <li ui-info-window="" data-to-hide-el=".js-mod-amb-temperature-details"> </li>
+                        </ul>
+                    </div>
+                    <button type="button" class="btn btn-default resetZoom pull-right" id="resetZoomAMB">Reset Zoom</button>
+                    <div class="panel-body js-mod-amb-temp theme-amb-mod-comp">
+
+                        <div inverter-mod-amb-temp=""></div>
+                    </div>
+                    <div class="alert alert-info js-mod-amb-temperature-details widget-show" style="display: none;font-size: 12pt">
+                        <p>A comparison of Module temperature and Ambient temperature</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 single-site-alarms">
+                <div class="panel panel-default theme-zone-wise-alarms">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">High Alert Alarms
+                    </h3>
+                        <ul class="panel-controls" style=" margin-top: 2px;">
+                            <li ui-info-window="" data-to-hide-el=".js-high-alert-alarms-details"> </li>
+                        </ul>
+                    </div>
+                    <div class="panel-body" style=" height: 250px;overflow: auto;padding:0px;">
+                        <div class="" ng-show="singleSiteAlarmInfo.length > 0" style="overflow-x: hidden;height:100%" single-site-alarms="">
+                        </div>
+
+                        <div class="theme-loader" ng-show="singleSiteAlarmInfo.length === 0">
+
+                        </div>
+                    </div>
+                    <div class="alert alert-info js-high-alert-alarms-details widget-show" style="display: none;font-size: 12pt">
+                        <p>Icons represent connectivity status and when device last communicated</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6" ng-controller="CufController">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">CUF (%)</h3>
+                        <ul class="panel-controls" style=" margin-top: 2px;">
+                            <li><a href="#" class="panel-fullscreen js-resize" style=" border: none"><span
+                                class="maximise"></span></a>
+                            </li>
+                            <li datefilternew set-view-mode="setViewMode(viewMode,startdate,enddate)" id="reportrange">
+                                <a href="#" class="dropdown-toggle no-border"><span class="theme-filterdd"></span></a>
+                            </li>
+                            <li export-highcharts=""></li>
+                            <li ui-info-window="" data-to-hide-el=".js-cuf-details"> </li>
+                        </ul>
+                    </div>
+                    <div class="panel-body theme-cuf js-cuf-trend">
+                        <div class="row" single-site-cuf>
+
+                        </div>
+                    </div>
+                    <div class="alert alert-info js-cuf-details widget-show" style="display: none;font-size: 12pt">
+                        <p style="margin-left: 1%;text-align: left">Formula used : </p>
+                        <hr>
+                        <p>CUF(Daily) = ( <sup>plant energy (kWh) daily</sup>/<sub>(plant installed dc capacity * 24)</sub> ) * 100</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6" ng-controller="PrTrendsController">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Performance Ratio Trend(%)</h3>
+                        <ul class="panel-controls" style=" margin-top: 2px;">
+                            <li><a href="#" class="panel-fullscreen js-resize" style=" border: none"><span
+                                class="maximise"></span></a>
+                            </li>
+                            <li datefilternew set-view-mode="setViewMode(viewMode,startdate,enddate)" id="reportrange">
+                                <a href="#" class="dropdown-toggle no-border"><span class="theme-filterdd"></span></a>
+                            </li>
+                            <li export-highcharts=""></li>
+                            <li ui-info-window="" data-to-hide-el=".js-pr-trends-details"> </li>
+                        </ul>
+                    </div>
+                    <div class="panel-body theme-pr-trend js-pr-trend">
+                        <div class="row" single-site-pr-trend>
+                        </div>
+                    </div>
+                    <div class="alert alert-info js-pr-trends-details widget-show" style="display: none;font-size: 12pt">
+                        <p style="margin-left: 1%;text-align: left">Formula used : </p>
+                        <hr>
+                        <p>PR Trends(Daily) = ( <sup> Site's energy </sup>/<sub>Site's Installed Capacity</sub> ) * ( <sup>1000</sup>/<sub> Irradiance Energy </sub> )</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12" ng-controller="ZonesOverviewController">
+                <div class="panel panel-default" addclass="true">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Zones Overview</h3>
+                        <ul class="panel-controls" style=" margin-top: 2px;">
+                            <li><a href="#" class="panel-fullscreen " style=" border: none"><span
+                            class="maximise"></span></a>
+                            </li>
+                            <li class="dropdown" table-export="" data-ignore-column="[]" data-table-id="js-zones-overview">
+                            </li>
+                            <li ui-info-window="" data-to-hide-el=".js-zones-overview-details"> </li>
+                        </ul>
+                    </div>
+                    <div class="panel-body theme-overVU-table">
+                        <div class="table-responsive theme-zones-overview" style="overflow:auto;height: 100%;" zones-overview="" ng-show="zoneOverviewData.length > 0">
+                        </div>
+                        <div class="theme-loader" ng-show="zoneOverviewData.length === 0">
+
+                        </div>
+                    </div>
+                    <div class="alert alert-info js-zones-overview-details widget-show" style="display: none;font-size: 12pt;padding: 0 0;">
+                        <ul style="margin-top: 1%;">
+                            <li> Installed Capacity - Building's Installed Capacity</li>
+                            <li> Current Power - Building's Energy Meter active power</li>
+                            <li> Today's Energy - Building's energy yield from energy meter</li>
+                            <li> Total Energy - Building's till now energy yield from energy meter</li>
+                            <li> POA Energy - Irradiance energy Yield</li>
+                            <li> CUF (%) - (<sup>building's yield (kWh) daily</sup>/<sub>(building's installed capacity * 24)</sub>) * 100</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

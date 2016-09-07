@@ -1,0 +1,20 @@
+<!--
+<div class="row">
+    <ul style="padding-left: 15%">
+        <li class="theme-legend"> Specific Power (kW/kWp)</li>
+    </ul>
+</div>
+-->
+
+
+<div class="row" ng-show="formattedSPPower.length > 0">
+    <div class="col-md-12 ">
+        <form role="form" class="form-horizontal">
+            <div class="form-group" ng-repeat="power in formattedSPPower" step="0.1" min="0" max="1" data="power" ion-range-slider="">
+            </div>
+        </form>
+    </div>
+</div>
+<div class="theme-loader" ng-show="formattedSPPower.length === 0">
+
+</div>

@@ -1,0 +1,342 @@
+<div class="dashboard-container">
+    <div class="row mtop">
+        <div class="col-sm-6 col-md-3">
+            <ul rn-carousel rn-carousel-auto-slide="7" rn-carousel-index="iNumberForperformanceIndication" rn-carousel-pause-on-hover class="image shadow-helper" rn-carousel-buffered style="min-height: 53px;border-radius:5px;">
+                <li>
+                    <div class="widget widget-default widget-item-icon shadow-helper">
+                        <div class="widget-item-left marhelp"><span class="theme-img-site"></span>
+                        </div>
+                        <div class="widget-data padhelp">
+                            <div class="widget-int num-count lynhgt">
+                                <span class="font24">{{Details.sites[0].siteName}}</span>
+                            </div>
+                            <div class="widget-title font12">Site Name</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="widget widget-default widget-item-icon shadow-helper">
+                        <div class="widget-item-left marhelp"><span class="theme-img-date"></span>
+                        </div>
+                        <div class="widget-data padhelp">
+                            <div class="widget-int num-count lynhgt">
+                                <span class="font24">{{Details.date}}</span>
+                            </div>
+                            <div class="widget-title font12">Date</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="widget widget-default widget-item-icon shadow-helper">
+                        <div class="widget-item-left marhelp"><span class="theme-img-PR"></span>
+                        </div>
+                        <div class="widget-data padhelp">
+                            <div class="widget-int num-count lynhgt">
+                                <span class="font24">{{Details.sitePr | number:2}} <span
+                                class="num-units">%</span></span>
+                            </div>
+                            <div class="widget-title font12">Performance Ratio</div>
+                        </div>
+                        
+                    </div>
+                </li>
+            </ul>
+            <div rn-carousel-indicators slides="performanceIndication" rn-carousel-index="iNumberForperformanceIndication" class="rn-carousel-indicators"></div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+            <ul rn-carousel rn-carousel-auto-slide="7" rn-carousel-index="iNumberForEnergyGeneration" rn-carousel-buffered rn-carousel-pause-on-hover class="image shadow-helper" style="min-height: 53px;border-radius:5px;">
+                <li>
+                    <div class="widget widget-default widget-item-icon shadow-helper">
+                        <div class="widget-item-left marhelp"><span class="theme-img-tod-gen"></span>
+                        </div>
+                        <div class="widget-data padhelp">
+                            <div class="widget-int num-count lynhgt">
+                                <span class="font24">{{Details.todayGeneration | number:2}} <span class="num-units">kWh</span></span>
+                            </div>
+                            <div class="widget-title font12">Today's Energy Generation</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="widget widget-default widget-item-icon shadow-helper">
+                        <div class="widget-item-left marhelp"><span class="theme-img-tot-gen"></span>
+                        </div>
+                        <div class="widget-data padhelp">
+                            <div class="widget-int num-count lynhgt">
+                                <span class="font24">{{Details.totalGeneration | number : 2}}  <span
+                    class="num-units">kWh</span></span>
+                            </div>
+                            <div class="widget-title font12">Total Energy Generation</div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div rn-carousel-indicators slides="energyGeneration" rn-carousel-index="iNumberForEnergyGeneration" class="rn-carousel-indicators"></div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+            <ul rn-carousel rn-carousel-auto-slide="7" rn-carousel-index="iNumberForpeakPower" rn-carousel-buffered rn-carousel-pause-on-hover class="image shadow-helper" style="min-height: 53px;border-radius:5px;">
+                <li>
+                    <div class="widget widget-default widget-item-icon shadow-helper">
+                        <div class="widget-item-left marhelp"><span class="theme-img-pk-pwr"></span>
+                        </div>
+                        <div class="widget-data padhelp">
+                            <div class="widget-int num-count lynhgt">
+                                <span class="font24">{{AllsitepeakPower | number : 2}} <span class="num-units">kW</span></span>
+                            </div>
+                            <div class="widget-title font12">Today's Peak Power</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="widget widget-default widget-item-icon shadow-helper">
+                        <div class="widget-item-left marhelp"><span class="theme-img-tot-capacity"></span>
+                        </div>
+                        <div class="widget-data padhelp">
+                            <div class="widget-int num-count lynhgt">
+                                <span class="font24">{{Details.totalCapacity | number:2}} <span class="num-units">kWp</span></span>
+                            </div>
+                            <div class="widget-title font12">Total Capacity</div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div rn-carousel-indicators slides="peakPower" rn-carousel-index="iNumberForpeakPower" class="rn-carousel-indicators"></div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+            <ul rn-carousel rn-carousel-auto-slide="7" rn-carousel-index="iNumberForemissions" rn-carousel-buffered rn-carousel-pause-on-hover class="image shadow-helper" style="min-height: 53px;border-radius:5px;">
+                <li>
+                    <div class="widget widget-default widget-item-icon shadow-helper">
+                        <div class="widget-item-left marhelp"><span class="theme-img-todays-co2"></span>
+                        </div>
+                        <div class="widget-data padhelp">
+                            <div class="widget-int num-count lynhgt">
+                                <span class="font24">{{Details.todayGeneration * 0.445 /1000 | number:2}} <span
+                                class="num-units">Ton</span></span>
+                            </div>
+                            <div class="widget-title font12">Today's Emissions Reduced</div>
+                        </div>
+                       
+                    </div>
+                </li>
+                <li>
+                    <div class="widget widget-default widget-item-icon shadow-helper">
+                        <div class="widget-item-left marhelp"><span class="theme-img-total-co2"></span>
+                        </div>
+                        <div class="widget-data padhelp">
+                            <div class="widget-int num-count lynhgt">
+                                <span class="font24">{{Details.totalGeneration * 0.445 /1000 | number:2}} <span
+                                class="num-units">Ton</span></span>
+                            </div>
+                            <div class="widget-title font12">Total Emissions Reduced</div>
+                        </div>
+                      
+                    </div>
+                </li>
+            </ul>
+            <div rn-carousel-indicators slides="emissions" rn-carousel-index="iNumberForemissions" class="rn-carousel-indicators"></div>
+        </div>
+    </div>
+</div>
+
+
+    <!--detailed charts starts here-->
+    <div class="row">
+        <div class="col-md-8" style="height: 100%">
+            <!--All Sites-->
+            <div class="panel panel-default" id="map-container">
+                <div class="panel-heading">
+                    <h3 class="panel-title">All Sites</h3>
+                    <ul class="panel-controls" style=" margin-top: 2px;">
+                        <li><a href="#" class="panel-fullscreen js-panel-map" style=" border: none"><span
+                            class="maximise"></span></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="panel-body js-map-panel-body" style="height: 418px;padding: 0px" all-sites-map>
+
+                </div>
+            </div>
+            <!--All Sites Ends-->
+        </div>
+        <div class="col-md-4" style="height: 100%">
+
+            <!--Performance Ratio-->
+            <div class="row panel-pr-comparisons" style="height:100%">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Performance Ratio (R<sub>p</sub>)</h3>
+                        <ul class="panel-controls" style="margin-top: 2px;">
+                            <li><a href="#" class="panel-fullscreen js-resize" style="border: none"><span
+                                class="maximise"></span></a>
+                            </li>
+                            <li export-highcharts=""></li>
+                            <li ui-info-window="" data-to-hide-el=".js-pr-widget-details"> </li>
+                        </ul>
+                        <!--<div class="" sorter data-filterfn="sortpr(direction)"></div>-->
+                    </div>
+                    <div class="panel-body theme-pr-compare js-pr-compare prGenericScreen" style="overflow: auto;">
+                        <div class="row" ng-show="formattedpr.length > 0" pr-comparisons="">
+
+                        </div>
+                        <div class="theme-loader" ng-show="formattedpr.length === 0">
+
+                        </div>
+                    </div>
+                    <div class="alert alert-info js-pr-widget-details widget-show" style=" display: none;font-size: 13pt">
+
+                        <p style="margin-left: 1%;text-align: left">Formula used : </p>
+                        <hr>
+                        <p>( <sup> Site's energy</sup>/<sub>Site's Installed Capacity</sub> ) * ( <sup>1000</sup>/<sub> Irradiance Energy</sub> )</p>
+                    </div>
+                </div>
+              
+            </div>
+            <!--Performance Ratio Ends-->
+
+            <!--Specific Yield-->
+            <div class="row panel-sp-yield-comparisons" style="height: 100%;">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Specific Energy (kWh/kWp)</h3>
+                        <ul class="panel-controls" style="margin-top: 2px;">
+                            <li><a href="#" class="panel-fullscreen js-resize" style="border: none"><span class="maximise"></span></a>
+                            </li>
+                            <li export-highcharts=""></li>
+                            <li ui-info-window="" data-to-hide-el=".js-sp-yield-details"></li>
+                        </ul>
+                        <!--<div class="" sorter data-filterfn="sortSpecificYield(direction)"></div>-->
+                    </div>
+                    <div class="panel-body theme-sp-yield-comparisons js-sp-yield-compare">
+                        <div class="row" sp-yield-comparisons="">
+                        </div>
+                    </div>
+                    <div class="alert alert-info js-sp-yield-details widget-show " style="display: none;font-size: 13pt">
+                        <p style="margin-left: 1%;text-align: left">Formula used : </p>
+                        <hr>
+                        <p>( <sup>Site's energy </sup>/<sub>Site's Installed Capacity</sub> )</p>
+                    </div>
+                </div>
+            </div>
+            <!--Specific Yield Ends-->
+
+        </div>
+    </div>
+
+
+    <!--Weather-->
+    <div class="row">
+        <div class="col-md-4 panel-weather-details" style="height: 100%">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Weather</h3>
+                    <ul class="panel-controls" style="margin-top: 2px;">
+                        <li><a href="#" class="panel-fullscreen" style="border: none"><span class="maximise"></span></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="panel-body theme-sites-weather" style=" padding: 0px;height: 210px;overflow:auto;">
+                    <div class="col-md-12" ng-show="weatherInfo.length > 0" style="height: 100%;min-height: 190px;padding:0px;margin:0px;" weather-details>
+                    </div>
+                    <div class="theme-loader" ng-show="weatherInfo.length == 0">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--weather ends-->
+
+        <!--Specific Power-->
+        <div class="col-md-4 panel-high-alert-alarms" style=" height:50%">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Specific Power (kW/kWp)</h3>
+                    <ul class="panel-controls" style="margin-top: 2px;">
+                        <li><a href="#" class="panel-fullscreen js-resize" style="border: none"><span
+                                    class="maximise"></span></a>
+                        </li>
+                        <li ui-info-window="" data-to-hide-el=".js-sp-power-details"></li>
+                    </ul>
+                    <!--<div class="" sorter data-filterfn="sortSpecificPower(direction)"></div>-->
+                </div>
+                <div class="panel-body theme-sp-power-comparisons prcompare prGenericScreen" style="height:210px;overflow: auto;" sp-power-comparisons="">
+
+                </div>
+                <div class="alert alert-info js-sp-power-details widget-show " style="display: none;font-size: 13pt">
+                    <p style="margin-left: 1%;text-align: left">Formula used : </p>
+                    <hr>
+                    <p>( <sup> Sum of Energy Meter's current Active Power</sup>/<sub>Site's Installed Capacity</sub> )</p>
+                </div>
+            </div>
+
+        </div>
+        <!--Sp Ends-->
+
+        <!--High Alert Alarms Ends-->
+        <div class="col-md-4" style="height: 100%">
+            <div class="panel panel-default ">
+                <div class="panel-heading">
+                    <h3 class="panel-title">High Alert Alarms</h3>
+                    <ul class="panel-controls" style=" margin-top: 2px;">
+                        <li ui-info-window="" data-to-hide-el=".js-high-alert-alarms-details"> </li>
+                    </ul>
+                    <!--
+                        <ul class="panel-controls" style=" margin-top: 2px;">
+                        <li class="dropdown" table-export="" data-ignore-column="[]" data-table-id="js-all-sites-alarms">
+                        </li>
+                        </ul>
+                        -->
+                </div>
+                <div class="panel-body theme-high-alert-alarms style-3" style="  height: 212px;overflow: auto;padding:0px;">
+                    <div class="" ng-show="formattedAlarms.length >0" style="  height: 100%" high-alert-alarms>
+
+                    </div>
+                    <div class="theme-loader" ng-show="formattedAlarms.length === 0">
+
+                    </div>
+                </div>
+                <div class="alert alert-info js-high-alert-alarms-details widget-show" style="display: none;font-size: 12pt">
+                    <p>Icons represent connectivity status and when device last communicated</p>
+                </div>
+            </div>
+        </div>
+        <!--High Alert Alarms Ends-->
+
+    </div>
+
+
+    <!--Site Overview-->
+    <div class="row">
+        <div class="col-md-12 panel-sites-table" style="height: 100%">
+            <div class="panel panel-default" refresher>
+                <div class="panel-heading">
+                    <h3 class="panel-title">Site Overview</h3>
+                    <ul class="panel-controls" style="margin-top: 2px;">
+                        <li><a href="#" class="panel-fullscreen" style=" border: none"><span
+                            class="maximise"></span></a>
+                        </li>
+                        <li class="dropdown" table-export="" data-ignore-column="[]" data-table-id="js-table-sitesOverview">
+                        </li>
+                        <li ui-info-window="" data-to-hide-el=".js-sites-overview-details"></li>
+                    </ul>
+                </div>
+                <div class="panel-body theme-sites-overview" style="padding:0px;overflow: scroll">
+                    <div class="row" style="height: 100%">
+                        <div class="col-md-12 forDesktopOnly" ng-show="sitesOverviewData.length > 0" style="padding:0px;" sites-table="">
+                        </div>
+                        <div class="theme-loader" ng-show="sitesOverviewData.length == 0">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="alert alert-info js-sites-overview-details widget-show" style="display: none;font-size: 12pt;padding: 0 0;">
+                    <ul style="margin-top: 4%;">
+                        <li> Installed Capacity - Site's Installed Capacity</li>
+                        <li> Current Power - Sum of Site's Energy Meter active power</li>
+                        <li> Today's Energy - Sum of all today's Energy from energy meter</li>
+                        <li> CUF (%) - (<sup>plant Energy (kWh) daily</sup>/<sub>(plant installed capacity * 24)</sub>) * 100</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Site Overview Ends-->
+</div>

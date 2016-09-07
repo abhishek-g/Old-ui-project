@@ -1,0 +1,147 @@
+<div class="container-fluid dashboard-container">
+    <div class="row mtop">
+        <div class="col-sm-6 col-md-3">
+            <ul rn-carousel rn-carousel-auto-slide="8" rn-carousel-transition="slide" rn-carousel-index="i" class="image" style="height: 60px;position: relative">
+                <li>
+                    <div class="widget widget-default widget-item-icon shadow-helper">
+                        <div class="widget-item-left marhelp"><span class="theme-img-tod-gen m8"></span>
+                        </div>
+                        <div class="widget-data padhelp">
+                            <div class="widget-int num-count lynhgt">
+                                <span class="font24">{{eYield | number:1}} <span
+                            class="num-units">kWh</span></span>
+                            </div>
+                            <div class="widget-title font12">Today's Generation</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="widget widget-default widget-item-icon shadow-helper">
+                        <div class="widget-item-left marhelp"><span class="theme-img-tod-gen m8"></span>
+                        </div>
+                        <div class="widget-data padhelp">
+                            <div class="widget-int num-count lynhgt">
+                                <span class="font24">{{tYield | number:1}} <span
+                            class="num-units">kWh</span></span>
+                            </div>
+                            <div class="widget-title font12">Total Generation</div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div rn-carousel-indicators slides="slides" rn-carousel-index="i" class="rn-carousel-indicators"></div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+            <div class="widget widget-default widget-item-icon shadow-helper">
+                <div class="widget-item-left marhelp"><span class="theme-img-powerfactor m8"></span>
+                </div>
+                <div class="widget-data padhelp">
+                    <div class="widget-int num-count lynhgt">
+                        <span class="font24">{{gridPowerFactor | number:4}} </span>
+                    </div>
+                    <div class="widget-title font12">Power Factor</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+            <div class="widget widget-default widget-item-icon shadow-helper">
+                <div class="widget-item-left marhelp"><span class="theme-img-frequency m8"></span>
+                </div>
+                <div class="widget-data padhelp">
+                    <div class="widget-int num-count lynhgt">
+                        <span class="font24">{{gridFrequency | number:1}} <span
+                            class="num-units">Hz</span></span>
+                    </div>
+                    <div class="widget-title font12">Frequency</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+            <div class="widget widget-default widget-item-icon shadow-helper">
+                <div class="widget-item-left marhelp"><span class="theme-img-alarms-top m8"></span>
+                </div>
+                <div class="widget-data padhelp">
+                    <div class="widget-int num-count lynhgt">
+                        <span class="font24">{{alarmCount}} </span>
+                    </div>
+                    <div class="widget-title font12">Alarms</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12 col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Power Details</h3>
+                    <ul class="panel-controls" style=" margin-top: 2px;">
+                        <li ui-info-window="" data-to-hide-el=".js-dc-ac-power-compare-details"></li>
+                    </ul>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-4 borderB">
+                            <p class="theme-gauge-label labelCenter nomargin">Reactive Power</p>
+                            <div reactive-power-gauge=""></div>
+                        </div>
+                        <div class="col-md-4 borderB">
+                            <p class="theme-gauge-label labelCenter nomargin">Active Power</p>
+                            <div power-gauge=""></div>
+                        </div>
+                        <div class="col-md-4">
+                            <p class="theme-gauge-label labelCenter nomargin">Apparent Power</p>
+                            <div apparent-power-gauge=""></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="alert alert-info js-dc-ac-power-compare-details widget-show" style="display: none;font-size: 12pt">
+                    <p style="margin-top: 1%;">
+                        The Gauges display instantaneous values of Reactive , Active and Apparent power of Energy Meter
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-sm-12 col-md-12">
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        Parameter Details
+                    </h3>
+                    <ul class="panel-controls">
+                        <li class="dropdown" table-export="" data-ignore-column="[]" data-table-id="table-gmeter-params">
+                        </li>
+                    </ul>
+                </div>
+                <div class="panel-body" style="overflow:auto;">
+                    <table id="table-gmeter-params" class="table table-responsive theme-gmeter-table">
+                        <thead>
+                            <tr>
+                                <th style="border-bottom: 2.5px solid #404041"> Parameter</th>
+                                <th style="border-bottom: 2.5px solid #c53326"> PHASE A</th>
+                                <th style="border-bottom: 2.5px solid #f68a1e"> PHASE B</th>
+                                <th style="border-bottom: 2.5px solid #024da1"> PHASE C</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="param in parameters">
+                                <td>{{param.name}}</td>
+                                <td>{{param.Phase1 }} {{param.unit}}</td>
+                                <td>{{param.Phase2 }} {{param.unit}}</td>
+                                <td>{{param.Phase3 }} {{param.unit}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

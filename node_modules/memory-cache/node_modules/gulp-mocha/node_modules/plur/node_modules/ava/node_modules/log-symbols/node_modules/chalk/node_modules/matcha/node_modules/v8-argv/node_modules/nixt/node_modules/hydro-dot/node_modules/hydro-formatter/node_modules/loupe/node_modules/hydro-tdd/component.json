@@ -1,0 +1,14 @@
+{
+  "name": "hydro-tdd",
+  "repo": "hydrojs/hydro-tdd",
+  "description": "TDD interface for hydro",
+  "version": "0.0.1",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js"
+  ],
+  "development": {
+    "chaijs/simple-assert": "*"
+  }
+}

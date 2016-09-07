@@ -1,0 +1,64 @@
+/* media queries for complete application
+@author : Pratik */
+
+@media (min-width: 240px) and (max-width: 319px) {
+    #datePicker {
+        width: 100px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 479px) {
+    .borderB {
+        border-bottom: 2px solid #ccc;
+    }
+    .table > thead > tr > th {
+        font-size: 12px;
+        padding: 8px 3px;
+    }
+    .table > tbody > tr > th {
+        padding: 8px 3px;
+    }
+    .panel .panel-heading .panel-title {
+        margin-left: 2px;
+    }
+    .theme-sp-yield-comparisons {
+        overflow: hidden;
+    }
+    .theme-sites-weather {
+        overflow: hidden;
+    }
+    #view-container {
+        padding: 0px;
+    }
+    #view-container .container-fluid {
+        padding: 5px;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+    #view-container {
+        padding: 0px;
+    }
+    #view-container .container-fluid {
+        padding: 5px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {}
+
+@media (min-width: 1024px) and (max-width: 1279px) {}
+
+@media (min-width: 1280px) and (max-width: 1399px) {
+    .panel-title {
+        font-size:11pt;
+    }
+    .forAmityOnly {
+        display: block;
+        width: 100%;
+        text-align: center!important;
+    }
+}
+
+@media (min-width: 1400px) and (max-width: 1680px) {}
+
+@media (min-width: 1681px)

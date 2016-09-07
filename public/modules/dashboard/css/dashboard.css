@@ -1,0 +1,1430 @@
+.theme-export-icon {
+    background: url("/modules/global/css/img/Down_Save1.png") no-repeat;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 80%;
+    height: 0;
+    background-size: cover;
+    display: inline-block;
+}
+
+.theme-sorter-high {
+    width: 56px;
+    padding-top: 20px;
+    height: 0;
+    background: url("/modules/dashboard/css/img/high.png") no-repeat;
+    background-size: cover;
+    display: inline-block;
+    float: right;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.theme-sorter-low {
+    width: 56px;
+    padding-top: 20px;
+    height: 0;
+    background: url("/modules/dashboard/css/img/low.png") no-repeat;
+    background-size: cover;
+    display: inline-block;
+    float: right;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.theme-sorter-down {
+    width: 55px;
+    padding-top: 20px;
+    height: 0;
+    background: url("/modules/dashboard/css/img/Down1.png") no-repeat;
+    background-size: cover;
+    display: inline-block;
+    position: absolute;
+    right: 7%;
+    top: 6%;
+    cursor: pointer;
+}
+
+.theme-sorter-down.blur {
+    -webkit-filter: brightness(2);
+    filter: brightness(2);
+}
+
+.theme-sorter-up {
+    width: 55px;
+    padding-top: 20px;
+    height: 0;
+    background: url("/modules/dashboard/css/img/UP1.png") no-repeat;
+    background-size: cover;
+    display: inline-block;
+    position: absolute;
+    right: 7%;
+    top: 2%;
+    cursor: pointer;
+}
+
+.theme-sorter-up.blur {
+    -webkit-filter: brightness(2);
+    filter: brightness(2);
+}
+
+.overflow-auto,
+.theme-pr-compare {
+    overflow: auto;
+}
+
+.top-16,
+.theme-pr-compare .irs-line,
+.theme-pr-compare .irs-bar,
+.theme-pr-compare .irs-bar-edge,
+.theme-sp-yield-comparisons .irs-line,
+.theme-sp-yield-comparisons .irs-bar,
+.theme-sp-yield-comparisons .irs-bar-edge,
+.theme-sp-power-comparisons .irs-line,
+.theme-sp-power-comparisons .irs-bar,
+.theme-sp-power-comparisons .irs-bar-edge {
+    top: 16px !important;
+}
+
+.top-5,
+.theme-sites-overview .irs-line,
+.theme-sites-overview .irs-bar,
+.theme-sites-overview .irs-bar-edge {
+    top: 5px !important;
+}
+
+.theme-alarm-header-icon {
+    width: 41%;
+    margin: 0 auto;
+    padding-top: 33%;
+    height: 0;
+    background: url("/modules/dashboard/css/img/alarmbell.png") no-repeat;
+    background-size: cover;
+    display: inline-block;
+}
+
+.theme-green-marker {
+    width: 37%;
+    margin: 0 auto;
+    padding-top: 29%;
+    height: 0;
+    background: url("/modules/dashboard/css/img/marker02.png") no-repeat;
+    background-size: cover;
+    display: inline-block;
+}
+
+.theme-connectivity-icon {
+    width: 43%;
+    margin: 0 auto;
+    padding-top: 16%;
+    height: 0;
+    background: url("/modules/dashboard/css/img/Connect_Green.png") no-repeat;
+    background-size: cover;
+    display: inline-block;
+}
+
+.theme-connectivity-red-icon {
+    width: 43%;
+    margin: 0 auto;
+    padding-top: 16%;
+    height: 0;
+    background: url("/modules/dashboard/css/img/Connect_Red.png") no-repeat;
+    background-size: cover;
+    display: inline-block;
+}
+
+.theme-humidity {
+    width: 29px;
+    padding-top: 29px;
+    height: 0;
+    background: url("/modules/dashboard/css/img/Humidity-30.png") no-repeat;
+    background-size: cover;
+    display: inline-block;
+}
+
+.theme-temp {
+    width: 48px;
+    height: 60px;
+    background: url(/modules/dashboard/css/img/AMB_Temp.png) no-repeat center center;
+    background-size: contain;
+    display: inline-block;
+    position: relative;
+    top: 20px;
+}
+
+.theme-temp2 {
+    width: 48px;
+    height: 60px;
+    background: url(/modules/dashboard/css/img/MOD_Temp.png) no-repeat center center;
+    background-size: contain;
+    display: inline-block;
+    position: relative;
+    top: 20px;
+}
+
+.theme-wind {
+    width: 48px;
+    height: 60px;
+    background: url(/modules/dashboard/css/img/Wind_Speed.png) no-repeat center center;
+    background-size: contain;
+    display: inline-block;
+    position: relative;
+    top: 20px;
+}
+
+.theme-windDirection {
+    width: 48px;
+    height: 60px;
+    background: url(/modules/dashboard/css/img/Wind_Direction.png) no-repeat center center;
+    background-size: contain;
+    display: inline-block;
+    position: relative;
+    top: 20px;
+}
+
+.content-center {
+    text-align: center;
+}
+
+.theme-rainfall {
+    width: 29px;
+    padding-top: 29px;
+    height: 0;
+    background: url("/modules/dashboard/css/img/Rainfall-30.png") no-repeat;
+    background-size: cover;
+    display: inline-block;
+}
+
+.theme-img-tot-capacity {
+    width: 38px;
+    height: 50px;
+    background: url("/modules/dashboard/css/img/top-widgets/Total-Capacity.png") no-repeat center center;
+    background-size: contain;
+    display: inline-block;
+}
+
+.theme-img-pk-pwr {
+    width: 38px;
+    height: 50px;
+    background: url("/modules/dashboard/css/img/top-widgets/Today’s-Peak-Power.png") no-repeat center center;
+    background-size: contain;
+    display: inline-block;
+}
+
+.theme-img-tot-gen {
+    width: 38px;
+    height: 50px;
+    background: url("/modules/dashboard/css/img/top-widgets/Total-GENERATION.png") no-repeat center center;
+    background-size: contain;
+    display: inline-block;
+}
+
+.theme-img-tod-gen {
+    width: 38px;
+    height: 50px;
+    background: url("/public/modules/dashboard/css/img/top-widgets/Todays-GENERATION.png") no-repeat center center;
+    background-size: contain;
+    display: inline-block;
+}
+
+.theme-img-date {
+    width: 38px;
+    height: 50px;
+    background: url("/modules/dashboard/css/img/top-widgets/Date.png") no-repeat center center;
+    background-size: contain;
+    display: inline-block;
+}
+
+.theme-img-site {
+    width: 38px;
+    height: 50px;
+    background: url("/modules/dashboard/css/img/top-widgets/Site.png") no-repeat center center;
+    background-size: contain;
+    display: inline-block;
+}
+
+.theme-img-PR {
+    width: 38px;
+    height: 50px;
+    background: url("/modules/dashboard/css/img/top-widgets/PR_Performance-Ratio.png") no-repeat center center;
+    background-size: contain;
+    display: inline-block;
+}
+
+.theme-img-alarms-top {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 80%;
+    height: 0;
+    background: url("/modules/dashboard/css/img/ALARMS_ICON.png") no-repeat;
+    background-size: cover;
+    display: inline-block;
+}
+
+.theme-img-todays-co2 {
+    width: 38px;
+    height: 50px;
+    background: url("/modules/dashboard/css/img/top-widgets/Todays-Emmision.png") no-repeat center center;
+    background-size: contain;
+    display: inline-block;
+}
+
+.theme-img-total-co2 {
+    width: 38px;
+    height: 50px;
+    background: url("/modules/dashboard/css/img/top-widgets/Total-Emmision.png") no-repeat center center;
+    background-size: contain;
+    display: inline-block;
+}
+
+table.table-responsive {
+    width: 100% !important;
+}
+
+.dataTables_scrollHeadInner {
+    width: 100% !important;
+}
+
+.widget.widget-item-icon .widget-item-left {
+    border-right: none !important;
+}
+
+.widget.widget-padding-sm,
+.widget.widget-item-icon {
+    padding: 0px;
+}
+
+.panel-heading {
+    background: #ebebec !important;
+    padding: 2px !important;
+}
+
+.panel .panel-title {
+    color: #42515a;
+    font-family: Roboto-Medium;
+    font-size: 11pt;
+}
+
+.panel .panel-heading .panel-title {
+    margin-left: 11px;
+    white-space: nowrap;
+}
+
+.panel-default {
+    border: 1px solid #CCCCCC;
+    border-top-color: #CCCCCC !important;
+}
+
+.widget-default,
+.tile-default {
+    border: 1px solid #CCCCCC;
+    border-top-color: #CCCCCC !important;
+    background: #dceaf8 !important;
+}
+
+.widget .widget-int.num-count {
+    font-size: 32px !important;
+    white-space: nowrap;
+}
+
+.widget-subtitle {
+    font-family: Roboto-Medium;
+}
+
+.widget .widget-int .num-units {
+    font-size: 14px !important;
+    font-family: Roboto-Medium;
+}
+
+.widget .widget-title,
+.tile .tile-title {
+    font-size: 12px;
+    text-transform: none;
+    margin-bottom: 0;
+    white-space: nowrap;
+}
+
+.widget .widget-subtitle,
+.tile .tile-subtitle {
+    font-size: 14pt !important;
+}
+
+.widget {
+    min-height: 50px;
+}
+
+.breadcrumb {
+    margin: 0;
+}
+
+#datePicker {
+    font-size: 12px;
+    width: 150px;
+    float: right;
+}
+
+.owl-theme .owl-controls {
+    width: 50%;
+    float: right;
+}
+
+.widget.widget-item-icon .widget-item-left,
+.widget.widget-item-icon .widget-item-right {
+    padding: 0px !important;
+}
+
+.owl-wrapper-outer {
+    padding-top: 4%;
+}
+
+.owl-theme .owl-controls .owl-page span {
+    width: 10px !important;
+    height: 10px !important;
+}
+
+.widget-subtitle {
+    font-size: 14pt !important;
+    font-weight: 600;
+}
+
+.theme-pr-compare {
+    height: 180px;
+}
+
+.theme-pr-compare .irs {
+    height: 40px;
+}
+
+.irs-line {
+    z-index: 0 !important;
+}
+
+.theme-pr-compare .irs-line {
+    background: linear-gradient(to bottom, #DDD -50%, #FFF 150%);
+    border: 1px solid #CCC;
+    height: 10px !important;
+    border-radius: 0px;
+}
+
+.theme-pr-compare .irs-bar {
+    background: #63A143;
+    border-bottom-color: #63A143;
+    border-top-color: #63A143;
+    height: 10px !important;
+}
+
+.theme-pr-compare .irs-bar-edge {
+    border-color: #63A143;
+    background: #63A143;
+    height: 10px !important;
+    border-radius: 0px;
+}
+
+.theme-pr-compare .irs-slider {
+    top: 14px !important;
+    width: 3px !important;
+    height: 14px !important;
+    background: grey;
+    border: 0px;
+}
+
+.theme-pr-compare .irs-slider:hover {
+    background: grey;
+}
+
+.theme-pr-compare .irs-slider.to.type_last {
+    display: none;
+}
+
+.theme-pr-compare label.control-label {
+    padding-top: 1.1%;
+    padding-left: 1% !important;
+    text-align: left;
+}
+
+.theme-pr-compare label.theme-slider-text {
+    color: #43525a;
+    font-size: 13px;
+    font-family: Roboto-Regular;
+}
+
+.theme-pr-compare label.theme-slide-val {
+    color: #63A143;
+    font-size: 21px;
+    font-family: Roboto-Regular;
+}
+
+.theme-pr-compare .theme-slider-unit {
+    color: #63A143;
+    font-size: 14px;
+    font-family: Roboto-Regular;
+}
+
+.theme-pr-compare .form-horizontal .form-group {
+    margin-bottom: 0px;
+}
+
+.theme-sp-yield-comparisons {
+    height: 180px;
+}
+
+.theme-sp-yield-comparisons .irs {
+    height: 40px;
+}
+
+.theme-sp-yield-comparisons .irs-slider {
+    top: 12px !important;
+    width: 18px !important;
+    height: 18px !important;
+}
+
+.theme-sp-yield-comparisons .irs-bar {
+    background: #326db0;
+    border-top-color: #326db0;
+    border-bottom-color: #326db0;
+    border-radius: 16px;
+}
+
+.theme-sp-yield-comparisons .irs-bar-edge {
+    background: #326db0;
+    border-color: #326db0;
+}
+
+.theme-sp-yield-comparisons label.control-label {
+    padding-top: 1.1% !important;
+    padding-left: 1% !important;
+    text-align: left;
+}
+
+.theme-sp-yield-comparisons label.theme-slider-text {
+    color: #43525a;
+    font-size: 12px;
+}
+
+.theme-sp-yield-comparisons label.theme-slide-val {
+    color: #007bba;
+    font-size: 14px;
+}
+
+.theme-sp-yield-comparisons .irs-slider.single {
+    display: none;
+}
+
+.theme-sp-yield-comparisons li.theme-legend {
+    font-size: 9pt;
+    list-style: disc outside;
+    color: #326db0;
+}
+
+.theme-sp-yield-comparisons .form-horizontal .form-group {
+    margin-bottom: 0px;
+}
+
+.theme-sp-power-comparisons {
+    height: 210px;
+}
+
+.theme-sp-power-comparisons .irs {
+    height: 40px;
+}
+
+.theme-sp-power-comparisons .irs-slider {
+    top: 14px !important;
+    width: 3px !important;
+    height: 14px !important;
+    background: grey;
+    border: 0px;
+}
+
+.theme-sp-power-comparisons .irs-slider:hover {
+    background: grey;
+}
+
+.theme-sp-power-comparisons .irs-line {
+    height: 10px;
+    border-radius: 0px;
+}
+
+.theme-sp-power-comparisons .irs-bar {
+    height: 10px;
+    background: #63A143;
+    border-bottom-color: #63A143;
+    border-top-color: #63A143;
+}
+
+.theme-sp-power-comparisons .irs-bar-edge {
+    height: 10px;
+    background: #63A143;
+    border: #63A143;
+    border-radius: 0;
+}
+
+.theme-sp-power-comparisons label.control-label {
+    padding-top: 1.1%;
+    padding-left: 1% !important;
+    text-align: left;
+}
+
+.theme-sp-power-comparisons label.theme-slider-text {
+    color: #43525a;
+    font-size: 12px;
+    font-family: Roboto-Regular;
+}
+
+.theme-sp-power-comparisons label.theme-slide-val {
+    color: #63A143;
+    font-size: 21px;
+    font-family: Roboto-Regular;
+}
+
+.theme-sp-power-comparisons li.theme-legend {
+    font-size: 9pt;
+    list-style: disc outside;
+    color: #3C763D;
+    font-family: Roboto-Regular;
+}
+
+.theme-sp-power-comparisons .form-horizontal .form-group {
+    margin-bottom: 0px;
+}
+
+.theme-sites-overview {
+    height: 260px;
+}
+
+.theme-sites-overview .dataTables_scrollHead .dataTable:first-child {
+    border-bottom: none !important;
+}
+
+.theme-sites-overview .irs {
+    height: 20px;
+}
+
+.theme-sites-overview .irs-slider.single {
+    display: none;
+}
+
+.theme-sites-overview .irs-line {
+    height: 6px;
+}
+
+.theme-sites-overview .irs-bar {
+    height: 6px;
+}
+
+.theme-sites-overview .theme-today-gen .irs-bar {
+    border-top-color: #000;
+    border-bottom-color: #000;
+    background: #f8da15;
+}
+
+.theme-sites-overview .theme-today-gen .irs-line {
+    background: #000000;
+    border: 1px solid #000;
+}
+
+.theme-sites-overview .theme-today-yield .irs-bar {
+    border-top-color: #4D5383;
+    border-bottom-color: #4D5383;
+    background: #4D5383;
+}
+
+.theme-sites-overview .irs-bar-edge {
+    height: 6px;
+}
+
+.theme-sites-overview .theme-today-gen .irs-bar-edge {
+    border-color: #000;
+    background: #f8da15;
+}
+
+.theme-sites-overview .theme-today-yield .irs-bar-edge {
+    border-color: #4D5383;
+    background: #4D5383;
+}
+
+.irs-min,
+.irs-max {
+    font-size: 10pt !important;
+    font-family: Roboto-Regular;
+    background: none !important;
+}
+
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+    border-top: none;
+}
+
+.table > thead > tr > th {
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.table > tbody > tr > td {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.theme-high-alert-alarms .table > thead > tr > th {
+    border-bottom: none;
+    text-align: left;
+    border-bottom: 1px solid #CCCCCC !important;
+}
+
+.theme-high-alert-alarms .table > tbody > tr > th {
+    border-bottom: 1px solid #CCCCCC !important;
+    text-align: left !important;
+    color: #000;
+    font-size: 12px;
+    font-family: Roboto-Regular;
+}
+
+.theme-high-alert-alarms .theme-alarm-count {
+    color: #f2706b;
+}
+
+.theme-sites-weather {
+    height: 210px;
+}
+
+.theme-sites-weather .table > thead > tr > th {
+    border-bottom: none;
+    text-align: center;
+    color: #647b98;
+}
+
+.theme-sites-weather .table > tbody > tr > th {
+    border-bottom: 1px solid #CCCCCC !important;
+    text-align: center !important;
+    color: #43525a;
+}
+
+.theme-sites-weather tbody > tr > th,
+.theme-sites-weather tbody > tr > td {
+    color: #000 !important;
+    font-size: 12px !important;
+    font-family: Roboto-Regular;
+    font-weight: normal;
+}
+
+.dataTables_wrapper,
+.dataTables_scroll {
+    height: 100%;
+}
+
+.dataTables_scrollBody {
+    height: 70% !important;
+}
+
+#site-hierarchy > .panel {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+label.theme-yield {
+    color: #43525a;
+    font-size: 13px;
+    font-family: Roboto-Regular;
+}
+
+div.theme-yield {
+    color: #6b8b33;
+    font-size: 13px;
+    font-family: Roboto-Regular;
+}
+
+.panel,
+.widget {
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+}
+
+.dataTables_scrollHead .dataTable:first-child {
+    border-bottom: 1px solid #CCCCCC;
+}
+
+.table > tbody > tr > td {
+    border-bottom: 1px solid #CCCCCC;
+}
+
+.panel .panel-default {
+    border: 1px solid #CCCCCC;
+}
+
+div.rn-carousel-indicator span {
+    font-size: 14px;
+    color: #000000 !important;
+    opacity: 0.3 !important;
+}
+
+div.rn-carousel-indicator span.active {
+    font-size: 14px;
+    color: #000000 !important;
+    opacity: 0.8 !important;
+}
+
+.highcharts-loading {
+    position: absolute;
+    opacity: 0.5;
+    text-align: center;
+    z-index: 10;
+    left: 8px !important;
+    top: 0px !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.highcharts-loading > span {
+    background: url("/modules/global/css/img/loaders/loading25.gif") no-repeat;
+    top: 24% !important;
+    padding-bottom: 52px !important;
+    display: block;
+    left: 44%;
+}
+
+.theme-loader {
+    background: url("/modules/global/css/img/loaders/loading25.gif") no-repeat;
+    display: block;
+    position: absolute;
+    width: 10%;
+    padding-bottom: 11%;
+    left: 45%;
+    top: 28%;
+}
+
+.forTooltip {
+    color: #333;
+}
+
+.forTooltip:hover {
+    text-decoration: none;
+    cursor: default;
+    color: #333;
+}
+
+.theme-map-cover {
+    height: 99%;
+    width: 99.5%;
+    position: absolute;
+    top: 1px;
+    background: #fff;
+    left: 1px;
+    opacity: 0.4;
+}
+/** CSS - Dashboard 
+    @author : Pratik **/
+
+.dashboard-container .mtop {
+    margin-top: 10px;
+}
+
+.shadow-helper {
+    box-shadow: 2px 2px 2px rgb(198, 198, 198) !important;
+}
+
+.panel {
+    box-shadow: 2px 2px 2px rgb(198, 198, 198) !important;
+    border-radius: 0px;
+}
+
+.panel-heading {
+    border-radius: 0px;
+}
+
+.padhelp {
+    padding-left: 60px !important;
+}
+
+.marhelp {
+    width: 60px !important;
+    margin: 0px !important;
+}
+
+.lynhgt {
+    line-height: 18px !important;
+    padding-top: 6px;
+}
+
+.font24 {
+    white-space: nowrap;
+    font-size: 18px !important;
+}
+
+.db {
+    display: block;
+}
+
+.centernormal {
+    text-align: center !important;
+    font-weight: normal;
+}
+
+.titlehelp {
+    border-bottom: 1px solid #CCCCCC !important;
+    color: #333 !important;
+    font-weight: 800;
+}
+
+.table tbody tr:nth-child(odd) {
+    background-color: #F1F5F9;
+}
+
+.table tbody tr td {
+    border-right: 1px solid #CCCCCC;
+}
+
+.highcharts-button {
+    display: none;
+}
+
+.highcharts-contextmenu {
+    right: -11px !important;
+    top: -14px !important;
+    padding: 15px !important;
+}
+
+.highcharts-contextmenu > div > div {
+    padding: 2px !important;
+    font-size: 9pt !important;
+    border-radius: 8px !important;
+    margin: 0px 4px !important;
+    text-align: center !important;
+}
+
+.highcharts-contextmenu > div > div:first-child {
+    display: none;
+}
+
+.highcharts-contextmenu > div > div:hover {
+    color: #FFF !important;
+    background: #26303A !important;
+}
+
+.highcharts-contextmenu > div {
+    border-radius: 5px;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.highcharts-contextmenu > div > hr {
+    margin: 0 !important;
+}
+
+.layout-chart-container {
+    padding: 12px 2px !important;
+}
+
+.valueGauge {
+    font-weight: 900;
+    font-size: 24px;
+}
+
+.boldness {
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.nomargin {
+    margin: 0px;
+}
+
+.alarmlabel {
+    background: #63A043;
+    padding: 2px 5px;
+    border-radius: 3px;
+    color: #fff;
+}
+
+.rn-carousel-indicators {
+    position: absolute;
+    top: 10px;
+    right: 5%;
+}
+
+.export-ele {
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 3px 12px !important;
+    font-size: 13px;
+    text-decoration: none;
+    border-bottom: none !important;
+    text-align: center;
+    margin: 4px 4px;
+}
+
+.export-ele:hover,
+.export-ele.active {
+    background: #33414e !important;
+    border: 1px solid #33414e !important;
+    color: #fff !important;
+}
+
+.rforAmityOnly {
+    margin-top: -30px;
+}
+
+.js-table-sitesOverview> tbody > tr > td,
+.js-table-weather > tbody > tr > td,
+.js-all-sites-alarms > tbody > tr > td {
+    padding: 5px;
+    border-right: 1px solid #ccc;
+}
+
+.js-table-sitesOverview> thead > tr > th,
+.js-table-weather > thead > tr > th,
+.js-all-sites-alarms > thead > tr > th {
+    border-right: 1px solid #CCCCCC;
+    border-bottom: 1px solid #CCC;
+    padding: 5px 0px;
+}
+
+div.datepicker {
+    min-width: 200px;
+}
+
+.item {
+    background: #fff;
+    text-align: center;
+    height: 180px !important;
+}
+
+.carousel {
+    margin-top: 0px;
+}
+
+#myCarousel > .carousel-indicators .active {
+    background-color: #ccc;
+}
+
+#myCarousel >.carousel-control.left,
+#myCarousel >.carousel-control.right {
+    background-image: none;
+}
+
+.zoneSlide {
+    color: #000;
+}
+
+.bs-example {
+    margin: 0px;
+}
+
+#slides_control > div {
+    height: 200px;
+}
+
+#slides_control {
+    position: absolute;
+    width: 400px;
+    left: 50%;
+    top: 20px;
+    margin-left: -200px;
+}
+
+.widget-hide {
+    opacity: 0.2;
+}
+
+.widget-show {
+    position: absolute;
+    width: 98%;
+    text-align: center;
+    top: 19%;
+    height: 80%;
+    display: block;
+    margin-left: 1%;
+}
+
+.widget-show > ul > li {
+    text-align: left;
+    padding: 0.5%;
+    list-style: circle;
+}
+
+.resetZoom {
+    padding: 2px 5px;
+    border-radius: 0px;
+}
+
+.irs-slider {
+    z-index: 0 !important;
+}
+
+.labelCenter {
+    text-align: center !important;
+}
+/*pagination css*/
+
+.pagination {
+    font-size: 80%;
+    width: auto;
+    margin: 0px 20%;
+}
+
+.pagination a {
+    text-decoration: none;
+    border: solid 1px #AAE;
+    color: #15B;
+}
+
+.pagination a,
+.pagination span {
+    display: block;
+    float: left;
+    padding: 0.3em 0.5em;
+    margin-right: 5px;
+    margin-bottom: -6px;
+}
+
+.pagination .current {
+    background: #26B;
+    color: #fff;
+    border: solid 1px #AAE;
+}
+
+.pagination .current.prev,
+.pagination .current.next {
+    color: #999;
+    border-color: #999;
+    background: #fff;
+}
+
+.highcharts-tooltip >span {
+    padding: 0px;
+}
+
+.highcharts-tooltip >span .titlespan {
+    padding: 3px 10px;
+    background: #fff;
+    margin: 0;
+    background: #2A3035;
+    color: #fff;
+    text-align: center;
+}
+
+.highcharts-tooltip >span .valuespan {
+    background: #2FA0EC;
+    padding: 3px;
+    color: #fff;
+    margin: 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+.highcharts-tooltip >span .titlespancol {
+    padding: 5px;
+    background: #fff;
+    margin: 0;
+    background: #2A3035;
+    color: #fff;
+    text-align: center;
+}
+
+.highcharts-tooltip >span .valuespancol {
+    background: #2FA0EC;
+    padding: 5px;
+    color: #fff;
+    margin: 0;
+    text-align: center;
+}
+
+.highcharts-tooltip>span .timevaluespan {
+    background: #6C9F3A;
+    color: #fff;
+    text-align: center;
+    padding: 2px 5px;
+    margin: 0;
+    font-size: 12px;
+    border-bottom: 1px solid black;
+}
+
+#slides_control > div {
+    height: 200px;
+}
+
+img {
+    margin: auto;
+    width: 400px;
+}
+
+#slides_control {
+    position: absolute;
+    width: 400px;
+    left: 50%;
+    top: 20px;
+    margin-left: -200px;
+}
+
+.alarmsHeadZone {
+    background: #ffe7de;
+    font-family: Roboto-Medium;
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+    margin: 0px;
+}
+
+.alarmLabel {
+    float: right;
+    font-weight: 600;
+    line-height: 7;
+}
+
+.alarmsHeadConnected {
+    background: #dbf0dc;
+    color: #63A143;
+    font-family: Roboto-Medium;
+    padding: 5px;
+    text-align: center;
+    font-size: 14px;
+    margin: 0px;
+}
+
+.alarmsHeadDisconnected {
+    background: #ffe7de;
+    color: #b64645;
+    font-family: Roboto-Medium;
+    padding: 5px;
+    text-align: center;
+    font-size: 14px;
+    margin: 0px;
+}
+
+.reportedAt {
+    color: #000;
+}
+
+.connectivityIcon {
+    background: url(img/Status_Conect.png) no-repeat center center;
+    width: 72px;
+    height: 72px;
+    position: absolute;
+}
+
+.disconnectivityIcon {
+    background: url(img/Status_Dissconect.png) no-repeat center center;
+    width: 72px;
+    height: 72px;
+    position: absolute;
+}
+
+.alarmbell {
+    background: url(img/Alarm_Bell.png) no-repeat center center;
+    width: 72px;
+    height: 72px;
+    position: absolute;
+}
+
+.siteTitle {
+    bottom: 0px;
+    position: absolute;
+    margin: 0;
+    text-align: center;
+    background: #ebebec;
+    width: 100%;
+    padding: 5px;
+    color: #2e65a3;
+    font-family: Roboto-Medium;
+    font-size: 10pt;
+}
+
+.siteTitleWeather {
+    bottom: 0px;
+    position: absolute;
+    margin: 0;
+    text-align: center;
+    background: #ebebec;
+    width: 100%;
+    padding: 5px;
+    color: #2e65a3;
+    font-family: Roboto-Medium;
+    font-size: 10pt;
+}
+
+.indycators {
+    background: #ebebec;
+    text-align: center;
+    padding: 5px;
+}
+
+.alarmcount {
+    text-align: center;
+    color: #ff5d4c;
+    font-size: 48px;
+    margin: 0px;
+    line-height: 50px;
+}
+
+.conectText {
+    white-space: nowrap;
+    line-height: 100px;
+    font-weight: 600;
+    padding: 0px !important;
+}
+
+.ambTitle {
+    background: #ebf2df;
+    text-align: center;
+    border-right: 1px solid #cccccc;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.ambBorderBottom {
+    border-bottom: 8px solid #6a853b
+}
+
+.modBorderBottom {
+    border-bottom: 8px solid #359066
+}
+
+.wsBorderBottom {
+    border-bottom: 8px solid #3c82b2
+}
+
+.wdBorderBottom {
+    border-bottom: 8px solid #436774
+}
+
+.modTitle {
+    background: #dbf0dc;
+    text-align: center;
+    border-right: 1px solid #cccccc;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.wsTitle {
+    background: #dbe8f0;
+    text-align: center;
+    border-right: 1px solid #cccccc;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.wdTitle {
+    background: #dee6f5;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.weatherValues {
+    position: absolute;
+    bottom: 45px;
+    width: 100%;
+    text-align: center;
+}
+
+.borderRight {
+    border-right: 1px solid #ccc;
+    line-height: 55px;
+}
+
+.borderRightValues {
+    border-right: 1px solid #ccc;
+}
+
+.nopad {
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+.footerTitle {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+.theme-plant-energy {
+    height: 349px;
+}
+
+.theme-pr-compares {
+    height: 248px;
+}
+
+.theme-pr-az,
+.theme-inv-eff {
+    height: 330px;
+}
+
+.theme-amb-mod-comp {
+    height: 224px
+}
+
+.theme-pk-pwr {
+    height: 440px
+}
+
+.theme-overVU-table {
+    height: 350px;
+    padding: 0px !important;
+}
+
+.theme-sp-energy {
+    height: 440px;
+    overflow: auto;
+}
+
+.theme-pr-comp {
+    height: 450px;
+}
+
+.theme-poa-vs-ap {
+    height: 423px;
+}
+
+.theme-cuf,
+.theme-pr-trend {
+    height: 250px;
+}
+
+.theme-zn-energy,
+.theme-inv-sp-pw {
+    height: 300px;
+}
+
+.theme-dc-ac-compare {
+    height: 300px;
+}
+
+.theme-dc-ac-comp-si {
+    height: 340px
+}
+
+.theme-ap-sg {
+    height: 370px;
+}
+
+.surface-vs-ambient {
+    height: 200px;
+}
+
+.weather-humidity,
+.live-wind-speed {
+    height: 250px;
+}
+
+.theme-username {
+    line-height: 50px;
+    color: #fff;
+}
+
+.theme-to-show-header {
+    width: 100%;
+    display: none;
+    margin-bottom: 0;
+}
+
+.theme-row-header-fixed {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background-color: #FFF;
+    z-index: 1;
+}

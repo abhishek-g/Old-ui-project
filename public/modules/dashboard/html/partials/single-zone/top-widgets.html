@@ -1,0 +1,120 @@
+<div class="col-md-3">
+    <ul rn-carousel class="shadow-helper" style="height: 53px;position: relative">
+        <li>
+            <div class="widget widget-default widget-item-icon  shadow-helper">
+                <div class="widget-item-left marhelp"><span class="theme-img-dev_inv m8"></span>
+                </div>
+                <div class="widget-data padhelp">
+                    <div class="widget-int num-count lynhgt">
+                        <span class="font24">{{invCount}} <span class="num-units">Inverters</span></span>
+                    </div>
+                    <div class="widget-title font12"></div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="col-md-3">
+    <ul rn-carousel rn-carousel-auto-slide="7" rn-carousel-index="iNumberForperformanceIndication" rn-carousel-pause-on-hover rn-carousel-buffered class="image shadow-helper" style="height: 53px;position: relative">
+        <li>
+            <div class="widget widget-default widget-item-icon">
+                <div class="widget-item-left marhelp"><span class="theme-img-tod-gen "></span>
+                </div>
+                <div class="widget-data padhelp">
+                    <div class="widget-int num-count lynhgt">
+                        <span class="font24">{{(SingleZoneDetails.totalGeneration) | number:2}} <span class="num-units">kWh</span></span>
+                        <div class="widget-title font12">Total generation</div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="widget widget-default widget-item-icon">
+                <div class="widget-item-left marhelp"><span class="theme-img-tod-gen"></span>
+                </div>
+                <div class="widget-data padhelp">
+                    <div class="widget-int num-count lynhgt">
+                        <span class="font24">{{(SingleZoneDetails.todayGeneration) | number:2}} <span class="num-units">kWh</span></span>
+                        <div class="widget-title font12">Today's generation</div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="widget widget-default widget-item-icon">
+                <div class="widget-item-left marhelp"><span class="theme-img-specificyield m8"></span>
+                </div>
+                <div class="widget-data padhelp">
+                    <div class="widget-int num-count lynhgt">
+                        <span class="font24">{{(SingleZoneDetails.todayGeneration)/(SingleZoneDetails.totalCapacity) | number:2}}  <span class="num-units">kWh/kWp</span></span>
+
+                        <div class="widget-title font12">Specific Energy</div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <div rn-carousel-indicators slides="performanceIndication" rn-carousel-index="iNumberForperformanceIndication" class="rn-carousel-indicators"></div>
+</div>
+<div class="col-md-3">
+    <ul rn-carousel rn-carousel-auto-slide="7" rn-carousel-index="iNumberForEnergyGeneration" rn-carousel-pause-on-hover rn-carousel-buffered class="image shadow-helper" style="height: 53px;position: relative">
+        <li>
+            <div class="widget widget-default widget-item-icon shadow-helper">
+                <div class="widget-item-left marhelp"><span class="theme-img-tot-capacity"></span>
+                </div>
+                <div class="widget-data padhelp">
+                    <div class="widget-int num-count lynhgt">
+                        <span class="font24">{{SingleZoneDetails.totalCapacity | number:2}} <span class="num-units">kWp</span></span>
+                    </div>
+                    <div class="widget-title font12">Total Zone Capacity</div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="widget widget-default widget-item-icon">
+                <div class="widget-item-left marhelp"><span class="theme-img-specificpower"></span>
+                </div>
+                <div class="widget-data padhelp">
+                    <div class="widget-int num-count lynhgt">
+                        <span class="font24">{{(SingleZoneDetails.todayGeneration)/(SingleZoneDetails.totalCapacity) | number:2}} <span class="num-units">kW/kWp</span></span>
+
+                        <div class="widget-title font12">Specific Power</div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <div rn-carousel-indicators slides="energyGeneration" rn-carousel-index="iNumberForEnergyGeneration" class="rn-carousel-indicators"></div>
+</div>
+<div class="col-md-3">
+    <ul rn-carousel rn-carousel-auto-slide="7" rn-carousel-index="iNumberForpeakPower" rn-carousel-pause-on-hover class="image shadow-helper" rn-carousel-buffered style="min-height: 53px;border-radius:5px;">
+        <li>
+            <div class="widget widget-default widget-item-icon shadow-helper">
+                <div class="widget-item-left marhelp"><span class="theme-img-todays-co2"></span>
+                </div>
+                <div class="widget-data padhelp">
+                    <div class="widget-int num-count lynhgt">
+                        <span class="font24">{{todayCo2Saved | number:2}} <span
+                                class="num-units">Ton</span></span>
+                    </div>
+                    <div class="widget-title font12">Today's Emissions Reduced</div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="widget widget-default widget-item-icon shadow-helper">
+                <div class="widget-item-left marhelp"><span class="theme-img-total-co2"></span>
+                </div>
+                <div class="widget-data padhelp">
+                    <div class="widget-int num-count lynhgt">
+                        <span class="font24">{{totalCo2Saved | number:2}} <span
+                                class="num-units">Ton</span></span>
+                    </div>
+                    <div class="widget-title font12">Total Emissions Reduced</div>
+                </div>
+            </div>
+        </li>
+
+    </ul>
+    <div rn-carousel-indicators slides="peakPower" rn-carousel-index="iNumberForpeakPower" class="rn-carousel-indicators"></div>
+</div>

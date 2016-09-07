@@ -1,0 +1,8 @@
+.theme-img-pr {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 80%;
+    height: 0;
+    background: url("/modules/dashboard/css/img/Best_PR_ICON.png") no-repeat;
+    background-size: cover;
+    display: inline-block; }

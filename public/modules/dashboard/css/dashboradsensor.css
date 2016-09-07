@@ -1,0 +1,95 @@
+#weatherconditons .panel-body .row{
+    height: 200px;
+}
+#weatherconditons .weather_icon{
+    background-color: #ebd3e2;
+    height: 70%;
+    background-image: url("../css/img/weathericons/Icon_Windy.png");
+    background-size: 80px 60px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 23px;
+}
+#weatherconditons .mCustomScrollbar{
+    height: 200px;overflow-y: auto;
+}
+
+#weatherconditons .mCustomScrollbar button{
+    margin: 3px 0 3px 0;
+    width: 90%;
+}
+.ftlt{
+    width: 100%;
+    float: left;
+}
+#weatherconditons .bottom-text{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.top-widget-wea-poa {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 80%;
+    height: 0;
+    background: url("../css/img/weathericons/weather-topwidget/Daily-GHI.png") no-repeat;
+    background-size: cover;
+    display: inline-block;
+}
+.top-widget-wea-ghi {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 80%;
+    height: 0;
+    background: url("../css/img/weathericons/weather-topwidget/Daily-POA.png") no-repeat;
+    background-size: cover;
+    display: inline-block;
+}
+.theme-rain-icon {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 80%;
+    height: 0;
+    background: url("../css/img/weathericons/weather-topwidget/Rainfall.png") no-repeat;
+    background-size: cover;
+    display: inline-block;
+}
+.theme-hum-icon{
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 80%;
+    height: 0;
+    background: url("../css/img/weathericons/weather-topwidget/Humidity.png") no-repeat;
+    background-size: cover;
+    display: inline-block;
+}
+.theme-windsp-icon {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 80%;
+    height: 0;
+    background: url("../css/img/weathericons/weather-topwidget/Windspeed.png") no-repeat;
+    background-size: cover;
+    display: inline-block;
+}
+.theme-winddir-icon{
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 80%;
+    height: 0;
+    background: url("../css/img/weathericons/weather-topwidget/Wind_direction.png") no-repeat;
+    background-size: cover;
+    display: inline-block;
+}
+.weather-date-group button{
+    background-color: #ffffff;
+    color: #42515a;
+    font-size: 13px;
+}
+.weather-date-group .btn-info {
+background-color: #3d71b8;
+border:1px solid #3d71b8;
+    color: #ffffff;
+    font-size: 14px;
+}

@@ -1,0 +1,56 @@
+<ul rn-carousel style="height:180px;margin:0px;" rn-carousel-index="iNumberDashboardWeather" rn-carousel-auto-slide="iNumberDashboardWeather" rn-carousel-pause-on-hover rn-carousel-buffered>
+    <li ng-repeat="weather in weatherInfo">
+        <div class="row">
+            <div class="col-md-12 nopad">
+                <div class="col-md-3 col-sm-3 col-xs-3 nopad">
+                    <div class="row ambTitle">
+                        <b style="white-space:nowrap;color:#33414e;">T <sub>am</sub></a> (<sup>o</sup>C)</b>
+                    </div>
+                    <div class="row borderRight content-center">
+                        <span class="theme-temp"></span>
+                    </div>
+                    <div class="row borderRightValues ambBorderBottom">
+                        <p style="color:#6a853b;font-size:18px;margin:0px;text-align: center;">{{weather.Ambtemperature.toFixed(2)}}</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-3 nopad">
+                    <div class="row modTitle">
+                        <b style="white-space:nowrap;color:#33414e;">T <sub>m</sub></a> (<sup>o</sup>C)</b>
+                    </div>
+                    <div class="row borderRight content-center">
+                        <span class="theme-temp2"></span>
+                    </div>
+                    <div class="row borderRightValues modBorderBottom">
+                        <p style="color:#359066;font-size:18px;margin:0px;text-align: center;">{{weather.Modtemperature.toFixed(2)}}</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-3 nopad">
+                    <div class="row wsTitle">
+                        <b style="white-space:nowrap;color:#33414e;">S <sub>w</sub></a> (m/s)</b>
+                    </div>
+                    <div class="row borderRight content-center">
+                        <span class="theme-wind"></span>
+                    </div>
+                    <div class="row borderRightValues wsBorderBottom">
+                        <p style="color:#3c82b2;font-size:18px;margin:0px;text-align: center;">{{weather.wind.toFixed(2)}}</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-3 nopad">
+                    <div class="row wdTitle">
+                        <b style="white-space:nowrap;color:#33414e;">D <sub>w</sub></b>
+                    </div>
+                    <div class="row content-center" style="line-height:55px;">
+                        <span class="theme-windDirection"></span>
+                    </div>
+                    <div class="row wdBorderBottom">
+                        <p style="color:#436774;font-size:18px;margin:0px;text-align: center;">{{weather.windDirection}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row footerTitle">
+            <p class="siteTitleWeather">{{weather.siteName.toUpperCase()}}</p>
+        </div>
+    </li>
+</ul>
+<div class="indycators" rn-carousel-indicators slides="weatherInfo" rn-carousel-index="iNumberDashboardWeather"></div>

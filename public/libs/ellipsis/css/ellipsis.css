@@ -1,0 +1,29 @@
+.layout-tooltip {
+	margin-top: 0.5%;
+	display: none;
+}
+
+.theme-text-tooltip {
+	border-radius: 4px;
+	font-size:15px;
+	/* line-height: normal; */
+	padding: 5px;
+	background: black;
+	position: absolute;
+	color: white;
+	/* bottom: auto;
+	right: auto;
+	width: auto; */
+	z-index: 1000;
+    top:64px;
+}
+
+.theme-text-tooltip-nub {
+	left: 10px;
+	position: absolute;
+	right: auto;
+	top: -10px;
+	border-bottom: 10px solid black;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+}

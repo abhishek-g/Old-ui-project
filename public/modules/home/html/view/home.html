@@ -1,0 +1,93 @@
+<div class="page-container page-navigation-top-fixed" load-resize-and-menu-resize="">
+    <page-sidebar></page-sidebar>
+
+    <div class="page-content" ng-controller="SocketController">
+
+        <ul class="x-navigation x-navigation-horizontal x-navigation-panel">
+            <li class="xn-icon-button">
+                <a href="#" class="x-navigation-minimize"><span class="fa fa-dedent"></span></a>
+            </li>
+            <li class="xn-icon-button pull-right">
+                <a href="#" class="mb-control" data-box="#mb-signout"><span class="fa fa-power-off"></span></a>
+            </li>
+            <li class="xn-icon-button pull-right ">
+                <a><span class="fa fa-bell"></span></a>
+                <div class="informer informer-danger">{{alarms.length}}</div>
+                <div class="panel panel-default animated zoomIn xn-drop-left ">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><span class="fa fa-bell-o"></span>   Alarms</h3>
+                        <div class="pull-right">
+                            <span class="label label-danger">{{alarms.length}}</span>
+                        </div>
+                    </div>
+                    <div class="panel-body list-group list-group-contacts alarm" style="height: 185px;overflow: auto">
+                        <a href="" class="list-group-item " ng-repeat="alarm in alarms track by $index | limitTo:3">
+                            <div class="list-group-status status-online"></div>
+                            <span class="contacts-title">
+                                Device Name : {{alarm.deviceSn}} <span class="btn btn-sm btn-danger pull-right" ng-click="goToAlarms()">View</span>
+                            </span>
+                            <p>Description : {{alarm.alarmDescription}}</p>
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li class="js-username pull-right theme-username">
+            </li>
+        </ul>
+
+        <ul class="breadcrumb">
+            <div class="js-datePicker theme-dtpicker-container" global-date-picker="">
+            </div>
+        </ul>
+
+        <div class="page-content-wrap" style=" min-height: 800px;background-color: #ffffff">
+            <!--
+<div class="theme-loader" style="height: inherit">
+
+</div>
+-->
+            <div id="view-container" ui-view class="container-fluid">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="page-footer">
+        <div class="page-footer-wrap bg-darken-gray">
+            <div class="row" style="color: #FFF;font-size: 10pt;">
+                <div class="col-md-4 col-sm-3" style="padding: 10px 0px;text-align: center">
+                    © 2015 MachinePulse . All Rights Reserved
+                </div>
+                <div class="col-md-4 col-sm-5" style="padding: 10px 0px;text-align: center">
+                    &nbsp;
+                </div>
+                <div class="col-md-2 col-sm-2 col-md-offset-2 col-sm-offset-2" style=" padding: 10px 0px;text-align: center;">
+                    powered by <span style=" font-size: 14pt;font-family: Roboto-Bold"> erixis</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="message-box animated fadeIn" data-sound="alert" id="mb-signout">
+    <div class="mb-container">
+        <div class="mb-middle">
+            <div class="mb-title"><span class="fa fa-sign-out"></span> Log <strong>Out</strong> ?</div>
+            <div class="mb-content">
+                <p>Are you sure you want to log out?</p>
+
+                <p>Press No if you want to continue work. Press Yes to logout current user.</p>
+            </div>
+            <div class="mb-footer">
+                <div class="pull-right">
+                    <a href="/logout" target="_self" class="btn btn-success btn-lg">Yes</a>
+                    <button class="btn btn-default btn-lg mb-control-close">No</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<audio id="audio-alert" src="/theme/audio/alert.mp3" preload="auto"></audio>
+<audio id="audio-fail" src="/theme/audio/fail.mp3" preload="auto"></audio>

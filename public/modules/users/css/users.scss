@@ -1,0 +1,209 @@
+@import "./../../../stack/styles/imagepaths.scss";
+@import "./../../../stack/styles/variables.scss";
+
+.theme-box-selected,.themeboxselected {
+  background: url($img_box_selected) no-repeat;
+  display: inline-block;
+  width: $width_16px;
+  height: $height_16px;
+  background-size: cover;
+  cursor: $cursor_pointer;
+}
+
+.theme-box-de-selected,.themeboxdeselected {
+  background: url($img_box_de_selected) no-repeat;
+  display: inline-block;
+  width: $width_16px;
+  height: $height_16px;
+  background-size: cover;
+  cursor: $cursor_pointer;
+}
+
+.theme-edit-grey-icon {
+  background: url($img_edit_grey) no-repeat;
+  display: inline-block;
+  width: $width_16px;
+  height: $height_17px;
+  background-size: cover;
+  cursor: $cursor_pointer;
+}
+
+.theme-edit-grey-icon:hover {
+  background: url($img_edit_blue) no-repeat;
+}
+
+.theme-create-button, .theme-create-button:hover {
+  background-color: $color_create_button;
+  border-color: $color_create_button;
+  color: $color_white;
+  font-family: Roboto-Medium;
+  font-size: $font_size_11pt;
+}
+
+.theme-delete-button, .theme-delete-button:hover {
+  background: $color_delete_button !important;
+  border-color: $color_delete_button !important;
+  color: $color_white !important;
+  font-family: Roboto-Medium;
+  font-size: $font_size_11pt;
+}
+
+.theme-users-table-container {
+
+  table thead tr th {
+    color: $color_dark_grey;
+    font-family: Roboto-Regular;
+    font-size: $font_size_11pt;
+    font-weight: $font_weight;
+    background-color: $color_white_shade !important;
+    border-top: $border_black !important;
+    border-bottom: $border_black;
+  }
+
+  table tbody tr td {
+    color:#404041;
+    font-family: Roboto-Regular;
+    font-size: $font_size_10pt;
+  }
+
+
+  table tbody tr.even {
+    background-color: $color_white_shade1;
+  }
+
+  #js-users-table {
+    width: 99% !important;
+  }
+
+  .sorting:before, .sorting_desc:before, .sorting_asc:before {
+    color: $color_dark_grey;
+  }
+
+  .dataTables_filter {
+    border-bottom: 0;
+  }
+
+  .dataTables_length, .dataTables_filter, .dataTables_info, .dataTables_paginate {
+    padding: 1%;
+    color: $color_dark_grey_shade;
+    font-family: Roboto-Regular;
+    font-size: $font_size_10pt;
+  }
+
+  .dataTables_paginate > a , .dataTables_paginate > span > a {
+    color: $color_dark_grey_shade !important;
+    font-family: Roboto-Regular;
+    font-size: $font_size_10pt;
+  }
+
+  .dataTables_paginate > span > a.current {
+    background-color: #33414e !important;
+    color:$color_white !important;
+  }
+
+  .dataTables_length > label > select {
+    padding: 0;
+  }
+
+  .form-control{
+    height: 26px;
+  }
+
+}
+
+.modal-content{
+  border: 1px solid #6e747e !important;
+  margin-top: 25%;
+  width: 88%;
+}
+
+.modal{
+  background: rgba(0, 0, 0, 0.498039);
+}
+
+.help-block{
+  text-align: center;
+}
+
+.alert-container{
+
+  position: absolute;
+  right: 1%;
+  text-align: center;
+  font-size: $font_size_12pt;
+  top: 1%;
+
+  .alert{
+    padding: 8px !important;
+  }
+
+  .alert-success {
+    background-color: #dff0d8 !important;
+    color: #3c763d !important;
+    border-color: #d6e9c6 !important;
+  }
+
+  .alert-danger{
+    color: #a94442 !important;
+    background-color: #f2dede !important;
+    border-color: #ebccd1 !important;
+  }
+
+}
+
+.modal-title{
+  text-align: center;
+  color:#105a85;
+  font-family:Roboto-Regular;
+  font-size: $font_size_18px;
+}
+
+.control-label, .form-control , .list-group-item{
+  color:#2f3339;
+  font-size: $font_size_14px;
+}
+
+.modal-header{
+  background: #ffffff !important;
+  border-bottom: 0 !important;
+}
+
+.modal-footer{
+  background: #ffffff !important;
+  border-top: 0 !important;
+}
+
+.blink_me {
+  -webkit-animation-name: blinker;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+
+  -moz-animation-name: blinker;
+  -moz-animation-duration: 1s;
+  -moz-animation-timing-function: linear;
+  -moz-animation-iteration-count: infinite;
+
+  animation-name: blinker;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@-moz-keyframes blinker {
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+
+@-webkit-keyframes blinker {
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+
+@keyframes blinker {
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}

@@ -1,0 +1,13 @@
+@root
+
+module
+
+indent 2
+maxlen 100
+tabs
+
+nomen
+plusplus
+stupid
+
+predef+ __dirname

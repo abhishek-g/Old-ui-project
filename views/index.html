@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" class="body-full-height">
+<head>
+    <title>Welcome to Solarpulse</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="shortcut icon" href="/modules/global/css/img/favicon.ico" type="image/x-icon"/>
+    <link rel='stylesheet' type="text/css" id="theme" href='/theme/css/theme-default.min.css'/>
+    <link rel="stylesheet" type="text/css" id="theme" href='/modules/global/css/global.css'>
+    <!-- <link rel="stylesheet" type="text/css" id="theme" href="css/style.css"/>
+     <script type="text/javascript" src="/js/plugins/aes.js"></script>-->
+</head>
+<body class="" refresher style="height: 100%;width:100%">
+    <div ui-view="" style="height:100%"></div>
+    <input id="uniqueID" type="hidden" name="uniqueId" value="<%= uniqueID %>">
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script data-main="/modules/require-config.js" src="/libs/require/require.js"></script>
+
+</body>
+</html>

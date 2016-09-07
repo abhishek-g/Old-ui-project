@@ -1,0 +1,93 @@
+<div class="col-md-3">
+    <ul rn-carousel rn-carousel-auto-slide="5" rn-carousel-index="iNumberForperformanceIndication" rn-carousel-pause-on-hover class="image shadow-helper" rn-carousel-buffered style="min-height: 53px;border-radius:5px;">
+        <li>
+            <div class="widget widget-default widget-item-icon shadow-helper">
+                <div class="widget-item-left marhelp"><span class="theme-img-pr"></span>
+                </div>
+                <div class="widget-data padhelp">
+                    <div class="widget-int num-count lynhgt">
+                        <span class="font24">{{bestPerformingZone}}</span>
+                    </div>
+                    <div class="widget-title font12">Best performing zone</div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="widget widget-default widget-item-icon shadow-helper">
+                <div class="widget-item-left marhelp"><span class="theme-img-dev_inv"></span>
+                </div>
+                <div class="widget-data padhelp">
+                    <div class="widget-int num-count lynhgt">
+                        <span class="font24"> {{totalInvCount}} <span class="num-units">INVs</span></span>
+                    </div>
+                    <div class="widget-title font12">Total number of inverters</div>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <div rn-carousel-indicators slides="performanceIndication" rn-carousel-index="iNumberForperformanceIndication" class="rn-carousel-indicators"></div>
+</div>
+<div class="col-md-3">
+    <ul rn-carousel class="shadow-helper" style="height: 53px;position: relative">
+        <li>
+            <div class="widget widget-default widget-item-icon shadow-helper">
+                <div class="widget-item-left marhelp"><span class="theme-img-tod-gen"></span>
+                </div>
+                <div class="widget-data padhelp">
+                    <div class="widget-int num-count lynhgt">
+                        <span class="font24">{{todaysBestGeneration | number:2}} <span class="num-units">kWh</span></span>
+                    </div>
+                    <div class="widget-title font12">Today's best generation</div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="col-md-3">
+    <ul rn-carousel class="shadow-helper" style="height: 53px;position: relative">
+        <li>
+            <div class="widget widget-default widget-item-icon shadow-helper">
+                <div class="widget-item-left marhelp"><span class="theme-img-tot-capacity"></span>
+                </div>
+                <div class="widget-data padhelp">
+                    <div class="widget-int num-count lynhgt">
+                        <span class="font24">{{totalZoneCapacity | number:2}} <span class="num-units">kWp</span></span>
+                    </div>
+                    <div class="widget-title font12">Total Zone Capacity</div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="col-md-3">
+    <ul rn-carousel rn-carousel-auto-slide="5" rn-carousel-index="iNumberForperformanceIndication" rn-carousel-pause-on-hover class="image shadow-helper" rn-carousel-buffered style="min-height: 53px;border-radius:5px;">
+        <li>
+            <div class="widget widget-default widget-item-icon shadow-helper">
+                <div class="widget-item-left marhelp"><span class="theme-img-todays-co2"></span>
+                </div>
+                <div class="widget-data padhelp">
+                    <div class="widget-int num-count lynhgt">
+                        <span class="font24">{{todayCo2Saved | number:2}} <span
+                                class="num-units">Ton</span></span>
+                    </div>
+                    <div class="widget-title font12">Today's Emissions Reduced</div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="widget widget-default widget-item-icon shadow-helper">
+                <div class="widget-item-left marhelp"><span class="theme-img-total-co2"></span>
+                </div>
+                <div class="widget-data padhelp">
+                    <div class="widget-int num-count lynhgt">
+                        <span class="font24">{{totalCo2Saved | number:2}} <span
+                                class="num-units">Ton</span></span>
+                    </div>
+                    <div class="widget-title font12">Total Emissions Reduced</div>
+                </div>
+            </div>
+        </li>
+
+    </ul>
+    <div rn-carousel-indicators slides="performanceIndication" rn-carousel-index="iNumberForperformanceIndication" class="rn-carousel-indicators"></div>
+</div>

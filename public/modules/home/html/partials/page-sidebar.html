@@ -1,0 +1,27 @@
+<div class="page-sidebar page-sidebar-fixed">
+    <ul class="x-navigation">
+        <li class="xn-logo">
+            <a href="/">SolarPulse</a>
+            <a href="#" class="x-navigation-control"></a>
+        </li>
+        <li class="js-menu-item xn-openable" id="allsites" data-state="dashboard">
+            <a href="" ui-sref="dashboard"><span class="fa fa-desktop"></span> <span class="xn-text">Dashboard</span></a>
+            <ul id="scrolz">
+                <div data-angular-treeview="true" data-tree-id="abc" data-tree-model="sitesList" data-node-id="id" data-node-label="displayName" data-node-children="children" style="max-height:500px;overflow-y:scroll;">
+                </div>
+                <div class="mCustomScrollbar"></div>
+            </ul>
+        </li>
+        <li class="js-menu-item " >
+            <a href="" ui-sref="alarms"  data-state="alarms"><span class="fa fa-bell-o"></span> <span class="xn-text ">Alarms</span></a>
+        </li>
+
+        <li class="js-menu-item xn-openable" id="admin">
+            <a href=""><span class="fa fa-sitemap"></span> <span class="xn-text ">Administration</span></a>
+            <ul id="adminscroll">
+                <li class="js-menu-item" ><a href="" ui-sref="users"  data-state="users"><span class="fa fa-user"></span> <span class="xn-text">Users</span></a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>

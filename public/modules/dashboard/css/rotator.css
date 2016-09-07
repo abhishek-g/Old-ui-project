@@ -1,0 +1,24 @@
+/*
+created by Sneha 05/02/2015
+*/
+
+#event_rotator {
+    width: 300px;
+    height: 150px;
+    position: relative;
+    overflow: hidden;
+}
+
+#slider {
+    position: absolute;
+    height: 150px;
+    left: 0;
+    width: 99999px;
+}
+
+.event {
+    float: left;
+    width: 300px;
+    height: 150px;
+    background: #eee;
+}

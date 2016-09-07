@@ -1,0 +1,20 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Zone Energy (kWh)</h3>
+        <ul class="panel-controls" style=" margin-top: 2px;">
+            <li><a href="#" class="panel-fullscreen js-panel-map" style=" border: none"><span class="maximise"></span></a>
+            </li>
+            <li datefilternew set-view-mode="setViewMode(viewMode,startdate,enddate)" id="reportrange">
+                <a href="#" class="dropdown-toggle no-border"><span class="theme-filterdd"></span></a>
+            </li>
+            <li export-highcharts=""></li>
+            <li ui-info-window="" data-to-hide-el=".js-zone-energy-yield-daily"> </li>
+        </ul>
+    </div>
+    <groupbychangecall group-by-change="groupByChange(groupby)"></groupbychangecall>
+    <div class="panel-body theme-zn-energy js-energy-trend">
+    </div>
+    <div class="alert alert-info js-zone-energy-yield-daily widget-show" style="display: none;font-size: 12pt">
+        <p>Zone energy hourly</p>
+    </div>
+</div>

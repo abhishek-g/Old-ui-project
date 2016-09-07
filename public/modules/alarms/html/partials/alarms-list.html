@@ -1,0 +1,223 @@
+<div class="panel panel-default">
+    <div class="panel-body theme-alarms-container" style="padding-left: 0;padding-right: 0;padding-top: 0;">
+        <div class="row">
+            <!-- -->
+            <ul class="x-navigation x-navigation-horizontal x-navigation-panel" style="position: relative;padding-right: 0;">
+                <!-- TOGGLE NAVIGATION -->
+                <li id="treeviewToggle">
+                    <a  href="javascript:void()">All Sites<span class="fa fa-caret-up"></span></a>
+                    <div class="panel panel-primary animated zoomIn xn-drop-right " style="display: none">
+
+                    </div>
+                </li>
+
+                <!-- END TOGGLE NAVIGATION -->
+                <li class="pull-right">
+                    <a id='alamtable-maximise' href="j" style=" padding: 8px 6px; width: 44px;padding-top: 12px;"><span class="maximise ng-isolate-scope theme-maximise"></span>
+                    </a>
+                </li>
+                <li class="xn-icon-button pull-right">
+                    <a href="" style=" padding: 8px 6px; width: 44px;padding-top: 12px;"><span class="theme-settings-icon"></span>
+                    </a>
+                    <ul class="xn-drop-left xn-drop-white animated zoomIn">
+                        <li>
+                            <a href="#" onclick="$('#DataTables_Table_Alarms').tableExport({type:'json',escape:'false'});"><img src="/theme/img/icons/json.png" width="24"> JSON</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="$('#DataTables_Table_Alarms').tableExport({type:'csv',escape:'false'});"><img src="/theme/img/icons/csv.png" width="24"> CSV</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#" onclick="$('#DataTables_Table_Alarms').tableExport({type:'excel',escape:'false'});"><img src="/theme/img/icons/xls.png" width="24"> XLS</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="$('#DataTables_Table_Alarms').tableExport({type:'doc',escape:'false'});"><img src="/theme/img/icons/word.png" width="24"> Word</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#" onclick="$('#DataTables_Table_Alarms').tableExport({type:'png',escape:'false'});"><img src="/theme/img/icons/png.png" width="24"> PNG</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void()" onclick="$('#DataTables_Table_Alarms').tableExport({type:'pdf',escape:'false'});"><img src="/theme/img/icons/pdf.png" width="24"> PDF</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="pull-right">
+                    <a href="javascript:void()" style="padding-top: 14px;padding-bottom: 0;padding-left: 10px;padding-right: 0"><span class="theme-filterdd"></span>
+                    </a>
+                </li>
+
+                <!-- SEARCH -->
+                <li class="pull-right">
+                    <a href="javascript:void()" style="padding-top: 10px;padding-bottom: 0;padding-left: 10px;padding-right: 0;width: auto">
+                        <button type="button" class="btn btn-sm btn-primary js-ackall disabled" style="height: 30px">AcknowledgeSelected</button>
+                    </a>
+
+                </li>
+                <li class="xn-search pull-right">
+                    <input type="text" id="myfilter" name="search" placeholder="Search...">
+                </li>
+                <!-- END SEARCH -->
+            </ul>
+<div id="treeview1" class="test animated zoomIn xn-drop-left" style="z-index: 3;min-width: 250px;position: absolute;top:50px;left: 0px;display: none;height: 200px;
+                    overflow-y: auto;overflow-x: auto"></div>
+
+            <div class="col-md-12" style="padding-top: 10px;">
+
+                <div class="table-responsive">
+                    <div id="DataTables_Table_1_wrapper" class="dataTables_wrapper no-footer">
+
+
+                        <table class="table datatable dataTable no-footer" id="DataTables_Table_Alarms" role="grid">
+                            <thead>
+                                <tr role="row">
+
+                                    <th class="sorting_disabled" style="">
+                                    <input type="checkbox" class="js-mater-check"> </th>
+                                    <th style="">Edit</th>
+                                    <th style="">Devices</th>
+                                    <th style="">Status</th>
+                                    <th style="">Raised At</th>
+                                    <th style="">Resolved At</th>
+                                    <th style="">Description</th>
+                                    <th style="">Acknowledge</th>
+                                    <th style="">Acknowledged By</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<form class="submitComment" role="form">
+    <!-- Modal HTML -->
+    <div id="myModal" class="modal fade" style=" background: rgba(0, 0, 0, 0.49804);">
+        <div class="modal-dialog" style="width: 45%;align:centre;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" ng-click="clearData()" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title"> <div class="theme-red-severity"></div> <span  style="padding-left: 3%">{{singleAlarmDetails.typeName}}</span></h4>
+                </div>
+                <div class="modal-body">
+                    <div class="alert alert-success " style="font-size: 100%;text-align: center" ng-show="successRes==true">Comments saved successfully!</div>
+                    <table class="table table-responsive table-striped">
+                        <tbody>
+                            <tr>
+                                <td style="text-align:left"><b>Equipment</b>
+                                </td>
+                                <td>{{singleAlarmDetails.typeName}}</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:left"><b>Status</b>
+                                </td>
+                                <td ng-if="singleAlarmDetails=='CLEARED'" style="text-align:left">Resolved</td>
+                                <td ng-if="singleAlarmDetails!='CLEARED'">Raised</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:left"><b>Raised at</b>
+                                </td>
+                                <td>{{singleAlarmDetails.ts| date:'medium'}}</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:left"><b>Acknowledged at</b>
+                                </td>
+                                <td>{{singleAlarmDetails.acknowledgedBy.fullname}}</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:left"><b>Description</b>
+                                </td>
+                                <td>{{singleAlarmDetails.alarmDescription}}</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:left"><b>Comment</b>
+                                </td>
+                                <td>
+                                    <textarea id="txtAreaForComments" rows="5" cols="50" ng-model="formInfo.CommentDesc"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" style="text-align:left;">
+                                    <div class="panel panel-default" ng-if="singleAlarmDetails.commentDetails.length>0">
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title">Earlier comments</h3>
+                                        </div>
+                                        <div class="panel-body" style="height: 200px;overflow:auto;">
+                                            <p ng-repeat="comment in singleAlarmDetails.commentDetails"><span class="label label-success label-form">Comment</span> - {{comment.commentDesc}}<span class="label label-info pull-right">- by {{comment.commentBy.fullname}}</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+
+                    <!--
+<div class="row">
+    <div class="col-md-3"><span class="pull-right"><b>Equipment:</b></span>
+    </div>
+    <div class="col-md-9">{{singleAlarmDetails.typeName}}</div>
+</div>
+<div class="row">
+    <div class="col-md-3"><span class="pull-right"><b>Status:</b></span>
+    </div>
+    <div class="col-md-9" ng-if="singleAlarmDetails=='CLEARED'">Resolved</div>
+    <div class="col-md-9" ng-if="singleAlarmDetails!='CLEARED'">Raised</div>
+</div>
+<div class="row">
+    <div class="col-md-3"><span class="pull-right"><b>Raised at:</b></span>
+    </div>
+    <div class="col-md-9">{{singleAlarmDetails.ts| date:'medium'}}</div>
+</div>
+<div class="row">
+    <div class="col-md-3"><span class="pull-right"><b>Resolved at:</b></span>
+    </div>
+    <div class="col-md-9">{{singleAlarmDetails.cleared_ts| date:'medium'}}</div>
+</div>
+<div class="row">
+    <div class="col-md-3"><span class="pull-right"><b>Acknowledged at: </b></span> </div>
+    <div class="col-md-9">{{singleAlarmDetails.acknowledgedBy.ts | date:'medium'}}</div>
+</div>
+<div class="row">
+    <div class="col-md-3"><span class="pull-right"><b>Acknowledged by:</b></span>
+    </div>
+    <div class="col-md-9">{{singleAlarmDetails.acknowledgedBy.fullname}}</div>
+</div>
+<div class="row">
+    <div class="col-md-3"><span class="pull-right"><b>Description:</b></span>
+    </div>
+    <div class="col-md-9">{{singleAlarmDetails.alarmDescription}}</div>
+</div>
+<div class="row">
+    <div class="col-md-3"><span class="pull-right"><b>Comment:</b></span>
+    </div>
+    <div class="col-md-9">
+        <textarea id="txtAreaForComments" rows="5" cols="40" ng-model="formInfo.CommentDesc"></textarea>
+    </div>
+</div>
+<div class="row theme-comment-history" id="commentHistoryDiv" ng-if="singleAlarmDetails.commentDetails.length>0">
+    <div class="col-md-3"><span class="pull-right"><b>Earlier comments:</b></span>
+    </div>
+    <div class="col-md-9 ">
+        <p ng-repeat="comment in singleAlarmDetails.commentDetails">Comment: {{comment.commentBy.fullname}} : {{comment.commentDesc}}</p>
+    </div>
+</div>
+-->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" ng-click="clearData()" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" ng-click="saveData()">Save comments</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

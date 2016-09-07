@@ -1,0 +1,95 @@
+.alarms-container .table > thead > tr > th {
+    color: #404041 !important;
+    font-size: 14px !important;
+    font-weight: 500;
+    font-family: Roboto-Regular !important;
+    background-color: #d4d5e2 !important;
+}
+
+.alarms-container tr.odd {
+    background-color: #F1F5F9;
+}
+
+.alarms-container {
+    margin-top: 10px;
+}
+
+#alarm-panel-heading .panel-title {
+    font-size: 12pt;
+    color: #33414e;
+}
+
+.js-ack {
+    background-color: #5499f7;
+}
+
+.DataTables_Table_Alarms_wrapper .toolbar {
+    float: left;
+    padding-top: 10px;
+}
+
+.dataTables_filter {
+    border-bottom: none;
+}
+
+.list-group .list-group-item {
+    line-height: 0;
+}
+
+.dropdown-menu {
+    top: 41px;
+}
+
+.dropdown-menu:before {
+    bottom: 100%;
+    left: 63%;
+    /* border: solid transparent; */
+    
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.theme-show-details {
+    width: 20px;
+    padding-top: 2px;
+    height: 20px;
+    background: url("/theme/img/Detailedmenu_Icon.png") no-repeat;
+    background-size: cover;
+    display: inline-block;
+    float: centre;
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+.theme-red-severity {
+    width: 25px;
+    padding-top: 2px;
+    padding-left: 5px;
+    height: 25px;
+    background: url("/theme/img/Red_Severity.png") no-repeat;
+    background-size: cover;
+    display: inline-block;
+    float: left;
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+.theme-comment-history {
+    height: 180px;
+    padding-bottom: 1%;
+    overflow: auto;
+}
+
+.open-modal {
+    padding: 0px;
+    font-size: 20px;
+}
+
+.open-modal:hover {
+    color: #326db0;
+    padding: 0px;
+    font-size: 20px;
+}

@@ -1,0 +1,29 @@
+<ul style="height:220px;margin:0px;" rn-carousel rn-carousel-index="iNumber" rn-carousel-auto-slide="5" rn-carousel-pause-on-hover rn-carousel-buffered>
+    <li ng-repeat="alarm in singleSiteAlarmInfo">
+        <div>
+            <p class="alarmsHeadConnected" ng-show="alarm.connectivity"><span class="reportedAt">Reported At : </span><b>{{alarm.lastReportedTime}}</b>
+            </p>
+            <p class="alarmsHeadDisconnected" ng-show="!alarm.connectivity"><span class="reportedAt">Reported At : </span><b>{{alarm.lastReportedTime}}</b>
+            </p>
+            <div class="row" style="padding:40px 0;">
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                    <span class="connectivityIcon" ng-show="alarm.connectivity"></span>
+                    <span class="disconnectivityIcon" ng-show="!alarm.connectivity"></span>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-3" style="margin-top:20px;margin-left:2px;">
+                    <p style="font-weight:600;">Connectivity Status</p>
+                </div>
+
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                    <span class="alarmbell"></span>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-3" style="float:right;">
+                    <p class="alarmcount">{{alarm.alarms}}</p>
+                    <p style="text-align:center;font-weight:600;">Alarms</p>
+                </div>
+            </div>
+            <p class="siteTitle">{{alarm.zoneName}}</p>
+        </div>
+    </li>
+</ul>
+<div class="indycators" ng-if="singleSiteAlarmInfo.length >= 1" rn-carousel-indicators slides="singleSiteAlarmInfo" rn-carousel-index="iNumber"></div>

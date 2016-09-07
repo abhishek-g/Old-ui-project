@@ -1,0 +1,120 @@
+<div class="container-fluid dashboard-container">
+    <div class="row mtop">
+        <top-widgets4></top-widgets4>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <all-zones-map></all-zones-map>
+        </div>
+
+        <div class="col-md-4">
+            <div class="single-site-alarms">
+                <div class="panel panel-default theme-zone-wise-alarms">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">High Alert Alarms</h3>
+                        <ul class="panel-controls" style=" margin-top: 2px;">
+                            <li ui-info-window="" data-to-hide-el=".js-high-alert-alarms-details"> </li>
+                        </ul>
+                    </div>
+                    <div class="panel-body" style=" height: 250px;overflow: auto;padding:0px;">
+                        <div class="table-responsive" ng-show="singleSiteAlarmInfo.length > 0" style="overflow: auto;height:100%" single-site-alarms="">
+                        </div>
+                        <div class="theme-loader" ng-show="singleSiteAlarmInfo.length === 0">
+                        </div>
+                    </div>
+                    <div class="alert alert-info js-high-alert-alarms-details widget-show" style="display: none;font-size: 12pt">
+                        <p>Icons represent connectivity status and when device last communicated</p>
+                    </div>
+                </div>
+            </div>
+            <div class="zones-pr-compare">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Performance Ratio (R<sub>p</sub>)</h3>
+                        <ul class="panel-controls" style=" margin-top: 2px;">
+                            <li><a href="#" class="panel-fullscreen js-resize" style=" border: none"><span class="maximise "></span></a>
+                            </li>
+                            <li export-highcharts=""></li>
+                            <li ui-info-window="" data-to-hide-el=".js-building-pr-details"> </li>
+                        </ul>
+                    </div>
+                    <div class="panel-body theme-pr-az js-single-site-zone-pr">
+                        <div class="row" zones-pr-compare="" ng-show="zonePrData.length >0">
+                        </div>
+                        <div class="theme-loader" ng-show="zonePrData.length  === 0">
+
+                        </div>
+                    </div>
+                    <div class="alert alert-info js-building-pr-details widget-show" style="display: none;font-size: 12pt">
+                        <p style="margin-left: 1%;text-align: left">Formula used : </p>
+                        <hr>
+                        <p>(<sup> Building's energy </sup>/<sub>Building's Installed Capacity</sub> ) * ( <sup>1000</sup>/<sub> Today's Irradiance Energy </sub> )</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12" style="height: 100%" ng-controller="ZoneOverviewController">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Zone overview</h3>
+                    <ul class="panel-controls">
+                        <li><a href="#" class="panel-fullscreen js-panel-az-zoneOverview" style="border: none"><span class="maximise"></span></a>
+                        </li>
+                        <li ui-info-window="" data-to-hide-el=".js-zones-overview-details"> </li>
+                    </ul>
+                </div>
+                <div class="panel-body js-az-zoneOverview-panel-body" style="height:400px;overflow:auto;">
+
+                    <div class="container-fluid dashboard-container">
+                        <div class="row">
+                            <div class="col-md-3" ng-repeat="overviewObj in zoneOverviewData" style="overflow: auto;">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading gauges">
+                                        <h3 class="panel-title">
+                                        Zone - {{overviewObj.zoneName}}
+                                        </h3>
+                                    </div>
+                                    <div class="panel-body" style="max-height:300px;overflow: auto;padding: 15px 0px">
+                                        <div class="row" style="border-bottom: 1px solid #c5c5c5;padding-bottom: 5px">
+                                            <div class="form-group" data="overviewObj" solid-gauge=""></div>
+                                            <p class="nomargin" style="text-align:center;"><span class="valueGauge">{{overviewObj.yield}}</span> <span class="num-units">kWh</span>
+                                            </p>
+                                            <p class="boldness" style="text-align:center;">Daily Energy</p>
+                                        </div>
+                                        <div class="row" style="border-bottom: 1px solid #c5c5c5;">
+                                            <div class="form-group" data="overviewObj" circular-gauge=""></div>
+                                            <p class="nomargin" style="text-align:center;"><span class="valueGauge">{{overviewObj.spPower}}</span> <span class="num-units">kW/kWp</span>
+                                            </p>
+                                            <p class="boldness" style="text-align:center;">Specific power</p>
+                                        </div>
+                                        <div class="row" style="padding-top: 10px ">
+                                            <div class="form-group" data="overviewObj" solid-gauge-sp-yield=""></div>
+                                            <p class="nomargin" style="text-align:center;"><span class="valueGauge">{{overviewObj.spYield}}</span> <span class="num-units">kWh/kWp</span>
+                                            </p>
+                                            <p class="boldness" style="text-align:center;">Specific Energy</p>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="alert alert-info js-zones-overview-details widget-show" style="display: none;font-size: 12pt">
+                    <ul style="margin-top: 1%;">
+                        <li> Daily Energy Energy of the Zone</li>
+                        <li> Specific Power of the zone (<sup>Zone Active Power (kW)</sup> / <sub>Capacity of the Zone(kWp)</sub>)</li>
+                        <li> Specific Energy of the zone (<sup>Zone Today Energy yield (kWh)</sup> / <sub>Capacity of the Zone(kWp)</sub>)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>

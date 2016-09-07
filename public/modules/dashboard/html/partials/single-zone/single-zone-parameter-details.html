@@ -1,0 +1,69 @@
+<div class="panel panel-default"  >
+    <!--<div class="panel panel-default"  ng-controller="SingleZoneParameters">-->
+    <!--<div class="panel panel-default" ng-controller="ParameterDetailsZonesController">-->
+    <div class="panel-heading">
+        <h3 class="panel-title">Parameter details</h3>
+        <ul class="panel-controls" style="margin-top: 2px;">
+            <!--<li><a href="#" class="panel-fullscreen"><span class="fa fa-expand"></span></a></li>-->
+            <!--<li><a href="#" class="panel-refresh"><span class="fa fa-refresh"></span></a></li>-->
+            <!--<li><a href="#" class="panel-collapse"><span class="fa fa-angle-down"></span></a></li>-->
+        </ul>
+    </div>
+    <div class="panel-body theme-high-alert-alarms" style="height: 180px">
+        <div class="table-responsive" style="height: 100%">
+            <table class="table no-footer" style="height:100%">
+                <thead>
+                <tr role="row">
+                    <th tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1"
+                        aria-label="Name: activate to sort column ascending">PARAMETER
+                    </th>
+                    <th tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1"
+                        aria-label="Name: activate to sort column ascending">PHASE A
+                        <!--<span class="theme-img-alarmfire"></span>-->
+                    </th>
+                    <th tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1"
+                        aria-label="Name: activate to sort column ascending">PHASE B
+                        <!--<span class="theme-img-alarmerror"></span>-->
+                    </th>
+                    <th tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1"
+                        aria-label="Name: activate to sort column ascending">PHASE C
+                        <!--<span class="theme-img-alarmbreakdown"></span>-->
+                    </th>
+                </tr>
+                </thead>
+                <!--<tbody>-->
+                    <!--<tr ng-repeat="parameterVal in parameterDetails">-->
+                        <!--<td>-->
+                            <!--{{parameterVal.parameter}}-->
+                        <!--</td>-->
+                        <!--<td>-->
+                            <!--{{parameterVal.Pa}}-->
+                        <!--</td>-->
+                        <!--<td>-->
+                            <!--{{parameterVal.Pb}}-->
+                        <!--</td>-->
+                        <!--<td>-->
+                            <!--{{parameterVal.Pc}}-->
+                        <!--</td>-->
+                    <!--</tr>-->
+                <!--</tbody>-->
+                <tbody>
+                <tr ng-repeat="parameterVal in parameterDetails">
+                    <td>
+                        {{parameterVal.parameter}}
+                    </td>
+                    <td>
+                        {{parameterVal.Pa}}
+                    </td>
+                    <td>
+                        {{parameterVal.Pb}}
+                    </td>
+                    <td>
+                        {{parameterVal.Pc}}
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

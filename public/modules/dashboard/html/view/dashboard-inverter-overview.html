@@ -1,0 +1,43 @@
+<div class="container-fluid dashboard-container" style="min-height: 100%;">
+    <div class="row" style="padding-top: 1%;">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Inverter Overview</h3>
+            </div>
+            <div class="panel-body" style="height: 300px;padding:0px;">
+                <div class="row" style="height:100%;">
+                    <div class="col-md-12" style="height:100%;padding:0px;">
+                        <div class="table-responsive" ng-show="inverterData.length > 0" style="height:100%;overflow: auto;overflow-x: hidden;" inverter-table="">
+                        </div>
+                        <div class="theme-loader" ng-show="inverterData.length === 0"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" ng-controller="InverterDcAcController">
+        <div class="panel panel-default" style="">
+            <div class="panel-heading">
+                <h3 class="panel-title">Dc vs Ac Power Comparison</h3>
+                <ul class="panel-controls" style=" margin-top: 2px;">
+                    <li><a href="#" class="panel-fullscreen js-resize" style=" border: none"><span
+                            class="maximise"></span></a>
+                    </li>
+                    <!--<li datefilternew set-view-mode="setViewMode(viewMode,startdate,enddate)" id="reportrange">
+    <a href="#" class="dropdown-toggle no-border"><span class="theme-filterdd"></span></a>
+</li>-->
+                    <li export-highcharts=""></li>
+                    <li ui-info-window="" data-to-hide-el=".js-dc-ac-power-compare-details"></li>
+                </ul>
+            </div>
+            <!--            <groupbychangecall group-by-change="groupByChange(groupby)"></groupbychangecall>-->
+            <button type="button" class="btn btn-default resetZoom pull-right">Reset Zoom</button>
+            <div class="panel-body theme-dc-ac-compare js-dc-ac-compare" inverter-dc-ac-compare>
+
+            </div>
+            <div class="alert alert-info js-dc-ac-power-compare-details widget-show" style="display: none;font-size: 12pt">
+                <p style="margin-top: 1%;">PV Power vs Active Power of Inverter </p>
+            </div>
+        </div>
+    </div>
+</div>

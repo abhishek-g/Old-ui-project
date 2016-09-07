@@ -1,0 +1,26 @@
+<div ng-switch on="dashboardView">
+    <div ng-switch-when="all-sites">
+        <div ng-include="'/modules/dashboard/html/view/dashboard-allsites.html'" ng-controller="AllSitesController"></div>
+    </div>
+    <div ng-switch-when="single-site">
+        <div ui-view="singlesite"></div>
+    </div>
+    <div ng-switch-when="all-zones">
+        <div ui-view="allzones"></div>
+    </div>
+    <div ng-switch-when="single-zone">
+        <div ui-view="singlezone"></div>
+    </div>
+    <div ng-switch-when="inv-overview">
+        <div ui-view="inverteroverview"></div>
+    </div>
+    <div ng-switch-when="single-inverter">
+        <div ui-view="singleinverter"></div>
+    </div>
+    <div ng-switch-when="single-sensor">
+        <div ui-view="singlesensorbox"></div>
+    </div>
+    <div ng-switch-when="gmeter">
+        <div ui-view="gmeter"></div>
+    </div>
+</div>

@@ -1,0 +1,71 @@
+<div class="container-fluid dashboard-container">
+    <div class="row mtop">
+        <top-widgets3></top-widgets3>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <single-zone-map></single-zone-map>
+        </div>
+        <div class="col-md-4 single-zone-alarms">
+            <div class="panel panel-default theme-zone-wise-alarms">
+                <div class="panel-heading">
+                    <h3 class="panel-title">High Alert Alarms
+                    </h3>
+                </div>
+                <div class="panel-body" style=" height: 250px;padding:0px;">
+
+                    <div class="" ng-show="singleZoneAlarmInfo.length > 0" style="overflow: auto;height:100%" single-zone-alarms="">
+                    </div>
+                    <div class="theme-loader" ng-show="singleZoneAlarmInfo.length === 0">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--<div class="col-md-4 devices-pr-compare" devices-pr-compare="">-->
+
+        <!--</div>-->
+
+        <div class="col-md-4" ng-controller="zonePrTrendController">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Performance Ratio</h3>
+                    <ul class="panel-controls" style=" margin-top: 2px;">
+                        <li><a href="#" class="panel-fullscreen js-resize" style=" border: none"><span
+                                class="maximise "></span></a>
+                        </li>
+                        <li datefilternew set-view-mode="setViewMode(viewMode,startdate,enddate)" id="reportrange">
+                            <a href="#" class="dropdown-toggle no-border"><span class="theme-filterdd"></span></a>
+                        </li>
+                        <li export-highcharts=""></li>
+                        <li ui-info-window="" data-to-hide-el=".js-pr-trends-details"> </li>
+                    </ul>
+                </div>
+                <div class="panel-body theme-pr-compares js-single-zone-pr" style="padding: 0;">
+                    <div class="row" single-zone-pr-compare="" ng-show="zonePrData">
+                    </div>
+                    <div class="theme-loader" ng-show="!zonePrData">
+                    </div>
+                </div>
+                <div class="alert alert-info js-pr-trends-details widget-show" style="display: none;font-size: 12pt">
+                    <p style="margin-left: 1%;text-align: left">Formula used : </p>
+                    <hr>
+                    <p>( <sup> Buildings's energy</sup>/<sub>Buildings's Installed Capacity</sub> ) * ( <sup>1000</sup>/<sub> Irradiance Energy</sub> )</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-12" single-zone-sp-power="" ng-controller="SingleZoneSpecificPowerController">
+        </div>
+    </div>
+
+    <div class="row" ng-controller="SingleZoneEnergyTrendsController">
+        <div class="col-md-12" single-zone-energy-yield="">
+
+        </div>
+    </div>
+</div>
+
+<site-hierarchy></site-hierarchy>

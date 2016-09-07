@@ -1,0 +1,42 @@
+<!--<div class="login-body js-login-container">
+    <div class="login-title "><strong>Welcome</strong>, Please login</div>
+    <div class="login-title js-message-text" style="font-size: 14px;color:yellow"></div>
+    <form id="jvalidate" name="loginForm" role="form" class="form-horizontal" method="post">
+        <div class="form-group">
+            <div class="col-md-12">
+                <input type="text" id="email" class="form-control" name="email" ng-model="User.email" placeholder="Email"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-12">
+                <input type="password" id="password" class="form-control" name="password" ng-model="User.password" placeholder="Password"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-6">
+                <a href="#" class="btn btn-link btn-block js-forgot-password">Forgot your password?</a>
+            </div>
+            <div class="col-md-6">
+                <button type="button" class="js-SignIn btn btn-info btn-block">Log In</button>
+            </div>
+        </div>
+    </form>
+</div>-->
+<form id="jvalidate" class="navbar-form navbar-right form-inline" role="form" method="post">
+    <div class="form-group">
+        <!--<label class="sr-only" for="Email">Email</label>-->
+        <input type="email" class="form-control" id="email" name="email" ng-model="User.email" placeholder="Email" required autofocus/><br>
+
+    </div>
+    <div class="form-group">
+        <!--  <label class="sr-only" for="Password">Password</label>-->
+        <input type="password" class="form-control" id="Password" name="password" ng-model="User.password" placeholder="Password" required/><br>
+    </div>
+    <button type="submit" class="js-SignIn btn btn-login">LOG IN</button>
+    <div class="login-title js-message-text" style="color:red;display: none;">
+        Username or Password is Incorrect
+    </div>
+    <div class="login-title" style="padding-bottom: 5px;text-align: right">
+        <a href="" style="font-size: 12px;color:#f07a11;"> Forgot your password?</a>
+    </div>
+</form>

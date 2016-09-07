@@ -1,0 +1,268 @@
+<div class="container-fluid dashboard-container" style="min-height: 100%;">
+    <div class="row mtop inverter">
+        <div class="col-md-3">
+            <ul rn-carousel class="shadow-helper" style="min-height: 53px;border-radius:5px;">
+                <li>
+                    <div class="widget widget-default widget-item-icon">
+                        <div class="widget-item-left marhelp"><span class="theme-inverter-icon"></span>
+                        </div>
+                        <div class="widget-data padhelp">
+                            <div class="widget-int num-count lynhgt">
+                                <span class="font24">{{singleInverterData.displayName}} </span>
+                            </div>
+                            <div class="widget-title font12">Inverter</div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+            <ul rn-carousel rn-carousel-auto-slide="8" rn-carousel-transition="slide" rn-carousel-index="i" class="shadow-helper" style="min-height: 53px;border-radius:5px;">
+                <li>
+                    <div class="widget widget-default widget-item-icon">
+                        <div class="widget-item-left marhelp"><span class="theme-img-tod-gen"></span>
+                        </div>
+                        <div class="widget-data padhelp">
+                            <div class="widget-int num-count lynhgt">
+                                <span class="font24">{{inverterData.yield | number : 2}} <span class="num-units">kWh</span></span>
+                            </div>
+                            <div class="widget-title font12">Today's Energy</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="widget widget-default widget-item-icon">
+                        <div class="widget-item-left marhelp"><span class="theme-img-tod-gen"></span>
+                        </div>
+                        <div class="widget-data padhelp">
+                            <div class="widget-int num-count lynhgt">
+                                <span class="font24">{{inverterData.totYield | number : 2}} <span class="num-units">kWh</span></span>
+                            </div>
+                            <div class="widget-title font12">Total Energy</div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div rn-carousel-indicators slides="slides" rn-carousel-index="i" class="rn-carousel-indicators"></div>
+        </div>
+        <div class="col-md-3">
+            <ul rn-carousel class="shadow-helper" style="min-height: 53px;border-radius:5px;">
+                <li>
+                    <div class="widget widget-default widget-item-icon">
+                        <div class="widget-item-left marhelp"><span class="theme-efficiency-icon"></span>
+                        </div>
+                        <div class="widget-data padhelp">
+                            <div class="widget-int num-count lynhgt">
+                                <span class="font24">{{inverterData.efficiency | number : 2}} <span class="num-units">%</span></span>
+                            </div>
+                            <div class="widget-title font12">Efficiency</div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+            <ul rn-carousel class="shadow-helper" style="min-height: 53px;border-radius:5px;">
+                <li>
+                    <div class="widget widget-default widget-item-icon shadow-helper">
+                        <div class="widget-item-left marhelp"><span class="theme-img-alarms-top"></span>
+                        </div>
+                        <div class="widget-data padhelp">
+                            <div class="widget-int num-count lynhgt">
+                                <span class="font24">{{inverterData.alarmCount }} </span>
+                            </div>
+                            <div class="widget-title font12">Alarm Count</div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-default" ng-controller="SingleInverterDcAcController">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Dc power vs Active Power</h3>
+                    <ul class="panel-controls" style=" margin-top: 2px;">
+                        <li><a href="#" class="panel-fullscreen js-resize" style=" border: none"><span
+                                class="maximise"></span></a>
+                        </li>
+                        <li datefilternew set-view-mode="setViewMode(viewMode,startdate,enddate)" id="reportrange">
+                            <a href="#" class="dropdown-toggle no-border"><span class="theme-filterdd"></span></a>
+                        </li>
+                        <li export-highcharts=""></li>
+                        <li ui-info-window="" data-to-hide-el=".js-dc-ac-power-compare-details"></li>
+                    </ul>
+                </div>
+                <groupbychangecall group-by-change="groupByChange(groupby)"></groupbychangecall>
+                <button type="button" id="dcAcRst" class="btn btn-default pull-right">Reset Zoom</button>
+                <div class="panel-body theme-dc-ac-comp-si js-dc-ac-compare">
+                    <div inverter-dc-ac-compare=""></div>
+                </div>
+                <div class="alert alert-info js-dc-ac-power-compare-details widget-show" style="display: none;font-size: 12pt">
+                    <p style="margin-top: 1%;">PV Power vs Active Power of Inverter </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-default" ng-controller="ActivePowerController">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Active Power</h3>
+                    <ul class="panel-controls" style=" margin-top: 2px;">
+                        <li><a href="#" class="panel-fullscreen js-resize" style=" border: none"><span
+                                class="maximise"></span></a>
+                        </li>
+                        <li export-highcharts=""></li>
+                        <li ui-info-window="" data-to-hide-el=".js-ac-power-details"></li>
+                    </ul>
+                </div>
+                <div class="panel-body theme-ap-sg js-activePowerGauge">
+                    <div active-power-gauge style=""></div>
+                </div>
+                <div class="alert alert-info js-ac-power-details widget-show" style="display: none;font-size: 12pt">
+                    <p style="margin-top: 1%;">Instantaneous active power</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="bottom: 0px">
+        <div class="col-md-6">
+            <div class="panel panel-default" ng-controller="InverterEfficiencyController">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Inverter Efficiency Curve</h3>
+                    <ul class="panel-controls" style=" margin-top: 2px;">
+                        <li><a href="#" class="panel-fullscreen js-resize" style=" border: none"><span
+                                class="maximise"></span></a>
+                        </li>
+                        <li datefilternew set-view-mode="setViewMode(viewMode,startdate,enddate)" id="reportrange">
+                            <a href="#" class="dropdown-toggle no-border"><span class="theme-filterdd"></span></a>
+                        </li>
+                        <li export-highcharts=""></li>
+                        <li ui-info-window="" data-to-hide-el=".js-inverter-efficiency-details"></li>
+                    </ul>
+                </div>
+                <groupbychangecall group-by-change="groupByChange(groupby)"></groupbychangecall>
+                <button type="button" id="effRst" class="btn btn-default pull-right">Reset Zoom</button>
+                <div class="panel-body theme-inv-eff js-eff-data">
+                    <div inverter-efficiency-curve=""></div>
+                </div>
+                <div class="alert alert-info js-inverter-efficiency-details widget-show" style="display: none;font-size: 12pt">
+                    <p style="margin-left: 1%;text-align: left">Formula used : </p>
+                    <hr>
+                    <p>( <sup>Inverter Ac Power </sup>/<sub>Inverter Dc Power</sub> ) * 100</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">DC Parameters</h3>
+                </div>
+                <div class="panel-body theme-param-details-container" style="overflow:auto;height: 300px;padding:0px;   ">
+                    <div class="row" ng-show="dcParams.pv1.length > 0" ng-repeat="param in dcParams.pv1">
+                        <div class="col-md-6 col-sm-6" style="padding:0px;">
+                            <span class="theme-param-subject">{{param.label}}</span>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <span class="theme-param-value">{{param.value | number : 3}}</span>
+                            <span>{{param.unit}}</span>
+                        </div>
+                    </div>
+                    <div class="row" ng-show="dcParams.pv2.length > 0" ng-repeat="param in dcParams.pv2">
+                        <div class="col-md-6 col-sm-6" style="padding:0px;">
+                            <span class="theme-param-subject">{{param.label}}</span>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <span class="theme-param-value">{{param.value | number : 3}}</span>
+                            <span>{{param.unit}}</span>
+                        </div>
+                    </div>
+                    <div class="theme-loader" ng-show="dcParams.pv1.length === 0 && dcParams.pv2.length === 0"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3" style="padding:0;">
+            <div class="row">
+                <div class="col-md-12" style="padding: 0">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">AC Current &amp; Voltage</h3>
+                        </div>
+                        <div class="panel-body theme-param-details-container" style="overflow:auto;/*height: 300px;*/padding:0px;">
+                            <div class="row" ng-show="acIVs.length > 0">
+                                <div class="col-sm-4 col-md-4">
+
+                                </div>
+                                <div class="col-sm-4 col-md-4 theme-param-header" style="text-align: center">
+                                    Voltage(V)
+                                </div>
+                                <div class="col-sm-4 col-md-4 theme-param-header" style="text-align: center">
+                                    Current(A)
+                                </div>
+                            </div>
+                            <div class="row" ng-show="acIVs.length > 0" ng-repeat="param in acIVs">
+                                <div class="col-sm-4 col-md-4" style="text-align: center">
+                                    <span class="theme-param-subject">{{param.phase}}</span>
+                                </div>
+                                <div class="col-sm-4 col-md-4" style="text-align: center">
+                                    <span class="theme-param-value">{{param.volts | number : 2}}</span>
+                                </div>
+                                <div class="col-sm-4 col-md-4" style="text-align: center">
+                                    <span class="theme-param-value">{{param.current | number : 2}}</span>
+                                </div>
+                            </div>
+                            <div class="theme-loader" ng-show="acIVs.length === 0"></div>
+                        </div>
+                    </div>
+                </div>
+                <!--</div>
+            <div class="row">-->
+                <div class="col-md-12" style="padding: 0">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Temperature</h3>
+                        </div>
+                        <div class="panel-body theme-param-details-container" style="overflow:auto;/*height: 300px;*/padding:0px;">
+                            <div class="row" ng-show="temperature">
+                                <div class="col-sm-6 col-md-6">
+                                    <span class="theme-param-subject">Power Board</span>
+                                </div>
+                                <div class="col-sm-6 col-md-6">
+                                    <span class="theme-param-value">{{temperature.powerBoard}} &nbsp;<sup>o</sup>C</span>
+                                </div>
+                            </div>
+                            <div class="row" ng-show="temperature">
+                                <div class="col-sm-6 col-md-6">
+                                    <span class="theme-param-subject">Heat Sink 1</span>
+                                </div>
+                                <div class="col-sm-6 col-md-6">
+                                    <span class="theme-param-value">{{temperature.heatSink1}} &nbsp;<sup>o</sup>C</span>
+                                </div>
+                            </div>
+                            <div class="row" ng-show="temperature">
+                                <div class="col-sm-6 col-md-6">
+                                    <span class="theme-param-subject">Heat Sink 2</span>
+                                </div>
+                                <div class="col-sm-6 col-md-6">
+                                    <span class="theme-param-value">{{temperature.heatSink2}} &nbsp;<sup>o</sup>C</span>
+                                </div>
+                            </div>
+                            <div class="row" ng-show="temperature">
+                                <div class="col-md-6">
+                                    <span class="theme-param-subject">Heat Sink 3</span>
+                                </div>
+                                <div class="col-md-6">
+                                    <span class="theme-param-value">{{temperature.heatSink3}} &nbsp;<sup>o</sup>C</span>
+                                </div>
+                            </div>
+                            <div class="theme-loader" ng-show="!temperature">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

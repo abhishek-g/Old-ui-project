@@ -1,0 +1,158 @@
+<div class="container-fluid" >
+    <div class="row" style="padding-top: 2%">
+        <div class="col-md-12">
+            <button id="js-delete-button" type="button" class="btn btn-default  "
+                    disabled="disabled" data-toggle="modal" data-target="#deleteModal"  style="margin-right: 1%;"> Delete Users
+            </button>
+            <button id="js-create-button" ng-click="addUser()" data-toggle="modal" data-target="#userModal" data-action="create"
+                    type="button" class="btn btn-primary  theme-create-button">Create User
+            </button>
+            <div class="col-sm-4 pull-right alert-container" messenger="" messagetext="messagetext" message="message" >
+            </div>
+        </div>
+    </div>
+    <div class="row theme-users-table-container" style="padding-top: 2%" users-table="">
+        <div class="col-md-12">
+            <div class="table-responsive">
+                <table class="table datatable" id="js-users-table">
+                    <thead>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th style="text-transform: capitalize;">Name</th>
+                        <th>Username</th>
+                        <th>Activation status</th>
+                        <th>Telephone No.</th>
+                        <th>Created Date</th>
+                        <th>Created By</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="modal fade" id="userModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title"><span ng-show="mode === 'create'">Create</span> <span ng-show="mode === 'edit'">Edit</span> User</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form name="userForm" class="form-horizontal" role="form">
+                            <div class="form-group row"
+                                 ng-class="{'has-error' : userForm.fullname.$invalid && !userForm.fullname.$pristine}">
+                                <label class="col-md-4 control-label">Full Name</label>
+
+                                <div class="col-md-6">
+                                    <input type="text" name="fullname" class="col-md-2 form-control" required
+                                           ng-model="User.fullname">
+                                </div>
+                            </div>
+                            <div class="form-group row"
+                                 ng-class="{'has-error' : userForm.phoneno.$invalid && !userForm.phoneno.$pristine}">
+                                <label class="col-md-4 control-label">Telephone Number</label>
+
+                                <div class="col-md-6">
+                                    <input type="text" name="phoneno" class="col-md-2 form-control" required
+                                           ng-model="User.phoneno" ng-minlength="10" maxlength="10" ng-pattern="/^\d+$/">
+                                </div>
+                                <span ng-show="userForm.phoneno.$error.pattern" class=" col-md-12 help-block">Invalid Telephone Number</span>
+                                <span ng-show="userForm.phoneno.$error.minlength" class=" col-md-12 help-block">Telephone Number minimum 10 numerals</span>
+                            </div>
+                            <div class="form-group row"
+                                 ng-class="{'has-error' : userForm.username.$invalid && !userForm.username.$pristine}">
+                                <label class="col-md-4 control-label">Username (Email id)</label>
+
+                                <div class="col-md-6">
+                                    <input type="email" name="username" class="col-md-2 form-control"
+                                           ng-model="User.username" required>
+                                </div>
+
+                                <span ng-show="userForm.username.$invalid && !userForm.username.$pristine" class=" col-md-12 help-block">Invalid Email Id</span>
+                            </div>
+                            <div class="form-group row js-password-container" disable-children="mode ==='edit'"
+                                 ng-class="{'has-error' : userForm.password.$invalid && !userForm.password.$pristine}">
+                                <label class="col-md-4 control-label">Password</label>
+
+                                <div class="col-md-6">
+                                    <input type="password" class="col-md-2 form-control" ng-model="User.password"
+                                           ng-required="true" ng-disabled="mode === 'edit'" name="password">
+                                </div>
+                            </div>
+                            <div class="form-group row js-password-container" disable-children="mode === 'edit'"
+                                 ng-class="{'has-error' : userForm.confirmPassword.$invalid && !userForm.confirmPassword.$pristine}">
+                                <label class="col-md-4 control-label">Confirm Password</label>
+
+                                <div class="col-md-6">
+                                    <input type="password" name="confirmPassword" compare-to="User.password" class="col-md-2 form-control" ng-model="User.confirmPassword"
+                                           ng-required="true" ng-disabled="mode === 'edit'" >
+                                </div>
+                                <span ng-show="userForm.confirmPassword.$error.compareTo" class=" col-md-12 help-block">Passwords need to match</span>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-md-4 control-label">Is Active</label>
+                                <div class="col-md-6">
+                                    <span class='js-isActive js-select-icon' ng-class="{themeboxdeselected:!User.isActivate,themeboxselected:User.isActivate}" style="margin-top: 2.5%;"></span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-md-4 control-label">Site Access</label>
+                                <div class="col-md-6">
+                                <select class="selectpicker dropdown">
+                                    <option  ng-repeat="sites in sitesList[0].children" value={{sites.id}}>{{sites.label}}</option>
+                                </select>
+                                </div>
+                            </div>
+                            <div class="form-group row" ng-show="selectedSites.length > 0">
+                                <label class="col-md-4 control-label">Accessible Sites</label>
+                                <div class="col-md-6">
+                                    <ul class="list-group border-bottom">
+                                        <li class="list-group-item" ng-repeat="site in selectedSites">
+                                            {{site.name}}
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-12" style="text-align: center;">
+                                    <button id="js-close-button" type="button" ng-click="clearData()" data-dismiss="modal"
+                                            class="btn btn-default " style="margin-right: 1%;">Close
+                                    </button>
+                                    <button id="js-save-user-button" type="button" ng-click="saveUser()" data-dismiss="modal"
+                                            class="btn btn-primary  theme-create-button" ng-show="mode === 'create'"
+                                            ng-disabled="userForm.$invalid">Save User
+                                    </button>
+                                    <button id="js-edit-user-button" type="button" ng-click="editUser()" data-dismiss="modal"
+                                            class="btn btn-primary  theme-create-button" ng-show="mode === 'edit'" ng-disabled="userForm.$invalid"
+                                            >Edit User
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="modal fade" id="deleteModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <h4>Sure!!! Delete these Users ???</h4>
+                        <br /><br />
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="cancelDelete()" data-dismiss="modal">NO</button>
+                        <button type="button" ng-click="deleteUser()" data-dismiss="modal" class="btn btn-primary theme-create-button">Yes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

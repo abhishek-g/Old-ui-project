@@ -1,0 +1,175 @@
+.theme-inverter-green-icon {
+  width: 33px;
+  margin: 0 auto;
+  padding-top: 30px;
+  height: 0;
+  background: url("/modules/dashboard/css/img/Inverter_Green.png") no-repeat;
+  background-size: cover;
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  left: 2px; }
+
+.theme-inverter-icon {
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 80%;
+  height: 0;
+  background: url("/modules/dashboard/css/img/Devices_Inverters_ICON.png") no-repeat;
+  background-size: cover;
+  display: inline-block; }
+
+.theme-pr-icon {
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 80%;
+  height: 0;
+  background: url("/modules/dashboard/css/img/Best_PR_ICON.png") no-repeat;
+  background-size: cover;
+  display: inline-block; }
+
+.theme-efficiency-icon {
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 80%;
+  height: 0;
+  background: url("/modules/dashboard/css/img/Efficiency.png") no-repeat;
+  background-size: cover;
+  display: inline-block; }
+
+.theme-inv-overview .theme-img-tod-gen {
+  width: 46%;
+  margin: 0 26%;
+  padding-top: 34%;
+  height: 0;
+  background: url("/modules/dashboard/css/img/Todays_GEN_ICON.png") no-repeat;
+  background-size: cover;
+  display: inline-block; }
+.theme-inv-overview .widget-title {
+  font-size: 16pt !important;
+  padding-bottom: 5px;
+  padding-top: 5px; }
+.theme-inv-overview .widget-subtitle {
+  font-size: 12pt !important;
+  padding-bottom: 5px;
+  padding-top: 5px; }
+
+.theme-inverter-table .table tbody tr {
+  padding: 5px; }
+.theme-inverter-table .table tbody tr.even {
+  background-color: #e3eaf8; }
+.theme-inverter-table .table tbody tr.selected {
+  background: #83c7d9; }
+.theme-inverter-table .table thead tr th {
+  color: #404041;
+  font-size: 11pt;
+  font-weight: 500;
+  font-family: Roboto-Regular !important;
+  background-color: #d4d5e2 !important; }
+.theme-inverter-table .table tbody tr td {
+  vertical-align: middle; }
+.theme-inverter-table .table tbody tr td:first-child {
+  position: relative; }
+.theme-inverter-table .table tbody tr.selected:hover {
+  cursor: default; }
+.theme-inverter-table .table tbody tr:hover {
+  cursor: pointer; }
+.theme-inverter-table .theme-inv-name {
+  background-color: #618761;
+  padding: 2%;
+  text-align: center;
+  font-size: 12pt;
+  color: #ffffff;
+  border-radius: 4px; }
+.theme-inverter-table .irs-line-left, .theme-inverter-table .irs-line-mid, .theme-inverter-table .irs-line-right {
+  background-color: #42515a; }
+.theme-inverter-table .irs {
+  height: 36px; }
+.theme-inverter-table .theme-inv-data {
+  padding-top: 3%;
+  color: #404041;
+  font-size: 11pt; }
+.theme-inverter-table .theme-table-data {
+  color: #404041;
+  font-size: 11pt; }
+.theme-inverter-table .irs-bar {
+  top: 14px;
+  height: 8px;
+  background: #b4e254;
+  border: 1px solid #b4e254; }
+.theme-inverter-table .irs-bar-edge {
+  top: 14px;
+  height: 8px;
+  background: #b4e254;
+  border: 1px solid #b4e254; }
+.theme-inverter-table .irs-slider.single {
+  display: none; }
+.theme-inverter-table .irs-line {
+  top: 14px;
+  height: 8px;
+  border: 1px solid #42515a !important; }
+
+.inverter div.rn-carousel-indicators {
+  position: absolute;
+  top: 34%;
+  right: 8%; }
+
+.theme-param-subject {
+  color: #43525a;
+  font-family: Roboto-Medium;
+  font-size: 11pt;
+}
+
+.theme-param-value {
+  color: #63839e;
+  font-family: Roboto-Regular;
+  font-size: 11pt; }
+
+.theme-param-header {
+  color: #43525a;
+  font-family: Roboto-Medium;
+  font-size: 11pt; }
+
+.theme-param-unit {
+  color: #6d6e70;
+  font-family: Roboto-Regular;
+  font-size: 10pt; }
+
+.theme-param-details-container .row {
+  /*padding: 3%;*/
+  border-bottom: 1px solid #CCCCCC;
+  padding: 7px 0 7px 15px;
+}
+
+.panel-body > .theme-loader {
+  width: 13%;
+  padding-bottom: 14%; }
+
+.theme-gauge-label-container {
+  padding-top: 20%; }
+
+.theme-gauge-label {
+  color: #788fae;
+  font-size: 14pt;
+  font-family: Roboto-Medium; }
+
+.theme-gmeter-table thead > tr > th:first-child {
+  color: #404041;
+  font-size: 11pt; }
+.theme-gmeter-table thead > tr > th:nth-child(2) {
+  color: #c53326;
+  font-size: 11pt; }
+.theme-gmeter-table thead > tr > th:nth-child(3) {
+  color: #f68a1e;
+  font-size: 11pt; }
+.theme-gmeter-table thead > tr > th:last-child {
+  color: #024da1;
+  font-size: 11pt; }
+.theme-gmeter-table tbody > tr > td {
+  color: #404041 !important;
+  font-size: 12pt !important; }
+
+#DataTables_Table_inverterdata > tbody > tr > td:first-child {
+  text-align: center; }
+
+/*# sourceMappingURL=inv-overview.css.map */

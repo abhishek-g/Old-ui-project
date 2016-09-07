@@ -1,0 +1,24 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Performance Ratio (R<sub>p</sub>)</h3>
+        <ul class="panel-controls" style=" margin-top: 2px;">
+            <li><a href="#" class="panel-fullscreen js-panel-map" style=" border: none"><span class="maximise ng-isolate-scope theme-maximise"></span></a>
+            </li>
+        </ul>
+    </div>
+    <div class="panel-body theme-pr-compare js-map-panel-body" style="height: 250px;overflow:auto">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row" style="border-bottom: 1px solid">
+                    <div class="col-md-4" style="font-size: 14px;font-weight: 900;">Inverter Name</div>
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4" style="font-size: 14px;font-weight: 900;">PR (%)</div>
+                </div>
+                <form role="form" class="form-horizontal">
+                    <div class="form-group" ng-repeat="pr in devicePrData" max=200 data="pr" ion-range-slider="">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

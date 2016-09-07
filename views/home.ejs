@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to Solarpulse</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="refresh" content="600">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon"/>
+    <link rel='stylesheet' type="text/css" id="theme" href='/css/theme-default.css'/>
+    <link rel="stylesheet" type="text/css" id="theme" href="css/style.css"/>
+</head>
+<body>
+
+<div class="page-container">
+<div class="page-sidebar">
+    <!-- START X-NAVIGATION -->
+    <ul class="x-navigation">
+        <li class="xn-logo">
+            <a href="/">SolarPulse</a>
+            <a href="#" class="x-navigation-control"></a>
+        </li>
+        <li class="active">
+            <a href="/dashboard"><span class="fa fa-desktop"></span> <span class="xn-text">Dashboard</span></a>
+        </li>
+        <li class="xn-openable">
+            <a href="#"><span class="fa fa-files-o"></span> <span class="xn-text">Admin</span></a>
+            <ul>
+                <!--<li><a href="pages-gallery.html"><span class="fa fa-image"></span> Create</a></li>-->
+                <li class="js-disabled"><a href="#"><span class="fa fa-user "></span> User</a></li>
+                <li class=""><a href="/admin/roles"><span class="fa fa-file-text "></span> Role</a></li>
+                <li class="js-disabled"><a href="#"><span class="fa fa-pencil "></span> Site</a></li>
+
+            </ul>
+        </li>
+        <li class="js-disabled">
+            <a href="#"><span class="fa fa-map-marker"></span> <span class="xn-text ">Sitemap</span></a>
+        </li>
+
+
+    </ul>
+    <!-- END X-NAVIGATION -->
+</div>
+
+<div class="page-content">
+<ul class="x-navigation x-navigation-horizontal x-navigation-panel">
+    <li class="xn-icon-button">
+        <a href="#" class="x-navigation-minimize"><span class="fa fa-dedent"></span></a>
+    </li>
+    <li class="xn-icon-button pull-right">
+        <a href="#" class="mb-control" data-box="#mb-signout"><span class="fa fa-sign-out"></span></a>
+    </li>
+    <li class=" xn-icon-button pull-right" style="color: #FFF;padding: 15px 10px;">
+    </li>
+</ul>
+
+<ul class="breadcrumb">
+    <li><a href="#">Home</a></li>
+    <li class="active">Dashboard</li>
+    <div class="col-md-1 col-sm-2 col-xs-2 pull-right" style="width: 4%;">
+        <div class="input-group">
+            <span class="input-group-addon js-refresh-page" style="cursor: pointer">
+                <span class="glyphicon glyphicon-refresh "></span>
+            </span>
+        </div>
+    </div>
+    <div class="col-md-2 col-sm-4 col-xs-5 pull-right">
+        <div class="input-group">
+            <input type="text" id="dp-3" class="form-control" data-date-format="dd-mm-yyyy" data-date-viewmode="years">
+            <span class="input-group-addon js-open-dpicker" style="cursor: pointer">
+                <span class="glyphicon glyphicon-calendar"></span>
+            </span>
+        </div>
+    </div>
+</ul>
+
+<div class="page-content-wrap" style=" min-height: 86%;background-color: #ffffff">
+
+    <div class="row">
+
+        <div class="col-md-3">
+
+            <div class="widget widget-default widget-carousel" style="border: 1px solid #CCCCCC">
+                <div class="owl-carousel" id="owl-example">
+                    <div id="site-detail-container">
+                        <div class="widget-title">Site</div>
+                        <div class="widget-int">Infosys</div>
+                        <div class="widget-subtitle">Hyderabad</div>
+
+                    </div>
+                    <div id="js-capacity-container">
+                        <div class="widget-title">Capacity</div>
+                        <div class="widget-int js-capacity">392</div>
+                        <div class="widget-subtitle">kW</div>
+                    </div>
+                    <div id="js-zone-inverter-conatiner">
+                        <div class="widget-title">Zones/ Inverters</div>
+                        <div class="widget-subtitle"></div>
+                        <div class="widget-int">1 / 20</div>
+                    </div>
+                </div>
+            </div>
+ajax
+        </div>
+
+        <div class="col-md-3">
+
+            <div id="widget1" class="widget widget-default widget-carousel" style="border: 1px solid #CCCCCC">
+                <div class="owl-carousel" id="owl-example">
+                    <div id="site-detail-container">
+                        <div class="widget-title">Today's Generation</div>
+                        <div class="widget-int js-currentGeneration-val"></div>
+                        <div class="widget-subtitle"> kWh</div>
+
+                    </div>
+                    <div id="js-capacity-container">
+                        <div class="widget-title">Today's Pr</div>
+                        <div class="widget-int js-today-pr"></div>
+                        <div class="widget-subtitle">%</div>
+                    </div>
+                    <div id="js-poaenergy-container">
+                        <div class="widget-title">Today's Poa Energy</div>
+                        <div class="widget-int js-today-poa"></div>
+                        <div class="widget-subtitle">Wh / m<sup>2</sup></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div id="widget2" class="widget widget-default widget-item-icon" style="border: 1px solid #CCCCCC">
+                <div class="widget-item-left">
+                    <span class="fa fa-globe"></span>
+                </div>
+                <div class="widget-data">
+                    <div class="widget-title">CO<sub>2</sub> Saved</div>
+                    <div class="widget-int js-co2-saved-value"></div>
+                    <div class="widget-subtitle">Tons</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="widget widget-default widget-item-icon" style="border: 1px solid #CCCCCC">
+                <div class="widget-item-left">
+                    <span class="fa fa-bell-o"></span>
+                </div>
+                <div class="widget-data">
+                    <div class="widget-title">Alarms</div>
+                    <div class="widget-int">0</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-12">
+            <div class="panel panel-default" style="border: 1px solid #CCCCCC">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Energy Trends</h3>
+                    <ul class="panel-controls">
+                        <li><a href="#" class="panel-collapse"><span class="fa fa-angle-down"></span></a></li>
+                        <!--<li><a href="#" class="panel-refresh"><span class="fa fa-refresh"></span></a></li>-->
+                        <!--<li><a href="#" class="panel-remove"><span class="fa fa-times"></span></a></li>-->
+                    </ul>
+                </div>
+                <div class="panel-body">
+                    <div id="rick_energyTrends" class="layout-graph-container">
+
+                    </div>
+                    <div id="noDataContainer" class="layout-graph-container" style="display: none">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12">
+            <div class="panel panel-default" style="border: 1px solid #CCCCCC">
+                <div class="panel-heading">
+                    <h3 class="panel-title">POA vs Active Power</h3>
+                    <ul class="panel-controls">
+                        <li><a href="#" class="panel-collapse"><span class="fa fa-angle-down"></span></a></li>
+                        <!--<li><a href="#" class="panel-refresh"><span class="fa fa-refresh"></span></a></li>-->
+                        <!--<li><a href="#" class="panel-remove"><span class="fa fa-times"></span></a></li>-->
+                    </ul>
+                </div>
+                <div class="panel-body">
+                    <div id="morris_pr" class="layout-graph-container">
+
+                    </div>
+                    <div id="noDataContainer1" class="layout-graph-container" style="display: none">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12">
+            <div class="panel panel-default" style="border: 1px solid #CCCCCC">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Performance Ratio</h3>
+                    <ul class="panel-controls">
+                        <li><a href="#" class="panel-collapse"><span class="fa fa-angle-down"></span></a></li>
+                        <!--<li><a href="#" class="panel-refresh"><span class="fa fa-refresh"></span></a></li>-->
+                        <!--<li><a href="#" class="panel-remove"><span class="fa fa-times"></span></a></li>-->
+                    </ul>
+                </div>
+                <div class="panel-body">
+                    <div id="morris_prbar" class="layout-graph-container">
+
+                    </div>
+                    <div id="noDataContainer2" class="layout-graph-container" style="display: none">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" style="height: 430px;">
+
+        <div style="height: 100%" class="col-lg-4 col-md-4 col-sm-12">
+            <div class="height-100 panel panel-default" style="border: 1px solid #CCCCCC">
+                <div class="panel-heading ui-draggable-handle">
+                    <h3 class="panel-title">Site Map </h3>
+                    <ul class="panel-controls">
+                        <li><a href="#" class="panel-collapse"><span class="fa fa-angle-down"></span></a></li>
+                        <!--<li><a href="#" class="panel-refresh"><span class="fa fa-refresh"></span></a></li>-->
+                        <!--<li><a href="#" class="panel-remove"><span class="fa fa-times"></span></a></li>-->
+                    </ul>
+                </div>
+                <div class="panel-body panel-body-map" style="height: 100%">
+                    <div class="js-map-container" style="width:100%;height: 85%">
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-8 col-md-8 col-sm-12">
+            <div class="panel panel-default" style="border: 1px solid #CCCCCC">
+                <div class="panel-heading ui-draggable-handle">
+                    <h3 class="panel-title">Inverter Status</h3>
+                    <ul class="panel-controls">
+                        <li><a href="#" class="panel-collapse"><span class="fa fa-angle-down"></span></a></li>
+                        <!--<li><a href="#" class="panel-refresh"><span class="fa fa-refresh"></span></a></li>-->
+                        <!--<li><a href="#" class="panel-remove"><span class="fa fa-times"></span></a></li>-->
+                    </ul>
+                </div>
+                <div class="panel-body js-table-container">
+                    <table class="table datatable_simple dataTable no-footer" id="DataTables_inverterStatus"
+                           role="grid">
+                        <thead>
+                        <tr role="row">
+                            <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 20%;">Serial No.</th>
+                            <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 20%;">Capacity</th>
+                            <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 20%;">Kwh Today</th>
+                            <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 20%;">Pr</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+</div>
+
+<div class="page-footer">
+
+    <div class="page-footer-wrap bg-darken-gray">
+        <!-- page footer holder -->
+        <div class="row" style="color: #FFF;font-size: 10pt;">
+
+            <!-- copyright -->
+            <div class="col-md-3 col-sm-3" style="padding: 10px 0px;text-align: center">
+                © 2014 MachinePulse . All Rights Reserved
+            </div>
+            <!-- ./copyright -->
+            <div class="col-md-5 col-sm-5" style="padding: 10px 0px;text-align: center">
+                &nbsp;
+            </div>
+
+            <!-- social links -->
+
+            <div class="col-md-2 col-sm-2 col-md-offset-2 col-sm-offset-2" style=" padding: 10px 0px;text-align: center;">
+                <!-- <a href="#"><span class="fa fa-facebook"></span></a>
+                 <a href="#"><span class="fa fa-twitter"></span></a>
+                 <a href="#"><span class="fa fa-google-plus"></span></a>
+                 <a href="#"><span class="fa fa-linkedin"></span></a>
+                 <a href="#"><span class="fa fa-vimeo-square"></span></a>
+                 <a href="#"><span class="fa fa-dribbble"></span></a>-->
+                powered by <span style=" font-size: 14pt;font-family: Roboto-Bold"> erixis</span>
+            </div>
+            <!-- ./social links -->
+
+        </div>
+        <!-- ./page footer holder -->
+    </div>
+
+</div>
+
+
+<div class="message-box animated fadeIn" data-sound="alert" id="mb-signout">
+    <div class="mb-container">
+        <div class="mb-middle">
+            <div class="mb-title"><span class="fa fa-sign-out"></span> Log <strong>Out</strong> ?</div>
+            <div class="mb-content">
+                <p>Are you sure you want to log out?</p>
+
+                <p>Press No if youwant to continue work. Press Yes to logout current user.</p>
+            </div>
+            <div class="mb-footer">
+                <div class="pull-right">
+                    <a href="/logout" class="btn btn-success btn-lg">Yes</a>
+                    <button class="btn btn-default btn-lg mb-control-close">No</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<audio id="audio-alert" src="audio/alert.mp3" preload="auto"></audio>
+<audio id="audio-fail" src="audio/fail.mp3" preload="auto"></audio>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+
+<script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="js/plugins/underscore/underscore.js"></script>
+<script type="text/javascript" src="js/plugins/jquery/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/plugins/bootstrap/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/plugins/datatables/jquery.dataTables.min.js"></script>
+<script type='text/javascript' src='js/plugins/icheck/icheck.min.js'></script>
+<script type="text/javascript" src="js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
+<script type="text/javascript" src="js/plugins/scrolltotop/scrolltopcontrol.js"></script>
+<script type="text/javascript" src="js/plugins/highcharts/highcharts.js"></script>
+<script type="text/javascript" src="js/plugins/morris/raphael-min.js"></script>
+<script type="text/javascript" src="js/plugins/morris/morris.min.js"></script>
+<script type="text/javascript" src="js/plugins/rickshaw/d3.v3.js"></script>
+<script type="text/javascript" src="js/plugins/rickshaw/rickshaw.min.js"></script>
+<script type='text/javascript' src='js/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js'></script>
+<script type='text/javascript' src='js/plugins/jvectormap/jquery-jvectormap-world-mill-en.js'></script>
+<script type='text/javascript' src='js/plugins/bootstrap/bootstrap-datepicker.js'></script>
+<script type="text/javascript" src="js/plugins/owl/owl.carousel.min.js"></script>
+<script type="text/javascript" src="js/plugins/moment.min.js"></script>
+<script type="text/javascript" src="js/plugins/daterangepicker/daterangepicker.js"></script>
+<script type="text/javascript" src="js/plugins/noty/jquery.noty.js"></script>
+<script type="text/javascript" src="js/plugins/noty/themes/default.js"></script>
+<script type="text/javascript" src="js/plugins/noty/layouts/topCenter.js"></script>
+<script type="text/javascript" src="js/app/actions.js"></script>
+<!--<script type="text/javascript" src="js/app/plugins.js"></script>-->
+
+<!--<script type="text/javascript" src="js/app/top-widgets.js"></script>-->
+<script type="text/javascript" src="js/app/rickshaw-graphs.js"></script>
+</body>
+</html>

@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to Solarpulse</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="refresh" content="600">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon"/>
+    <link rel='stylesheet' type="text/css" id="theme" href='/css/theme-default.css'/>
+    <link rel="stylesheet" type="text/css" id="theme" href="/css/style.css"/>
+</head>
+<body>
+
+<div class="page-container">
+<div class="page-sidebar">
+    <!-- START X-NAVIGATION -->
+    <ul class="x-navigation">
+        <li class="xn-logo">
+            <a href="/">SolarPulse</a>
+            <a href="#" class="x-navigation-control"></a>
+        </li>
+        <li class="">
+            <a href="/dashboard"><span class="fa fa-desktop"></span> <span class="xn-text">Dashboard</span></a>
+        </li>
+        <li class="xn-openable active">
+            <a href="#"><span class="fa fa-files-o"></span> <span class="xn-text">Admin</span></a>
+            <ul>
+                <!--<li><a href="pages-gallery.html"><span class="fa fa-image"></span> Create</a></li>-->
+                <li class="js-disabled"><a href="#"><span class="fa fa-user "></span> User</a></li>
+                <li class="active"><a href="#"><span class="fa fa-file-text "></span> Role</a></li>
+                <li class="js-disabled"><a href="#"><span class="fa fa-pencil "></span> Site</a></li>
+
+            </ul>
+        </li>
+        <li class="js-disabled">
+            <a href="#"><span class="fa fa-map-marker"></span> <span class="xn-text ">Sitemap</span></a>
+        </li>
+
+
+    </ul>
+    <!-- END X-NAVIGATION -->
+</div>
+
+<div class="page-content">
+<ul class="x-navigation x-navigation-horizontal x-navigation-panel">
+    <li class="xn-icon-button">
+        <a href="#" class="x-navigation-minimize"><span class="fa fa-dedent"></span></a>
+    </li>
+    <li class="xn-icon-button pull-right">
+        <a href="#" class="mb-control" data-box="#mb-signout"><span class="fa fa-sign-out"></span></a>
+    </li>
+    <li class=" xn-icon-button pull-right" style="color: #FFF;padding: 15px 10px;">
+    </li>
+</ul>
+
+<ul class="breadcrumb">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Admin</a></li>
+    <li class="active">Roles</li>
+</ul>
+
+<div class="page-title">
+    <!-- <h2><span class="fa fa-key"></span> Role Management</h2>
+
+
+     <h2 class="pull-right">
+         <button type="button" class="btn btn-info active js-switch-view js-hide">Add Role</button>
+     </h2>-->
+
+    <h2><span class="fa fa-users"></span> User Management</h2>
+
+
+    <h2 class="pull-right">
+        <button type="button" class="btn btn-info active js-switch-view js-hide">Add User</button>
+    </h2>
+
+</div>
+
+
+<div class="page-content-wrap" style=" min-height: 86%;background-color: #ffffff">
+
+
+<div class="row js-table-container js-container" style="">
+    <div class="col-md-12">
+
+        <div class="panel panel-default" style="border: 1px solid #CCCCCC">
+
+            <div class="panel-heading ui-draggable-handle">
+                <h3 class="panel-title">Users</h3>
+                <ul class="panel-controls">
+                    <li><a href="#" class="panel-collapse"><span class="fa fa-angle-down"></span></a></li>
+                    <!--<li><a href="#" class="panel-refresh"><span class="fa fa-refresh"></span></a></li>
+                    <li><a href="#" class="panel-remove"><span class="fa fa-times"></span></a></li>-->
+                </ul>
+            </div>
+
+            <div class="panel-body">
+                <table id="roles-table" class="table datatable dataTable no-footer"
+                       role="grid">
+                    <thead>
+                    <tr role="row">
+                        <th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
+                            colspan="1" aria-sort="ascending"
+                            aria-label="Name: activate to sort column ascending"
+                            style="font-size: 15px;font-weight: 400;">User Id
+                        </th>
+                        <th class="sorting" tabindex="1" aria-controls="DataTables_Table_0" rowspan="1"
+                            colspan="1" aria-label="Full Name: activate to sort column ascending"
+                            style="font-size: 15px;font-weight: 400;">Full Name
+                        </th>
+                        <th class="sorting" tabindex="2" aria-controls="DataTables_Table_0" rowspan="1"
+                            colspan="1" aria-label="Email Id: activate to sort column ascending"
+                            style="font-size: 15px;font-weight: 400;">Email Id (Username)
+                        </th>
+                        <th class="sorting" tabindex="3" aria-controls="DataTables_Table_0" rowspan="1"
+                            colspan="1" aria-label="Telephone No: activate to sort column ascending"
+                            style="font-size: 15px;font-weight: 400;">Telephone No
+                        </th>
+                        <th class="sorting" tabindex="4" aria-controls="DataTables_Table_0" rowspan="1"
+                            colspan="1" aria-label="Organization: activate to sort column ascending"
+                            style="font-size: 15px;font-weight: 400;">Organization
+                        </th>
+                        <th class="sorting" tabindex="4" aria-controls="DataTables_Table_0" rowspan="1"
+                            colspan="1" aria-label="Created By: activate to sort column ascending"
+                            style="font-size: 15px;font-weight: 400;"> Created By
+                        </th>
+                        <th class="sorting" tabindex="4" aria-controls="DataTables_Table_0" rowspan="1"
+                            colspan="1" aria-label="Created Time: activate to sort column ascending"
+                            style="font-size: 15px;font-weight: 400;"> Created Time
+                        </th>
+                        <th class="" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
+                            colspan="1"
+                            style="font-size: 15px;font-weight: 400;">
+                        </th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="row js-form-container js-container">
+    <div class="col-md-12">
+        <form class="form-horizontal js-add-user-form" role="form">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        Add a User
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="col-md-3 col-sm-3 control-label">Full Name</label>
+
+                            <div class="col-md-4 col-sm-4 ">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" required="" id="js-fname" name="fName">
+                                    <!--<span class="input-group-addon" style=""><span class="fa fa-pencil"></span></span>-->
+                                </div>
+                                        <span class="help-block">
+                                            First name for the User
+                                        </span>
+                            </div>
+                            <div class="col-md-4 col-sm-4 ">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" required="" id="js-lastname" name="lName">
+                                    <!--<span class="input-group-addon" style=""><span class="fa fa-pencil"></span></span>-->
+                                </div>
+                                        <span class="help-block">
+                                            Second name for the User
+                                        </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 col-sm-3 control-label">Email Id</label>
+
+                            <div class="col-md-8 col-sm-8 col-xs-8">
+                                <div class="input-group">
+                                    <input type="email" class="form-control" required="" id="js-email" name="emailid">
+                                    <!--<span class="input-group-addon" style=""><span class="fa fa-pencil"></span></span>-->
+                                </div>
+                                        <span class="help-block">
+                                            Email Id for the User (Will be taken as Username)
+                                        </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 col-sm-3 control-label">Password</label>
+
+                            <div class="col-md-4 col-sm-4">
+                                <div class="input-group">
+                                    <input type="password" class="form-control" required="" id="js-pass"
+                                           name="password">
+                                    <!--<span class="input-group-addon" style=""><span class="fa fa-pencil"></span></span>-->
+                                </div>
+                                        <span class="help-block">
+                                            Password for the User
+                                        </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 col-sm-3 control-label">Confirm Password</label>
+
+                            <div class="col-md-4 col-sm-4">
+                                <div class="input-group">
+                                    <input type="password" class="form-control" required="" id="js-pass-c"
+                                           name="cpassword">
+                                    <!--<span class="input-group-addon" style=""><span class="fa fa-pencil"></span></span>-->
+                                </div>
+                                        <span class="help-block">
+                                            Re- Type the Password
+                                        </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="col-md-3 col-sm-3 control-label"> Is Disabled</label>
+
+                            <div class="col-md-4 col-sm-4">
+                                <label class="check input-group">
+                                    <div id="js-isDisabled" class="icheckbox_minimal-grey " style="position: relative;">
+                                        <input type="checkbox" class="icheckbox"
+                                               style="position: absolute; opacity: 0;">
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 col-sm-3 control-label">Organization</label>
+
+                            <div class="col-md-4 col-sm-4">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" required="" id="js-organization"
+                                           name="organization">
+                                </div>
+                                        <span class="help-block">
+                                            Name of the Organization
+                                        </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 col-sm-3 control-label">Role Assigned</label>
+
+                            <div class="col-md-4 col-sm-4">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" required="" id="js-role-assigned"
+                                           name="role">
+                                </div>
+                                        <span class="help-block">
+                                            Role to be assigned to the User
+                                        </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            &nbsp;
+                        </div>
+                        <div class="form-group">
+                            &nbsp;
+                        </div>
+                        <div class="form-group ">
+                            <h2 class="col-md-2 col-sm-3 col-xs-3 col-xs-offset-1">
+                                <button id="js-save-user" type="button" class="btn btn-primary active pull-right">Save User</button>
+                            </h2>
+                            <h2 class="col-md-3 col-sm-3 col-xs-3 col-xs-offset-1">
+                                <button id="js-cancel-user" type="button" class="btn btn-default active js-switch-view">Cancel</button>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- <div class="row js-table-container js-container" style="">
+
+     <div class="col-md-12">
+
+         <div class="panel panel-default" style="border: 1px solid #CCCCCC">
+
+             <div class="panel-heading ui-draggable-handle">
+                 <h3 class="panel-title">Roles</h3>
+                 <ul class="panel-controls">
+                     <li><a href="#" class="panel-collapse"><span class="fa fa-angle-down"></span></a></li>
+                     &lt;!&ndash;  <li><a href="#" class="panel-refresh"><span class="fa fa-refresh"></span></a></li>
+                              <li><a href="#" class="panel-remove"><span class="fa fa-times"></span></a></li>&ndash;&gt;
+                        </ul>
+                    </div>
+
+                    <div class="panel-body">
+                        <table id="roles-table" class="table datatable dataTable no-footer"
+                               role="grid">
+                            <thead>
+                            <tr role="row">
+                                <th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
+                                    colspan="1" aria-sort="ascending"
+                                    aria-label="Name: activate to sort column ascending"
+                                    style="font-size: 15px;font-weight: 400;">Role Id
+                                </th>
+                                <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
+                                    colspan="1" aria-label="Position: activate to sort column ascending"
+                                    style="font-size: 15px;font-weight: 400;">Role Name
+                                </th>
+                                <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
+                                    colspan="1" aria-label="Position: activate to sort column ascending"
+                                    style="font-size: 15px;font-weight: 400;">Role Details
+                                </th>
+                                <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
+                                    colspan="1" aria-label="Office: activate to sort column ascending"
+                                    style="font-size: 15px;font-weight: 400;">Created By
+                                </th>
+                                <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
+                                    colspan="1" aria-label="Age: activate to sort column ascending"
+                                    style="font-size: 15px;font-weight: 400;">Created At
+                                </th>
+                                <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
+                                    colspan="1" aria-label="Start date: activate to sort column ascending"
+                                    style="font-size: 15px;font-weight: 400;">
+                                </th>
+                            </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div style="display: none" class="row js-form-container js-container">
+            <div class="col-md-12">
+                <form class="form-horizontal js-add-role-form" role="form">
+                    <div class="panel panel-default" style="border:1px solid #CCCCCC">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Add a Role</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="col-md-5">
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label">
+                                        Role Name
+                                    </label>
+
+                                    <div class="col-md-6">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" required="" id="js-roleName" name="roleName">
+                                                <span class="input-group-addon" style=""><span class="fa fa-pencil"></span></span>
+                                        </div>
+                                        <span class="help-block">
+                                            Add a name for the Role
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label">Role Details</label>
+
+                                    <div class="col-md-9 col-xs-12">
+                                        <textarea id="js-role-details" class="form-control" rows="5"></textarea>
+                                        <span class="help-block">Some details of the Role</span>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label"> Is Disabled</label>
+
+                                    <div class="col-md-4">
+                                        <label class="check">
+                                            <div id="js-isDisabled" class="icheckbox_minimal-grey " style="position: relative;">
+                                                <input type="checkbox" class="icheckbox"
+                                                       style="position: absolute; opacity: 0;">
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label"> Assign Features</label>
+                                    <div class="col-md-6">
+                                        <ul class="list-group border-bottom" style="border: 1px solid #CCCCCC">
+                                            <li class="list-group-item js-primary" style="cursor: pointer">
+                                                <a>
+                                                    <label class="check  ">
+                                                        <div class="icheckbox_minimal-grey " style="position: relative;">
+                                                            <input type="checkbox" class="icheckbox js-check primry"
+                                                                   style="position: absolute; opacity: 0;" data-featureName="Admin">
+                                                        </div>
+                                                    </label>
+
+                                                    Administration
+
+                                                </a>
+
+                                                <ul class="list-group issecondary">
+                                                    <li class="list-group-item secondary">
+                                                        <a>
+                                                        <label class="check ">
+                                                            <div class="icheckbox_minimal-grey " style="position: relative;">
+                                                                <input type="checkbox" class="icheckbox js-check secondary"
+                                                                       style="position: absolute; opacity: 0;" data-featureName="Roles">
+                                                            </div>
+                                                        </label>
+
+                                                        Roles
+                                                        </a>
+                                                    </li>
+                                                    <li class="list-group-item secondary">
+                                                        <a>
+                                                        <label class="check ">
+                                                            <div class="icheckbox_minimal-grey " style="position: relative;">
+                                                                <input type="checkbox" class="icheckbox js-check secondary"
+                                                                       style="position: absolute; opacity: 0;" data-featureName="Users">
+                                                            </div>
+                                                        </label>
+
+                                                        Users
+                                                        </a>
+                                                    </li>
+                                                    <li class="list-group-item secondary">
+                                                        <a>
+                                                        <label class="check ">
+                                                            <div class="icheckbox_minimal-grey " style="position: relative;">
+                                                                <input type="checkbox" class="icheckbox js-check secondary"
+                                                                       style="position: absolute; opacity: 0;" data-featureName="Sites">
+                                                            </div>
+                                                        </label>
+
+                                                        Sites
+                                                        </a>
+                                                    </li>
+                                                </ul>
+
+                                            </li>
+                                            <li class="list-group-item js-primary" style="cursor: pointer">
+                                                <a>
+                                                <label class="check ">
+                                                    <div class="icheckbox_minimal-grey " style="position: relative;">
+                                                        <input type="checkbox" class="icheckbox js-check primry"
+                                                               style="position: absolute; opacity: 0;" data-featureName="Alarms">
+                                                    </div>
+                                                </label>
+
+                                               Alarms
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item js-primary" style="cursor: pointer">
+                                                <a>
+                                                <label class="check ">
+                                                    <div class="icheckbox_minimal-grey " style="position: relative;">
+                                                        <input type="checkbox" class="icheckbox js-check primry"
+                                                               style="position: absolute; opacity: 0;" data-featureName="Dashboard">
+                                                    </div>
+                                                </label>
+
+                                                Dashboard
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    &nbsp;
+                                </div>
+                                <div class="form-group ">
+                                    <h2 class="col-md-2 col-sm-3 col-xs-3 col-xs-offset-1">
+                                        <button id="js-save-role" type="button" class="btn btn-primary active pull-right">Save Role</button>
+                                    </h2>
+                                    <h2 class="col-md-3 col-sm-3 col-xs-3 col-xs-offset-1">
+                                        <button id="js-cancel-role" type="button" class="btn btn-default active js-switch-view">Cancel</button>
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>-->
+</div>
+</div>
+
+
+<div class="page-footer">
+
+    <div class="page-footer-wrap bg-darken-gray">
+        <!-- page footer holder -->
+        <div class="row" style="color: #FFF;font-size: 10pt;">
+
+            <!-- copyright -->
+            <div class="col-md-3 col-sm-3" style="padding: 10px 0px;text-align: center">
+                © 2014 MachinePulse . All Rights Reserved
+            </div>
+            <!-- ./copyright -->
+            <div class="col-md-5 col-sm-5" style="padding: 10px 0px;text-align: center">
+                &nbsp;
+            </div>
+
+            <!-- social links -->
+
+            <div class="col-md-2 col-sm-2 col-md-offset-2 col-sm-offset-2"
+                 style=" padding: 10px 0px;text-align: center;">
+                <!-- <a href="#"><span class="fa fa-facebook"></span></a>
+                 <a href="#"><span class="fa fa-twitter"></span></a>
+                 <a href="#"><span class="fa fa-google-plus"></span></a>
+                 <a href="#"><span class="fa fa-linkedin"></span></a>
+                 <a href="#"><span class="fa fa-vimeo-square"></span></a>
+                 <a href="#"><span class="fa fa-dribbble"></span></a>-->
+                powered by <span style=" font-size: 14pt;font-family: Roboto-Bold"> erixis</span>
+            </div>
+            <!-- ./social links -->
+
+        </div>
+        <!-- ./page footer holder -->
+    </div>
+
+</div>
+
+
+<div class="message-box animated fadeIn" data-sound="alert" id="mb-signout">
+    <div class="mb-container">
+        <div class="mb-middle">
+            <div class="mb-title"><span class="fa fa-sign-out"></span> Log <strong>Out</strong> ?</div>
+            <div class="mb-content">
+                <p>Are you sure you want to log out?</p>
+
+                <p>Press No if youwant to continue work. Press Yes to logout current user.</p>
+            </div>
+            <div class="mb-footer">
+                <div class="pull-right">
+                    <a href="/logout" class="btn btn-success btn-lg">Yes</a>
+                    <button class="btn btn-default btn-lg mb-control-close">No</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<audio id="audio-alert" src="/audio/alert.mp3" preload="auto"></audio>
+<audio id="audio-fail" src="/audio/fail.mp3" preload="auto"></audio>
+
+
+<script type="text/javascript" src="/js/plugins/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="/js/plugins/underscore/underscore.js"></script>
+<script type="text/javascript" src="/js/plugins/jquery/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/js/plugins/bootstrap/bootstrap.min.js"></script>
+<script type="text/javascript" src="/js/plugins/datatables/jquery.dataTables.min.js"></script>
+<script type='text/javascript' src='/js/plugins/icheck/icheck.min.js'></script>
+<script type="text/javascript" src="/js/plugins/formvalidator/dist/jquery.validate.js"></script>
+<script type="text/javascript" src="/js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
+<script type="text/javascript" src="/js/plugins/scrolltotop/scrolltopcontrol.js"></script>
+<script type='text/javascript' src='/js/plugins/bootstrap/bootstrap-datepicker.js'></script>
+<script type="text/javascript" src="/js/plugins/moment.min.js"></script>
+<script type="text/javascript" src="/js/plugins/noty/jquery.noty.js"></script>
+<script type="text/javascript" src="/js/plugins/noty/themes/default.js"></script>
+<script type="text/javascript" src="/js/plugins/noty/layouts/topCenter.js"></script>
+<script type="text/javascript" src="/js/app/actions.js"></script>
+<script type="text/javascript" src="/js/app/plugins.js"></script>
+<script type="text/javascript" src="/js/app/admin.js"></script>
+
+</div>

@@ -1,0 +1,44 @@
+<div class="panel panel-default theme-single-site-weather-info">
+    <div class="panel-heading">
+        <h3 class="panel-title">Weather</h3>
+    </div>
+    <div class="panel-body " style=" height: 250px;overflow:auto">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="widget widget-default widget-item-icon">
+                    <div class="widget-controls">
+                        <a class="widget-control-left theme-date-text">
+                            {{siteWeatherInfo.dateText}}
+                        </a>
+                        <a class="widget-control-right">
+                            {{siteWeatherInfo.dateVal}}
+                        </a>
+                    </div>
+                    <div class="widget-item-left" style="padding: 7% 0px !important;margin-left: 10%;margin-top: 2%;">
+                        <span class="theme-weather-sunny-icon"></span>
+                    </div>
+                    <div class="widget-data" style=" padding: 6% 0px !important;margin-left: 35%;margin-top: 7%;">
+                        <div class="theme-temp-text">{{siteWeatherInfo.temp | number: 2}}<small><sup>o</sup>C</small></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-sm-4 col-xs-4">
+                <span class="theme-wind-icon" ></span>
+                <span class="theme-icon-side-data theme-data-value">{{siteWeatherInfo.wind | number :2 }} <small>m/s</small></span>
+                <span class="theme-icon-side-data theme-data-label" style="top: 52%;left: 38%;">wind</span>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-4">
+                <span class="theme-rainfall-icon"></span>
+                <span class="theme-icon-side-data theme-data-value">{{siteWeatherInfo.rainfall}} </span>
+                <span class="theme-icon-side-data theme-data-label" style="top: 52%;left: 38%;">rainfall</span>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-4">
+                <span class="theme-humidity-icon"></span>
+                <span class="theme-icon-side-data theme-data-value">{{siteWeatherInfo.humidity}} </span>
+                <span class="theme-icon-side-data theme-data-label" style="top: 52%;left: 38%;">humidity</span>
+            </div>
+        </div>
+    </div>
+</div>

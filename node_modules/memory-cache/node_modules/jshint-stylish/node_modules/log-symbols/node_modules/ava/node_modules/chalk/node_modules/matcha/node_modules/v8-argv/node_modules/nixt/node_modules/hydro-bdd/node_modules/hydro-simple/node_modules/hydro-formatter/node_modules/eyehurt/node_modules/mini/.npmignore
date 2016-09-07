@@ -1,0 +1,5 @@
+/test
+/examples
+/coverage
+*.sock
+CHANGELOG.md

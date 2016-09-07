@@ -1,0 +1,4 @@
+<config>
+  <domain>domain.com</domain>
+  <database>mydb</database>
+</config>

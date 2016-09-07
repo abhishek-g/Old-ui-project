@@ -1,0 +1,104 @@
+.overflow-auto,
+.theme-pr-compare {
+    overflow: auto;
+}
+
+.top-16,
+.theme-pr-compare .irs-line,
+.theme-pr-compare .irs-bar,
+.theme-pr-compare .irs-bar-edge,
+.theme-sp-yield-comparisons .irs-line,
+.theme-sp-yield-comparisons .irs-bar,
+.theme-sp-yield-comparisons .irs-bar-edge,
+.theme-sp-power-comparisons .irs-line,
+.theme-sp-power-comparisons .irs-bar,
+.theme-sp-power-comparisons .irs-bar-edge {
+    top: 16px !important;
+}
+
+.top-5,
+.theme-sites-overview .irs-line,
+.theme-sites-overview .irs-bar,
+.theme-sites-overview .irs-bar-edge {
+    top: 5px !important;
+}
+
+.theme-img-tod-gen {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 80%;
+    height: 0;
+    background: url("../css/img/Todays_GEN_ICON.png") no-repeat;
+    background-size: cover;
+    display: inline-block;
+}
+
+.theme-img-dev_inv {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 80%;
+    height: 0;
+    background: url("../css/img/Devices_Inverters_ICON.png") no-repeat;
+    background-size: cover;
+    display: inline-block;
+}
+
+.theme-img-specificyield {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 80%;
+    height: 0;
+    background: url("../css/img/SpecificYield_ICON.png") no-repeat;
+    background-size: cover;
+    display: inline-block;
+}
+
+.theme-img-specificpower {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 80%;
+    height: 0;
+    background: url("../css/img/SpecificPower_ICON.png") no-repeat;
+    background-size: cover;
+    display: inline-block;
+}
+
+.theme-img-frequency {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 80%;
+    height: 0;
+    background: url("../css/img/Frequency_ICON.png") no-repeat;
+    background-size: cover;
+    display: inline-block;
+}
+
+.theme-img-powerfactor {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 80%;
+    height: 0;
+    background: url("../css/img/PowerFACTOR_ICON.png") no-repeat;
+    background-size: cover;
+    display: inline-block;
+}
+
+.theme-showeye {
+    width: 78%;
+    margin: 0 auto;
+    padding-top: 80%;
+    height: 0;
+    background: url('../css/img/ShowEye.png') no-repeat;
+    background-size: contain;
+    display: inline-block;
+}
+
+.theme-hideeye {
+    width: 78%;
+    margin: 0 auto;
+    padding-top: 80%;
+    height: 0;
+    background: url('../css/img/HideEye.png') no-repeat;
+    background-size: contain;
+    display: inline-block;
+}

@@ -1,0 +1,54 @@
+
+        <div class="centered">
+            <label for="homecheck">HOME</label><input id="homecheck" data-index="1" type="checkbox" class="icheckbox"/><br>
+          <!--  <label for="aboutcheck">ABOUT</label> <input id="aboutcheck" data-index="2" type="checkbox" class="icheckbox"/><br>-->
+            <label for="contactcheck" class="posrgt80">CONTACT</label><input id="contactcheck"  data-index="2" type="checkbox" class="icheckbox"/><br>
+        </div>
+        <script>
+
+        </script>
+
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-2">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img src="../modules/login/images/icons/LOGO_With BG_Infosys.png"> </a>
+        </div>
+
+        <!--&lt;!&ndash; Collect the nav links, forms, and other content for toggling &ndash;&gt;-->
+        <div class="collapse navbar-collapse" id="navbar-collapse-2">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a class="btn login-icon"  data-toggle="collapse" href="#nav-collapse2" aria-expanded="false" aria-controls="nav-collapse2">
+                    </a>
+                </li>
+                <li>
+                    <a class="btn page-navigate"  data-toggle="collapse" href="#nav-collapse3" aria-expanded="false" aria-controls="nav-collapse2">
+                    </a>
+                </li>
+                <li class="container collapse pagelink" id="nav-collapse3">
+                    <div id="homelink" class="alert active" data-target="#homepage">
+                        <strong>HOME</strong>
+                    </div>
+                    <!--<div id="aboutlink" class="alert alert-warning" data-target="#aboutpage">
+                        <strong>ABOUT</strong>
+                    </div>-->
+                    <div id='contactlink' class="alert alert-danger" data-target="#contactpage">
+                        <strong>CONTACT</strong>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="collapse nav navbar-nav nav-collapse navbar-right" id="nav-collapse2">
+                <form-login logincallback=authenticateUser(User) errorcallback=errorcallback> </form-login>
+            </div>
+        </div>
+    </div>
+</nav>
+<page-list></page-list>
+

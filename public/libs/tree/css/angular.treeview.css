@@ -1,0 +1,59 @@
+div[data-angular-treeview] {
+    /* prevent user selection */
+    
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    /* default */
+    
+    font-family: "Open Sans", sans-serif;
+    font-size: 13px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    line-height: 19px;
+}
+
+div[data-tree-model] ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: none;
+    overflow: hidden;
+    font-size: 13px;
+    line-height: 19px;
+}
+
+div[data-tree-model] li {
+    position: relative;
+    padding: 0 0 0 10px;
+    line-height: 40px;
+}
+
+div[data-tree-model] li .expanded {
+    font-size: 13px;
+    color: #FFD559;
+}
+
+div[data-tree-model] li .collapsed {
+    font-size: 13px;
+    color: #fff;
+}
+
+div[data-tree-model] li .normal {
+    font-size: 13px;
+    color: #fff;
+}
+
+div[data-tree-model] li i,
+div[data-tree-model] li span {
+    cursor: pointer;
+}
+
+div[data-tree-model] li .selected {
+    color: #FFD559;
+    font-weight: bold;
+    padding: 1px 5px;
+}
